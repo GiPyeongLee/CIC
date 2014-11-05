@@ -14,6 +14,7 @@
 		83BAEDB81A09D16F00776368 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83BAEDB71A09D16F00776368 /* Images.xcassets */; };
 		83BAEDBB1A09D16F00776368 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BAEDB91A09D16F00776368 /* LaunchScreen.xib */; };
 		83BAEDC71A09D16F00776368 /* CICTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDC61A09D16F00776368 /* CICTests.m */; };
+		83BAEDD81A09D9A400776368 /* LKHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDD71A09D9A400776368 /* LKHttpRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		83BAEDC01A09D16F00776368 /* CICTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CICTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BAEDC51A09D16F00776368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BAEDC61A09D16F00776368 /* CICTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CICTests.m; sourceTree = "<group>"; };
+		83BAEDD61A09D9A400776368 /* LKHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKHttpRequest.h; sourceTree = "<group>"; };
+		83BAEDD71A09D9A400776368 /* LKHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKHttpRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 		83BAEDD41A09D28B00776368 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				83BAEDD61A09D9A400776368 /* LKHttpRequest.h */,
+				83BAEDD71A09D9A400776368 /* LKHttpRequest.m */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			files = (
 				83BAEDB31A09D16F00776368 /* ViewController.m in Sources */,
 				83BAEDB01A09D16F00776368 /* AppDelegate.m in Sources */,
+				83BAEDD81A09D9A400776368 /* LKHttpRequest.m in Sources */,
 				83BAEDAD1A09D16F00776368 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
