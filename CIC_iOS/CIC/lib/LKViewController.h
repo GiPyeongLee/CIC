@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Define.h"
+#import "FlatUIKit.h"
 @interface LKViewController : UIViewController
 
 @end

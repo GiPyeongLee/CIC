@@ -32,6 +32,9 @@
                                                 <state key="normal" image="btn_signup.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pushedRegist:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U0s-dJ-GEU"/>
+                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_write_input_line.png" translatesAutoresizingMaskIntoConstraints="NO" id="8M2-72-ezp">
                                                 <rect key="frame" x="30" y="267" width="260" height="1"/>
@@ -60,6 +63,9 @@
                                                 <state key="normal" image="btn_login.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pushedLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8mA-Hz-JX6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -79,6 +85,8 @@
                     <navigationItem key="navigationItem" id="qOa-20-dgb"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="field_id" destination="H4b-4Y-oMq" id="Qan-og-H7y"/>
+                        <outlet property="field_pw" destination="Eti-sp-l7D" id="g1J-JS-idi"/>
                         <outlet property="scrollView" destination="pV1-3P-HRt" id="AZ7-6W-oXw"/>
                     </connections>
                 </viewController>

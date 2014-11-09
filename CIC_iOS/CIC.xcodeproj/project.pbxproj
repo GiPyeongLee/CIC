@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		830BFB6C1A0F7CAD00F9C036 /* LKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB6B1A0F7CAD00F9C036 /* LKView.m */; };
+		830BFB961A0F903300F9C036 /* FUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB711A0F903300F9C036 /* FUIAlertView.m */; };
+		830BFB971A0F903300F9C036 /* FUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB731A0F903300F9C036 /* FUIButton.m */; };
+		830BFB981A0F903300F9C036 /* FUICellBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB751A0F903300F9C036 /* FUICellBackgroundView.m */; };
+		830BFB991A0F903300F9C036 /* FUIPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB771A0F903300F9C036 /* FUIPopoverBackgroundView.m */; };
+		830BFB9A1A0F903300F9C036 /* FUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB791A0F903300F9C036 /* FUISegmentedControl.m */; };
+		830BFB9B1A0F903300F9C036 /* FUISwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB7B1A0F903300F9C036 /* FUISwitch.m */; };
+		830BFB9C1A0F903300F9C036 /* FUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB7D1A0F903300F9C036 /* FUITextField.m */; };
+		830BFB9D1A0F903300F9C036 /* UIBarButtonItem+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB7F1A0F903300F9C036 /* UIBarButtonItem+FlatUI.m */; };
+		830BFB9E1A0F903300F9C036 /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB811A0F903300F9C036 /* UIColor+FlatUI.m */; };
+		830BFB9F1A0F903300F9C036 /* UIFont+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB831A0F903300F9C036 /* UIFont+FlatUI.m */; };
+		830BFBA01A0F903300F9C036 /* UIImage+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB851A0F903300F9C036 /* UIImage+FlatUI.m */; };
+		830BFBA11A0F903400F9C036 /* UINavigationBar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB871A0F903300F9C036 /* UINavigationBar+FlatUI.m */; };
+		830BFBA21A0F903400F9C036 /* UIPopoverController+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB891A0F903300F9C036 /* UIPopoverController+FlatUI.m */; };
+		830BFBA31A0F903400F9C036 /* UIProgressView+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB8B1A0F903300F9C036 /* UIProgressView+FlatUI.m */; };
+		830BFBA41A0F903400F9C036 /* UISlider+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB8D1A0F903300F9C036 /* UISlider+FlatUI.m */; };
+		830BFBA51A0F903400F9C036 /* UIStepper+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB8F1A0F903300F9C036 /* UIStepper+FlatUI.m */; };
+		830BFBA61A0F903400F9C036 /* UITabBar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB911A0F903300F9C036 /* UITabBar+FlatUI.m */; };
+		830BFBA71A0F903400F9C036 /* UITableViewCell+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB931A0F903300F9C036 /* UITableViewCell+FlatUI.m */; };
+		830BFBA81A0F903400F9C036 /* UIToolbar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFB951A0F903300F9C036 /* UIToolbar+FlatUI.m */; };
 		8390AE1A1A0B2FDA00C69020 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE191A0B2FDA00C69020 /* res */; };
 		8390AE1C1A0B3D9800C69020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE1B1A0B3D9800C69020 /* Images.xcassets */; };
 		83BAEDAD1A09D16F00776368 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDAC1A09D16F00776368 /* main.m */; };
@@ -33,6 +52,46 @@
 /* Begin PBXFileReference section */
 		830BFB6A1A0F7CAD00F9C036 /* LKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKView.h; sourceTree = "<group>"; };
 		830BFB6B1A0F7CAD00F9C036 /* LKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKView.m; sourceTree = "<group>"; };
+		830BFB6D1A0F84A600F9C036 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		830BFB6F1A0F903300F9C036 /* FlatUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlatUIKit.h; sourceTree = "<group>"; };
+		830BFB701A0F903300F9C036 /* FUIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIAlertView.h; sourceTree = "<group>"; };
+		830BFB711A0F903300F9C036 /* FUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIAlertView.m; sourceTree = "<group>"; };
+		830BFB721A0F903300F9C036 /* FUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIButton.h; sourceTree = "<group>"; };
+		830BFB731A0F903300F9C036 /* FUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIButton.m; sourceTree = "<group>"; };
+		830BFB741A0F903300F9C036 /* FUICellBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUICellBackgroundView.h; sourceTree = "<group>"; };
+		830BFB751A0F903300F9C036 /* FUICellBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUICellBackgroundView.m; sourceTree = "<group>"; };
+		830BFB761A0F903300F9C036 /* FUIPopoverBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPopoverBackgroundView.h; sourceTree = "<group>"; };
+		830BFB771A0F903300F9C036 /* FUIPopoverBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPopoverBackgroundView.m; sourceTree = "<group>"; };
+		830BFB781A0F903300F9C036 /* FUISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUISegmentedControl.h; sourceTree = "<group>"; };
+		830BFB791A0F903300F9C036 /* FUISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUISegmentedControl.m; sourceTree = "<group>"; };
+		830BFB7A1A0F903300F9C036 /* FUISwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUISwitch.h; sourceTree = "<group>"; };
+		830BFB7B1A0F903300F9C036 /* FUISwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUISwitch.m; sourceTree = "<group>"; };
+		830BFB7C1A0F903300F9C036 /* FUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUITextField.h; sourceTree = "<group>"; };
+		830BFB7D1A0F903300F9C036 /* FUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUITextField.m; sourceTree = "<group>"; };
+		830BFB7E1A0F903300F9C036 /* UIBarButtonItem+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+FlatUI.h"; sourceTree = "<group>"; };
+		830BFB7F1A0F903300F9C036 /* UIBarButtonItem+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+FlatUI.m"; sourceTree = "<group>"; };
+		830BFB801A0F903300F9C036 /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatUI.h"; sourceTree = "<group>"; };
+		830BFB811A0F903300F9C036 /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatUI.m"; sourceTree = "<group>"; };
+		830BFB821A0F903300F9C036 /* UIFont+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FlatUI.h"; sourceTree = "<group>"; };
+		830BFB831A0F903300F9C036 /* UIFont+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FlatUI.m"; sourceTree = "<group>"; };
+		830BFB841A0F903300F9C036 /* UIImage+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FlatUI.h"; sourceTree = "<group>"; };
+		830BFB851A0F903300F9C036 /* UIImage+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FlatUI.m"; sourceTree = "<group>"; };
+		830BFB861A0F903300F9C036 /* UINavigationBar+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+FlatUI.h"; sourceTree = "<group>"; };
+		830BFB871A0F903300F9C036 /* UINavigationBar+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+FlatUI.m"; sourceTree = "<group>"; };
+		830BFB881A0F903300F9C036 /* UIPopoverController+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+FlatUI.h"; sourceTree = "<group>"; };
+		830BFB891A0F903300F9C036 /* UIPopoverController+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+FlatUI.m"; sourceTree = "<group>"; };
+		830BFB8A1A0F903300F9C036 /* UIProgressView+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+FlatUI.h"; sourceTree = "<group>"; };
+		830BFB8B1A0F903300F9C036 /* UIProgressView+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+FlatUI.m"; sourceTree = "<group>"; };
+		830BFB8C1A0F903300F9C036 /* UISlider+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISlider+FlatUI.h"; sourceTree = "<group>"; };
+		830BFB8D1A0F903300F9C036 /* UISlider+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISlider+FlatUI.m"; sourceTree = "<group>"; };
+		830BFB8E1A0F903300F9C036 /* UIStepper+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStepper+FlatUI.h"; sourceTree = "<group>"; };
+		830BFB8F1A0F903300F9C036 /* UIStepper+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStepper+FlatUI.m"; sourceTree = "<group>"; };
+		830BFB901A0F903300F9C036 /* UITabBar+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+FlatUI.h"; sourceTree = "<group>"; };
+		830BFB911A0F903300F9C036 /* UITabBar+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+FlatUI.m"; sourceTree = "<group>"; };
+		830BFB921A0F903300F9C036 /* UITableViewCell+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+FlatUI.h"; sourceTree = "<group>"; };
+		830BFB931A0F903300F9C036 /* UITableViewCell+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+FlatUI.m"; sourceTree = "<group>"; };
+		830BFB941A0F903300F9C036 /* UIToolbar+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+FlatUI.h"; sourceTree = "<group>"; };
+		830BFB951A0F903300F9C036 /* UIToolbar+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+FlatUI.m"; sourceTree = "<group>"; };
 		8390AE191A0B2FDA00C69020 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		8390AE1B1A0B3D9800C69020 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83BAEDA71A09D16F00776368 /* CIC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +137,52 @@
 				830BFB6B1A0F7CAD00F9C036 /* LKView.m */,
 			);
 			name = LKView;
+			sourceTree = "<group>";
+		};
+		830BFB6E1A0F903300F9C036 /* FlatKit */ = {
+			isa = PBXGroup;
+			children = (
+				830BFB6F1A0F903300F9C036 /* FlatUIKit.h */,
+				830BFB701A0F903300F9C036 /* FUIAlertView.h */,
+				830BFB711A0F903300F9C036 /* FUIAlertView.m */,
+				830BFB721A0F903300F9C036 /* FUIButton.h */,
+				830BFB731A0F903300F9C036 /* FUIButton.m */,
+				830BFB741A0F903300F9C036 /* FUICellBackgroundView.h */,
+				830BFB751A0F903300F9C036 /* FUICellBackgroundView.m */,
+				830BFB761A0F903300F9C036 /* FUIPopoverBackgroundView.h */,
+				830BFB771A0F903300F9C036 /* FUIPopoverBackgroundView.m */,
+				830BFB781A0F903300F9C036 /* FUISegmentedControl.h */,
+				830BFB791A0F903300F9C036 /* FUISegmentedControl.m */,
+				830BFB7A1A0F903300F9C036 /* FUISwitch.h */,
+				830BFB7B1A0F903300F9C036 /* FUISwitch.m */,
+				830BFB7C1A0F903300F9C036 /* FUITextField.h */,
+				830BFB7D1A0F903300F9C036 /* FUITextField.m */,
+				830BFB7E1A0F903300F9C036 /* UIBarButtonItem+FlatUI.h */,
+				830BFB7F1A0F903300F9C036 /* UIBarButtonItem+FlatUI.m */,
+				830BFB801A0F903300F9C036 /* UIColor+FlatUI.h */,
+				830BFB811A0F903300F9C036 /* UIColor+FlatUI.m */,
+				830BFB821A0F903300F9C036 /* UIFont+FlatUI.h */,
+				830BFB831A0F903300F9C036 /* UIFont+FlatUI.m */,
+				830BFB841A0F903300F9C036 /* UIImage+FlatUI.h */,
+				830BFB851A0F903300F9C036 /* UIImage+FlatUI.m */,
+				830BFB861A0F903300F9C036 /* UINavigationBar+FlatUI.h */,
+				830BFB871A0F903300F9C036 /* UINavigationBar+FlatUI.m */,
+				830BFB881A0F903300F9C036 /* UIPopoverController+FlatUI.h */,
+				830BFB891A0F903300F9C036 /* UIPopoverController+FlatUI.m */,
+				830BFB8A1A0F903300F9C036 /* UIProgressView+FlatUI.h */,
+				830BFB8B1A0F903300F9C036 /* UIProgressView+FlatUI.m */,
+				830BFB8C1A0F903300F9C036 /* UISlider+FlatUI.h */,
+				830BFB8D1A0F903300F9C036 /* UISlider+FlatUI.m */,
+				830BFB8E1A0F903300F9C036 /* UIStepper+FlatUI.h */,
+				830BFB8F1A0F903300F9C036 /* UIStepper+FlatUI.m */,
+				830BFB901A0F903300F9C036 /* UITabBar+FlatUI.h */,
+				830BFB911A0F903300F9C036 /* UITabBar+FlatUI.m */,
+				830BFB921A0F903300F9C036 /* UITableViewCell+FlatUI.h */,
+				830BFB931A0F903300F9C036 /* UITableViewCell+FlatUI.m */,
+				830BFB941A0F903300F9C036 /* UIToolbar+FlatUI.h */,
+				830BFB951A0F903300F9C036 /* UIToolbar+FlatUI.m */,
+			);
+			path = FlatKit;
 			sourceTree = "<group>";
 		};
 		83BAED9E1A09D16F00776368 = {
@@ -143,6 +248,7 @@
 		83BAEDD11A09D21300776368 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				830BFB6D1A0F84A600F9C036 /* Define.h */,
 				83BAEDD21A09D22200776368 /* Root */,
 			);
 			name = src;
@@ -160,6 +266,7 @@
 		83BAEDD41A09D28B00776368 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				830BFB6E1A0F903300F9C036 /* FlatKit */,
 				83C2C92A1A0B427B00FD292B /* LKHTTPRequest */,
 				83C2C92B1A0B428A00FD292B /* LKViewController */,
 				830BFB691A0F7C8F00F9C036 /* LKView */,
@@ -286,12 +393,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				830BFB981A0F903300F9C036 /* FUICellBackgroundView.m in Sources */,
+				830BFB961A0F903300F9C036 /* FUIAlertView.m in Sources */,
 				83BAEDB31A09D16F00776368 /* ViewController.m in Sources */,
+				830BFB9D1A0F903300F9C036 /* UIBarButtonItem+FlatUI.m in Sources */,
+				830BFB9C1A0F903300F9C036 /* FUITextField.m in Sources */,
+				830BFB9E1A0F903300F9C036 /* UIColor+FlatUI.m in Sources */,
+				830BFBA81A0F903400F9C036 /* UIToolbar+FlatUI.m in Sources */,
 				83BAEDB01A09D16F00776368 /* AppDelegate.m in Sources */,
 				83C2C92E1A0B432E00FD292B /* LKViewController.m in Sources */,
+				830BFB9A1A0F903300F9C036 /* FUISegmentedControl.m in Sources */,
 				83BAEDD81A09D9A400776368 /* LKHttpRequest.m in Sources */,
+				830BFBA41A0F903400F9C036 /* UISlider+FlatUI.m in Sources */,
 				83BAEDAD1A09D16F00776368 /* main.m in Sources */,
+				830BFBA71A0F903400F9C036 /* UITableViewCell+FlatUI.m in Sources */,
+				830BFBA61A0F903400F9C036 /* UITabBar+FlatUI.m in Sources */,
+				830BFBA01A0F903300F9C036 /* UIImage+FlatUI.m in Sources */,
+				830BFBA31A0F903400F9C036 /* UIProgressView+FlatUI.m in Sources */,
+				830BFBA51A0F903400F9C036 /* UIStepper+FlatUI.m in Sources */,
+				830BFB9B1A0F903300F9C036 /* FUISwitch.m in Sources */,
+				830BFBA21A0F903400F9C036 /* UIPopoverController+FlatUI.m in Sources */,
+				830BFB991A0F903300F9C036 /* FUIPopoverBackgroundView.m in Sources */,
+				830BFBA11A0F903400F9C036 /* UINavigationBar+FlatUI.m in Sources */,
+				830BFB971A0F903300F9C036 /* FUIButton.m in Sources */,
 				830BFB6C1A0F7CAD00F9C036 /* LKView.m in Sources */,
+				830BFB9F1A0F903300F9C036 /* UIFont+FlatUI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
