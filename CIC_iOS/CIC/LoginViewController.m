@@ -6,23 +6,31 @@
 //  Copyright (c) 2014년 com.devsfolder.cic. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LoginViewController.h"
 #import "LKHttpRequest.h"
 
-@interface ViewController ()
+@interface LoginViewController ()
 @property (nonatomic,strong) LKHttpRequest *request;
 @property (weak, nonatomic) IBOutlet UITextField *field_id;
 @property (weak, nonatomic) IBOutlet UITextField *field_pw;
 @end
 
-@implementation ViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
     // Do any additional setup after loading the view, typically from a nib.
     self.request = [[LKHttpRequest alloc]init];
 
 
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    UIViewController *VC = [storyBoard instantiateViewControllerWithIdentifier:@"MainViewController"];
+//    [self.navigationController pushViewController:VC animated:false];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,19 +39,7 @@
 }
 - (IBAction)pushedLogin:(id)sender {
     if(self.field_id.text.length==0||self.field_pw.text.length==0){
-        FUIAlertView *alertView = [[FUIAlertView alloc]initWithTitle:@"" message:@"입력값을 확인해주세요." delegate:nil cancelButtonTitle:@"확인" otherButtonTitles:nil, nil];
-        alertView.backgroundOverlay.backgroundColor = [UIColor clearColor];
-        alertView.titleLabel.textColor = [UIColor cloudsColor];
-        alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
-        alertView.messageLabel.textColor = [UIColor cloudsColor];
-        alertView.messageLabel.font = [UIFont flatFontOfSize:14];
-        alertView.alertContainer.backgroundColor = [UIColor midnightBlueColor];
-        alertView.defaultButtonColor = [UIColor cloudsColor];
-        alertView.defaultButtonShadowColor = [UIColor asbestosColor];
-        alertView.defaultButtonFont = [UIFont boldFlatFontOfSize:16];
-        alertView.defaultButtonTitleColor = [UIColor midnightBlueColor];
-        alertView.alertContainer.layer.cornerRadius = 14.0f;
-        [alertView show];
+        [self showAlertViewWithTitle:@"" description:@"입력값을 확인해주세요"];
         
         return;
     }
@@ -51,6 +47,7 @@
 
         NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         NSLog(@"jsonArray : %@",jsonDic);
+        
 
     }];
 }
