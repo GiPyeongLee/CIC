@@ -28,9 +28,10 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    UIViewController *VC = [storyBoard instantiateViewControllerWithIdentifier:@"MainViewController"];
-//    [self.navigationController pushViewController:VC animated:false];
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"]){
+        [self.navigationController pushViewController:VIEWCONTROLLER(@"MainViewController") animated:true];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,8 +39,13 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)pushedLogin:(id)sender {
-    if(self.field_id.text.length==0||self.field_pw.text.length==0){
-        [self showAlertViewWithTitle:@"" description:@"입력값을 확인해주세요"];
+    if(self.field_id.text.length==0){
+        [self showAlertViewWithTitle:@"" description:@"아이디를 확인해주세요"];
+        
+        return;
+    }
+    if(self.field_pw.text.length==0){
+        [self showAlertViewWithTitle:@"" description:@"비밀번호를 확인해주세요"];
         
         return;
     }
@@ -47,11 +53,18 @@
 
         NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         NSLog(@"jsonArray : %@",jsonDic);
-        
+
+        if([[jsonDic valueForKey:@"status"]isEqualToString:kREQUEST_SUCCESS]){
+            [[NSUserDefaults standardUserDefaults] setObject:[jsonDic objectForKey:@"data"] forKey:@"userInfo"];
+            [self.navigationController pushViewController:VIEWCONTROLLER(@"MainViewController") animated:true];
+        }else if([[jsonDic valueForKey:@"status"]isEqualToString:kREQUEST_FAIL]){
+            [self showAlertViewWithTitle:[[jsonDic objectForKey:@"data"] valueForKey:@"title"] description:[[jsonDic objectForKey:@"data"] valueForKey:@"message"]];
+        }
 
     }];
 }
 - (IBAction)pushedRegist:(id)sender {
+    
 }
 
 @end

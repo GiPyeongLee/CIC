@@ -14,4 +14,5 @@ typedef void (^postComplete)(NSData *data, NSURLResponse *response, NSError *err
 
 @interface LKHttpRequest : NSObject
 - (void)postWithURL:(NSString *)url withParams:(NSDictionary *)param compelete:(postComplete)completeBlock;
+- (void)cleanDictionary:(NSMutableDictionary *)dictionary;
 @end

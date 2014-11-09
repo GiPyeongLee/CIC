@@ -31,6 +31,7 @@
 		830BFBB61A0FA8B700F9C036 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBB31A0FA8B700F9C036 /* JASidePanelController.m */; };
 		830BFBB71A0FA8B700F9C036 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBB51A0FA8B700F9C036 /* UIViewController+JASidePanel.m */; };
 		830BFBBC1A0FA99B00F9C036 /* LKSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBBB1A0FA99B00F9C036 /* LKSideViewController.m */; };
+		830BFBBF1A0FB32D00F9C036 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBBE1A0FB32D00F9C036 /* RegistViewController.m */; };
 		8390AE1A1A0B2FDA00C69020 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE191A0B2FDA00C69020 /* res */; };
 		8390AE1C1A0B3D9800C69020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE1B1A0B3D9800C69020 /* Images.xcassets */; };
 		83BAEDAD1A09D16F00776368 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDAC1A09D16F00776368 /* main.m */; };
@@ -104,6 +105,8 @@
 		830BFBB51A0FA8B700F9C036 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
 		830BFBBA1A0FA99B00F9C036 /* LKSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKSideViewController.h; sourceTree = "<group>"; };
 		830BFBBB1A0FA99B00F9C036 /* LKSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKSideViewController.m; sourceTree = "<group>"; };
+		830BFBBD1A0FB32D00F9C036 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
+		830BFBBE1A0FB32D00F9C036 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		8390AE191A0B2FDA00C69020 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		8390AE1B1A0B3D9800C69020 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83BAEDA71A09D16F00776368 /* CIC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,11 +229,13 @@
 			path = JASidePanel;
 			sourceTree = "<group>";
 		};
-		830BFBB81A0FA94200F9C036 /* New Group */ = {
+		830BFBB81A0FA94200F9C036 /* RegistViewController */ = {
 			isa = PBXGroup;
 			children = (
+				830BFBBD1A0FB32D00F9C036 /* RegistViewController.h */,
+				830BFBBE1A0FB32D00F9C036 /* RegistViewController.m */,
 			);
-			name = "New Group";
+			name = RegistViewController;
 			sourceTree = "<group>";
 		};
 		830BFBB91A0FA96B00F9C036 /* LKSideView */ = {
@@ -307,7 +312,7 @@
 				83BAEDD21A09D22200776368 /* Root */,
 				830BFBA91A0F98F500F9C036 /* LoginViewController */,
 				830BFBAA1A0F990500F9C036 /* MainViewController */,
-				830BFBB81A0FA94200F9C036 /* New Group */,
+				830BFBB81A0FA94200F9C036 /* RegistViewController */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -467,6 +472,7 @@
 				830BFBA41A0F903400F9C036 /* UISlider+FlatUI.m in Sources */,
 				83BAEDAD1A09D16F00776368 /* main.m in Sources */,
 				830BFBB71A0FA8B700F9C036 /* UIViewController+JASidePanel.m in Sources */,
+				830BFBBF1A0FB32D00F9C036 /* RegistViewController.m in Sources */,
 				830BFBA71A0F903400F9C036 /* UITableViewCell+FlatUI.m in Sources */,
 				830BFBA61A0F903400F9C036 /* UITabBar+FlatUI.m in Sources */,
 				830BFBA01A0F903300F9C036 /* UIImage+FlatUI.m in Sources */,
