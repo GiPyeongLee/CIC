@@ -1,6 +1,5 @@
-Computer Information Communication Application iOS
-===
 This is Graduation Project, Hongik University, in Republic of Korea.
+2014. 09. ~ 2014. 11.
 ===
 Developed By
 
