@@ -31,4 +31,3 @@ Contact : ahnsohee9089@gmail.com
 성소연 ( So Yun Sung )
 
 Contact : soyeon7890@gmail.com 
->>>>>>> 0ded4ff5b6a85cb8ab260b35ed9f40f3572f3f86
