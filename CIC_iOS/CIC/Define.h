@@ -11,6 +11,7 @@
 
 #pragma mark - LOAD VIEW CONTROLLER FROM STORYBOARD
 #define VIEWCONTROLLER(name) [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:name]
+#define IMAGE(name) [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",name]]
 
 #pragma mark - HTTP REQUEST STATUS CODE
 #define kREQUEST_SUCCESS @"200"
@@ -18,5 +19,6 @@
 
 #pragma mark - URL FLAGS
 #define kURL_MEMBER_LOGIN @"https://cic.hongik.ac.kr/api/login.php"
+#define kURL_MEMBER_JOIN @"https://cic.hongik.ac.kr/api/join.php"
 
 #endif

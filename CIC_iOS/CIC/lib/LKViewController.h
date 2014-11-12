@@ -16,6 +16,9 @@
     CGRect goalFrame;
 }
 - (void)showAlertViewWithTitle:(NSString *)title description:(NSString *)description;
+- (void)showDatePickerView;
+- (NSDate *)getSelectedDate;
+- (void)hideDatePickerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyboardHeight;
 @property (nonatomic,weak) IBOutlet UIScrollView *scrollView;
 @end

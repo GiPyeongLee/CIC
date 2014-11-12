@@ -30,7 +30,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if([[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"]){
-//        [self.navigationController pushViewController:VIEWCONTROLLER(@"MainViewController") animated:true];
+        [self.navigationController pushViewController:VIEWCONTROLLER(@"MainViewController") animated:false];
     }
 
 }
@@ -70,7 +70,7 @@
     if([self.field_pw isFirstResponder])
         [self.field_pw resignFirstResponder];
     
-    [self.navigationController pushViewController:VIEWCONTROLLER(@"RegistViewController") animated:true];
+    [self.navigationController pushViewController:VIEWCONTROLLER(@"AgreementViewController") animated:true];
 }
 
 

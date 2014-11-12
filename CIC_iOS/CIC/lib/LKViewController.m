@@ -11,7 +11,7 @@
 @interface LKViewController () <UITextFieldDelegate>
 {
     BOOL isKeyboardAnimating;
-    
+    UIDatePicker *activeDatePicker;
 }
 
 @end
@@ -148,6 +148,54 @@
 - (IBAction)pushedSideMenu:(id)sender {
     [self.sidePanelController showLeftPanelAnimated:true];
 }
+
+#pragma mark - Custom Methods
+- (void)showDatePickerView{
+    CGFloat width = self.view.frame.size.width;
+     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    [actionSheet.view setBackgroundColor:[UIColor whiteColor]];
+    
+    UIDatePicker *datePicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, 44, width, 426)];
+    [datePicker setDatePickerMode:UIDatePickerModeDate];
+    [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
+    activeDatePicker = datePicker;
+    UIToolbar *pickerDateToolbar = [[UIToolbar alloc]init];
+    pickerDateToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, width, 44)];
+    pickerDateToolbar.barStyle = UIBarStyleBlackOpaque;
+    [pickerDateToolbar sizeToFit];
+    
+    NSMutableArray *barItems = [[NSMutableArray alloc] init];
+    
+    UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    [barItems addObject:flexSpace];
+    
+    UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(datePickerDoneClick)];
+    [barItems addObject:doneBtn];
+    
+    [pickerDateToolbar setItems:barItems animated:YES];
+    
+    [actionSheet.view addSubview:pickerDateToolbar];
+    [actionSheet.view addSubview:datePicker];
+    [self presentViewController:actionSheet animated:YES completion:^{
+        [UIView animateWithDuration:0.5f animations:^{
+            [actionSheet.view setBounds:CGRectMake(0,0, width, 470)];
+            [datePicker sizeToFit];
+
+        }];
+    }];
+}
+- (NSDate *)getSelectedDate{
+    if(activeDatePicker)
+        return [activeDatePicker date];
+    else
+        return [NSDate date];
+}
+- (void)hideDatePickerView{
+    [self dismissViewControllerAnimated:true completion:^{
+        activeDatePicker = nil;
+    }];
+}
+
 
 /*
  #pragma mark - Navigation

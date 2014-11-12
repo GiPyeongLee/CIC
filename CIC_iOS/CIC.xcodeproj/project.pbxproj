@@ -42,6 +42,10 @@
 		83BAEDC71A09D16F00776368 /* CICTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDC61A09D16F00776368 /* CICTests.m */; };
 		83BAEDD81A09D9A400776368 /* LKHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDD71A09D9A400776368 /* LKHttpRequest.m */; };
 		83C2C92E1A0B432E00FD292B /* LKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C2C92D1A0B432E00FD292B /* LKViewController.m */; };
+		83C6FB551A13A154003CD71B /* AgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C6FB541A13A154003CD71B /* AgreementViewController.m */; };
+		83C6FB581A13A6F9003CD71B /* AgreementContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C6FB571A13A6F9003CD71B /* AgreementContentsViewController.m */; };
+		83C6FB5C1A13ABF7003CD71B /* agreement_2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C6FB5B1A13ABF7003CD71B /* agreement_2.txt */; };
+		83C6FB5E1A13AC7D003CD71B /* agreement_1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C6FB5D1A13AC7D003CD71B /* agreement_1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +129,12 @@
 		83BAEDD71A09D9A400776368 /* LKHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKHttpRequest.m; sourceTree = "<group>"; };
 		83C2C92C1A0B432E00FD292B /* LKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKViewController.h; sourceTree = "<group>"; };
 		83C2C92D1A0B432E00FD292B /* LKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKViewController.m; sourceTree = "<group>"; };
+		83C6FB531A13A154003CD71B /* AgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementViewController.h; sourceTree = "<group>"; };
+		83C6FB541A13A154003CD71B /* AgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementViewController.m; sourceTree = "<group>"; };
+		83C6FB561A13A6F9003CD71B /* AgreementContentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementContentsViewController.h; sourceTree = "<group>"; };
+		83C6FB571A13A6F9003CD71B /* AgreementContentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementContentsViewController.m; sourceTree = "<group>"; };
+		83C6FB5B1A13ABF7003CD71B /* agreement_2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = agreement_2.txt; sourceTree = "<group>"; };
+		83C6FB5D1A13AC7D003CD71B /* agreement_1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = agreement_1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,8 +242,14 @@
 		830BFBB81A0FA94200F9C036 /* RegistViewController */ = {
 			isa = PBXGroup;
 			children = (
+				83C6FB5D1A13AC7D003CD71B /* agreement_1.txt */,
+				83C6FB5B1A13ABF7003CD71B /* agreement_2.txt */,
 				830BFBBD1A0FB32D00F9C036 /* RegistViewController.h */,
 				830BFBBE1A0FB32D00F9C036 /* RegistViewController.m */,
+				83C6FB531A13A154003CD71B /* AgreementViewController.h */,
+				83C6FB541A13A154003CD71B /* AgreementViewController.m */,
+				83C6FB561A13A6F9003CD71B /* AgreementContentsViewController.h */,
+				83C6FB571A13A6F9003CD71B /* AgreementContentsViewController.m */,
 			);
 			name = RegistViewController;
 			sourceTree = "<group>";
@@ -438,8 +454,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83BAEDB61A09D16F00776368 /* Main.storyboard in Resources */,
+				83C6FB5E1A13AC7D003CD71B /* agreement_1.txt in Resources */,
 				8390AE1A1A0B2FDA00C69020 /* res in Resources */,
 				8390AE1C1A0B3D9800C69020 /* Images.xcassets in Resources */,
+				83C6FB5C1A13ABF7003CD71B /* agreement_2.txt in Resources */,
 				83BAEDBB1A09D16F00776368 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +479,7 @@
 				830BFB981A0F903300F9C036 /* FUICellBackgroundView.m in Sources */,
 				830BFB961A0F903300F9C036 /* FUIAlertView.m in Sources */,
 				83BAEDB31A09D16F00776368 /* LoginViewController.m in Sources */,
+				83C6FB581A13A6F9003CD71B /* AgreementContentsViewController.m in Sources */,
 				830BFB9D1A0F903300F9C036 /* UIBarButtonItem+FlatUI.m in Sources */,
 				830BFB9C1A0F903300F9C036 /* FUITextField.m in Sources */,
 				830BFB9E1A0F903300F9C036 /* UIColor+FlatUI.m in Sources */,
@@ -471,6 +490,7 @@
 				83BAEDD81A09D9A400776368 /* LKHttpRequest.m in Sources */,
 				830BFBA41A0F903400F9C036 /* UISlider+FlatUI.m in Sources */,
 				83BAEDAD1A09D16F00776368 /* main.m in Sources */,
+				83C6FB551A13A154003CD71B /* AgreementViewController.m in Sources */,
 				830BFBB71A0FA8B700F9C036 /* UIViewController+JASidePanel.m in Sources */,
 				830BFBBF1A0FB32D00F9C036 /* RegistViewController.m in Sources */,
 				830BFBA71A0F903400F9C036 /* UITableViewCell+FlatUI.m in Sources */,
@@ -611,7 +631,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CIC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -623,7 +643,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CIC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
