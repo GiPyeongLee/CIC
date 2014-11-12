@@ -9,5 +9,8 @@
 #import "RegistViewController.h"
 
 @implementation RegistViewController
+- (void)viewDidLoad{
+    [self.scrollView setContentSize:self.scrollView.frame.size];
+}
 
 @end

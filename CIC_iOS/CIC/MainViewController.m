@@ -15,8 +15,6 @@
     [super viewDidLoad];
 }
 
-- (IBAction)pushedSideMenu:(id)sender {
-    [self.sidePanelController showLeftPanelAnimated:true];
-}
+
 
 @end

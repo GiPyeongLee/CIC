@@ -20,7 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
+    self.sidePanelController.allowLeftSwipe =false;
+    [self.scrollView setContentSize:self.view.frame.size];
     // Do any additional setup after loading the view, typically from a nib.
     self.request = [[LKHttpRequest alloc]init];
 
@@ -29,7 +30,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if([[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"]){
-        [self.navigationController pushViewController:VIEWCONTROLLER(@"MainViewController") animated:true];
+//        [self.navigationController pushViewController:VIEWCONTROLLER(@"MainViewController") animated:true];
     }
 
 }
@@ -64,7 +65,14 @@
     }];
 }
 - (IBAction)pushedRegist:(id)sender {
+    if([self.field_id isFirstResponder])
+        [self.field_id resignFirstResponder];
+    if([self.field_pw isFirstResponder])
+        [self.field_pw resignFirstResponder];
     
+    [self.navigationController pushViewController:VIEWCONTROLLER(@"RegistViewController") animated:true];
 }
+
+
 
 @end

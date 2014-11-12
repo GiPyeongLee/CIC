@@ -32,7 +32,7 @@
 
 - (void)postWithURL:(NSString *)url withParams:(NSDictionary *)param compelete:(postComplete)completeBlock
 {
-
+    
     NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     NSMutableString *paramStr = @"".mutableCopy;
     [param enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
@@ -43,15 +43,15 @@
     [urlRequest setHTTPBody:[paramStr dataUsingEncoding:NSUTF8StringEncoding]];
     
     NSURLSessionDataTask * dataTask =[self.session dataTaskWithRequest:urlRequest
-                                                       completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                           if(error == nil)
-                                                           {
-                                                               completeBlock(data,response,error);
-                                                           }else{
-                                                               NSLog(@"%s \n%@",__FUNCTION__,error);
-                                                           }
-                                                           
-                                                       }];
+                                                     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                         if(error == nil)
+                                                         {
+                                                             completeBlock(data,response,error);
+                                                         }else{
+                                                             NSLog(@"%s \n%@",__FUNCTION__,error);
+                                                         }
+                                                         
+                                                     }];
     [dataTask resume];
 }
 

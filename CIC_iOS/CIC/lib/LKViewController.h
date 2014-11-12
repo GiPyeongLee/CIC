@@ -11,6 +11,11 @@
 #import "FlatUIKit.h"
 #import "JASidePanelController.h"
 #import "UIViewController+JASidePanel.h"
-@interface LKViewController : UIViewController
+@interface LKViewController : UIViewController{
+    CGRect touchFieldRect;
+    CGRect goalFrame;
+}
 - (void)showAlertViewWithTitle:(NSString *)title description:(NSString *)description;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyboardHeight;
+@property (nonatomic,weak) IBOutlet UIScrollView *scrollView;
 @end
