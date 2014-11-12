@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-Computer Information Communication Application iOS
-=======
-This is Graduation Project, Hongik University, in Republic of Korea.
->>>>>>> 0ded4ff5b6a85cb8ab260b35ed9f40f3572f3f86
-===
-Project Period 
-2014. 09. ~ 2014. 11.
-
-<<<<<<< HEAD
-
-
 Computer Information Commuincation 2014 Graduation Project , Hongik UNIV, Republic of
 =======
+Project Period 
+2014. 09. ~ 2014. 11.
 ===
 Developed By
 
