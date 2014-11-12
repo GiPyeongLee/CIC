@@ -10,6 +10,9 @@
 #define CIC_Define_h
 
 #pragma mark - LOAD VIEW CONTROLLER FROM STORYBOARD
+#define sharedUserInfo(key) [[[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"]valueForKey:key]
+#define RGB(r, g, b) [UIColor colorWithRed:(float)r / 255.0 green:(float)g / 255.0 blue:(float)b / 255.0 alpha:1.0]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:(float)r / 255.0 green:(float)g / 255.0 blue:(float)b / 255.0 alpha:a]
 #define VIEWCONTROLLER(name) [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:name]
 #define IMAGE(name) [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",name]]
 

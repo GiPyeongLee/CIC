@@ -22,8 +22,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     self.viewController = [[JASidePanelController alloc] init];
-    
-    self.viewController.leftPanel = [[LKSideViewController alloc] init];
+
+    self.viewController.leftPanel = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LKSideViewController"];
     self.viewController.centerPanel = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"RootViewController"];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
