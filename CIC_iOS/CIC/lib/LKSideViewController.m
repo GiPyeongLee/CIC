@@ -53,7 +53,7 @@
 - (IBAction)pushedSettingBtn:(id)sender {
 }
 - (IBAction)pushedImageBtn:(id)sender {
-
+    
 }
 
 

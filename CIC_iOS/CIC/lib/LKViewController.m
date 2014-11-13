@@ -19,7 +19,7 @@
 @implementation LKViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
-
+    
     
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -48,75 +48,86 @@
     CGRect keyboardBeginFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
     UIViewAnimationCurve animationCurve = [[[notification userInfo] objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
     NSTimeInterval animationDuration = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] integerValue];
-    
-//    [UIView beginAnimations:nil context:nil];
-//    [UIView setAnimationDuration:animationDuration];
-//    [UIView setAnimationCurve:animationCurve];
-//    
-//    CGRect newFrame = self.view.frame;
-//    CGRect keyboardFrameEnd = [self.view convertRect:keyboardEndFrame toView:nil];
-//    CGRect keyboardFrameBegin = [self.view convertRect:keyboardBeginFrame toView:nil];
-//    
-//    newFrame.size.height -= (keyboardFrameBegin.origin.y - keyboardFrameEnd.origin.y);
-//    self.view.frame = newFrame;
-//
-//    [UIView commitAnimations];
-    [UIView animateWithDuration:animationDuration animations:^{
-        [UIView setAnimationCurve:animationCurve];
-        CGRect newFrame = self.view.frame;
-        CGRect keyboardFrameEnd = [self.view convertRect:keyboardEndFrame toView:nil];
-        CGRect keyboardFrameBegin = [self.view convertRect:keyboardBeginFrame toView:nil];
-        
-        newFrame.size.height -= (keyboardFrameBegin.origin.y - keyboardFrameEnd.origin.y);
-        self.view.frame = newFrame;
-    } completion:^(BOOL finished) {
-        [self.scrollView scrollRectToVisible:CGRectMake(0, touchFieldRect.origin.y, self.scrollView.frame.size.width, self.view.frame.size.height) animated:true];
-        
-    }];
-    
-//    scrollFrame.origin.y += (keyboardFrameBegin.origin.y - keyboardFrameEnd.origin.y);
-//    scrollFrame.size.height -= (keyboardFrameBegin.origin.y - keyboardFrameEnd.origin.y);
-//    self.scrollView.frame = scrollFrame;
-//    [self.scrollView setContentSize:self.view.frame.size];
+    CGRect keyboardFrameEnd = [self.view convertRect:keyboardEndFrame toView:nil];
+    CGRect keyboardFrameBegin = [self.view convertRect:keyboardBeginFrame toView:nil];
 
-//    NSDictionary* info = [notification userInfo];
-//    NSNumber *duration = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
-//    NSNumber *curve = [info objectForKey: UIKeyboardAnimationCurveUserInfoKey];
-//    CGRect kKeyBoardFrame = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-//    CGFloat gap = 50.f;
-//    //352 ,216
-//    // 568
-//    goalFrame = CGRectMake(0, 0,self.view.frame.size.width, kKeyBoardFrame.origin.y);
-//    
-//    if(isKeyboardAnimating==false){
-//        isKeyboardAnimating = true;
-//        //        dispatch_async(dispatch_get_main_queue(), ^{
-//        [self.view setFrame:goalFrame];
-//        self.scrollView.frame=self.view.frame;
-//        [self.scrollView scrollRectToVisible:CGRectMake(0, touchFieldRect.origin.y-gap,self.scrollView.frame.size.width,self.scrollView.frame.size.height) animated:true];
-//        //        });
-//        //            [self.scrollView scrollRectToVisible:CGRectMake(0, touchFieldRect.origin.y-gap,self.scrollView.frame.size.width,self.scrollView.frame.size.height) animated:true];
-//    }else{
-//        NSLog(@"%f",goalFrame.size.height);
-//        [self.view setFrame:goalFrame];
-//        self.scrollView.frame=self.view.frame;
-//        [self.scrollView scrollRectToVisible:CGRectMake(0, touchFieldRect.origin.y-gap,self.scrollView.frame.size.width,self.scrollView.frame.size.height) animated:true];
-//        
-//        //        [UIView animateWithDuration:[duration doubleValue] animations:^{
-//        //            //ANIMATE VALUES HERE
-//        //            [UIView setAnimationCurve:[curve integerValue]];
-//        //            [self.view setFrame:goalFrame];
-//        //        } completion:^(BOOL finished) {
-//        //            [self.scrollView scrollRectToVisible:CGRectMake(0, touchFieldRect.origin.y-gap, self.scrollView.frame.size.width,self.scrollView.frame.size.height) animated:true];
-//        //        }];
-//    }
+
+    [UIView beginAnimations:@"keyboardAnimate" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    [UIView setAnimationCurve:animationCurve];
+    
+    CGRect newFrame = self.view.frame;
+    
+    newFrame.size.height -= (keyboardFrameBegin.origin.y - keyboardFrameEnd.origin.y);
+    
+    self.view.frame = newFrame;
+    
+    
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:@selector(animationFinished:finished:context:)];
+    [UIView commitAnimations];
+    //    [UIView animateWithDuration:animationDuration animations:^{
+    //        [UIView setAnimationCurve:animationCurve];
+    //        CGRect newFrame = self.view.frame;
+    //        CGRect keyboardFrameEnd = [self.view convertRect:keyboardEndFrame toView:nil];
+    //        CGRect keyboardFrameBegin = [self.view convertRect:keyboardBeginFrame toView:nil];
+    //
+    //        newFrame.size.height -= (keyboardFrameBegin.origin.y - keyboardFrameEnd.origin.y);
+    //        self.view.frame = newFrame;
+    //    } completion:^(BOOL finished) {
+    //        [self.scrollView scrollRectToVisible:CGRectMake(0, touchFieldRect.origin.y, self.scrollView.frame.size.width, self.view.frame.size.height) animated:true];
+    //
+    //    }];
+    
+    //    scrollFrame.origin.y += (keyboardFrameBegin.origin.y - keyboardFrameEnd.origin.y);
+    //    scrollFrame.size.height -= (keyboardFrameBegin.origin.y - keyboardFrameEnd.origin.y);
+    //    self.scrollView.frame = scrollFrame;
+    //    [self.scrollView setContentSize:self.view.frame.size];
+    
+    //    NSDictionary* info = [notification userInfo];
+    //    NSNumber *duration = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    //    NSNumber *curve = [info objectForKey: UIKeyboardAnimationCurveUserInfoKey];
+    //    CGRect kKeyBoardFrame = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    //    CGFloat gap = 50.f;
+    //    //352 ,216
+    //    // 568
+    //    goalFrame = CGRectMake(0, 0,self.view.frame.size.width, kKeyBoardFrame.origin.y);
+    //
+    //    if(isKeyboardAnimating==false){
+    //        isKeyboardAnimating = true;
+    //        //        dispatch_async(dispatch_get_main_queue(), ^{
+    //        [self.view setFrame:goalFrame];
+    //        self.scrollView.frame=self.view.frame;
+    //        [self.scrollView scrollRectToVisible:CGRectMake(0, touchFieldRect.origin.y-gap,self.scrollView.frame.size.width,self.scrollView.frame.size.height) animated:true];
+    //        //        });
+    //        //            [self.scrollView scrollRectToVisible:CGRectMake(0, touchFieldRect.origin.y-gap,self.scrollView.frame.size.width,self.scrollView.frame.size.height) animated:true];
+    //    }else{
+    //        NSLog(@"%f",goalFrame.size.height);
+    //        [self.view setFrame:goalFrame];
+    //        self.scrollView.frame=self.view.frame;
+    //        [self.scrollView scrollRectToVisible:CGRectMake(0, touchFieldRect.origin.y-gap,self.scrollView.frame.size.width,self.scrollView.frame.size.height) animated:true];
+    //
+    //        //        [UIView animateWithDuration:[duration doubleValue] animations:^{
+    //        //            //ANIMATE VALUES HERE
+    //        //            [UIView setAnimationCurve:[curve integerValue]];
+    //        //            [self.view setFrame:goalFrame];
+    //        //        } completion:^(BOOL finished) {
+    //        //            [self.scrollView scrollRectToVisible:CGRectMake(0, touchFieldRect.origin.y-gap, self.scrollView.frame.size.width,self.scrollView.frame.size.height) animated:true];
+    //        //        }];
+    //    }
+}
+- (void)animationFinished:(NSString *)animationID finished:(BOOL)finished context:(void *)context{
+    if([animationID isEqualToString:@"keyboardAnimate"]){
+    [self.scrollView scrollRectToVisible:CGRectMake(0, touchFieldRect.origin.y, self.scrollView.frame.size.width, touchFieldRect.size.height+self.scrollView.frame.size.height/2) animated:true];
+
+    }
 }
 
 #pragma mark - TextField
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     NSLog(@"%s",__FUNCTION__);
     touchFieldRect = textField.frame;
-
+    
     return true;
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
@@ -152,7 +163,7 @@
 #pragma mark - Custom Methods
 - (void)showDatePickerView{
     CGFloat width = self.view.frame.size.width;
-     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
     [actionSheet.view setBackgroundColor:[UIColor whiteColor]];
     
     UIDatePicker *datePicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, 44, width, 426)];
@@ -180,7 +191,7 @@
         [UIView animateWithDuration:0.5f animations:^{
             [actionSheet.view setBounds:CGRectMake(0,0, width, 470)];
             [datePicker sizeToFit];
-
+            
         }];
     }];
 }

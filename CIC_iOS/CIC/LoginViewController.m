@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.sidePanelController.allowLeftSwipe =false;
     [self.scrollView setContentSize:self.view.frame.size];
     // Do any additional setup after loading the view, typically from a nib.
@@ -30,7 +29,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if([[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"]){
-        [self.navigationController pushViewController:VIEWCONTROLLER(@"MainViewController") animated:false];
+//        [self.navigationController pushViewController:VIEWCONTROLLER(@"MainViewController") animated:false];
     }
 
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hBI-00-SFY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hBI-00-SFY">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -114,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7V0-14-M3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-85" y="-697"/>
+            <point key="canvasLocation" x="-45.333333333333336" y="-659.82666666666671"/>
         </scene>
         <!--Agreement View Controller-->
         <scene sceneID="nu9-tT-UgF">
@@ -219,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6q-bS-fbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="-689"/>
+            <point key="canvasLocation" x="320" y="-660"/>
         </scene>
         <!--Agreement Contents View Controller-->
         <scene sceneID="HXq-WQ-9U7">
@@ -268,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9d-im-DXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="-1320"/>
+            <point key="canvasLocation" x="9" y="-1331"/>
         </scene>
         <!--Regist View Controller-->
         <scene sceneID="YHu-TV-ShP">
@@ -319,7 +318,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hc6-g9-GLe">
                                                 <rect key="frame" x="42" y="135" width="236" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="FPq-ZT-UKP" id="PyM-3Y-2E7"/>
                                                 </connections>
@@ -327,23 +326,23 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 확인" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LLa-K6-ATJ">
                                                 <rect key="frame" x="42" y="188" width="236" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="FPq-ZT-UKP" id="9Dn-C8-5dC"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEp-tP-Pwc">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일(admin@mail.com)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEp-tP-Pwc">
                                                 <rect key="frame" x="42" y="241" width="236" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="FPq-ZT-UKP" id="Tm8-C4-6oL"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="핸드폰 번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5J1-be-jKP">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="핸드폰 번호 (010-1234-5678)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5J1-be-jKP">
                                                 <rect key="frame" x="42" y="294" width="236" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="FPq-ZT-UKP" id="Ftf-e0-7KM"/>
                                                 </connections>
@@ -429,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CqG-Ra-KoG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="631" y="-689"/>
+            <point key="canvasLocation" x="336.5333333333333" y="-652.25333333333333"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -446,7 +445,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pV1-3P-HRt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKz-yR-KXB" customClass="LKView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKz-yR-KXB" customClass="LKView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="533-M9-ANx">
@@ -496,19 +495,21 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="GKz-yR-KXB" secondAttribute="centerX" id="5DR-Pt-oHi"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="pV1-3P-HRt" secondAttribute="bottom" id="Umg-V3-wiZ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="pV1-3P-HRt" secondAttribute="bottom" id="7Kd-8R-KFK"/>
+                            <constraint firstItem="pV1-3P-HRt" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="A04-LD-sw1"/>
                             <constraint firstItem="pV1-3P-HRt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="ZWq-hE-xV1"/>
-                            <constraint firstItem="pV1-3P-HRt" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="xdn-3f-frz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pV1-3P-HRt" secondAttribute="trailing" constant="-16" id="xx4-Lv-vJL"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="qOa-20-dgb"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="field_id" destination="H4b-4Y-oMq" id="Qan-og-H7y"/>
                         <outlet property="field_pw" destination="Eti-sp-l7D" id="g1J-JS-idi"/>
@@ -517,7 +518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="631" y="-9"/>
+            <point key="canvasLocation" x="24" y="-15"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="1fp-OV-OZF">
@@ -538,7 +539,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1E-fw-l8R">
-                                        <rect key="frame" x="15" y="25" width="30" height="30"/>
+                                        <rect key="frame" x="7" y="14" width="42" height="47"/>
                                         <state key="normal" image="icon_menu.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -628,7 +629,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Vc-j6-qdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="-9"/>
+            <point key="canvasLocation" x="369" y="-15"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k6X-kb-2Yz">
@@ -646,7 +647,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11J-UY-mRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="197" y="-9"/>
+            <point key="canvasLocation" x="-314" y="-15"/>
         </scene>
     </scenes>
     <resources>
@@ -688,4 +689,9 @@
         <image name="navi_signup" width="320" height="68"/>
         <image name="noimage" width="100" height="100"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
