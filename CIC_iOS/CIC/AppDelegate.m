@@ -19,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 네트워크 로딩 인디케이터 보여주기
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     self.viewController = [[JASidePanelController alloc] init];

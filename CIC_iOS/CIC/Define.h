@@ -23,5 +23,6 @@
 #pragma mark - URL FLAGS
 #define kURL_MEMBER_LOGIN @"https://cic.hongik.ac.kr/api/login.php"
 #define kURL_MEMBER_JOIN @"https://cic.hongik.ac.kr/api/join.php"
+#define kURL_MEMBER_UPLOAD_PROFILE @"https://cic.hongik.ac.kr/api/upload_profile.php"
 
 #endif

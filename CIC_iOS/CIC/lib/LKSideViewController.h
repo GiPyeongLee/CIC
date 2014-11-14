@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LKSideViewController : UIViewController
-
+- (void)refreshInfo;
 @end

@@ -32,6 +32,7 @@
 		830BFBB71A0FA8B700F9C036 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBB51A0FA8B700F9C036 /* UIViewController+JASidePanel.m */; };
 		830BFBBC1A0FA99B00F9C036 /* LKSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBBB1A0FA99B00F9C036 /* LKSideViewController.m */; };
 		830BFBBF1A0FB32D00F9C036 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBBE1A0FB32D00F9C036 /* RegistViewController.m */; };
+		83807F1B1A15A9B800071612 /* UIImage+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 83807F1A1A15A9B800071612 /* UIImage+Async.m */; };
 		8390AE1A1A0B2FDA00C69020 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE191A0B2FDA00C69020 /* res */; };
 		8390AE1C1A0B3D9800C69020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE1B1A0B3D9800C69020 /* Images.xcassets */; };
 		83BAEDAD1A09D16F00776368 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDAC1A09D16F00776368 /* main.m */; };
@@ -46,6 +47,7 @@
 		83C6FB581A13A6F9003CD71B /* AgreementContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C6FB571A13A6F9003CD71B /* AgreementContentsViewController.m */; };
 		83C6FB5C1A13ABF7003CD71B /* agreement_2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C6FB5B1A13ABF7003CD71B /* agreement_2.txt */; };
 		83C6FB5E1A13AC7D003CD71B /* agreement_1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C6FB5D1A13AC7D003CD71B /* agreement_1.txt */; };
+		83C6FB611A14F4BE003CD71B /* LKProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C6FB601A14F4BE003CD71B /* LKProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		830BFBBB1A0FA99B00F9C036 /* LKSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKSideViewController.m; sourceTree = "<group>"; };
 		830BFBBD1A0FB32D00F9C036 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		830BFBBE1A0FB32D00F9C036 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		83807F191A15A9B800071612 /* UIImage+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Async.h"; sourceTree = "<group>"; };
+		83807F1A1A15A9B800071612 /* UIImage+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Async.m"; sourceTree = "<group>"; };
 		8390AE191A0B2FDA00C69020 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		8390AE1B1A0B3D9800C69020 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83BAEDA71A09D16F00776368 /* CIC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +139,8 @@
 		83C6FB571A13A6F9003CD71B /* AgreementContentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementContentsViewController.m; sourceTree = "<group>"; };
 		83C6FB5B1A13ABF7003CD71B /* agreement_2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = agreement_2.txt; sourceTree = "<group>"; };
 		83C6FB5D1A13AC7D003CD71B /* agreement_1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = agreement_1.txt; sourceTree = "<group>"; };
+		83C6FB5F1A14F4BE003CD71B /* LKProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKProgressView.h; sourceTree = "<group>"; };
+		83C6FB601A14F4BE003CD71B /* LKProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +269,15 @@
 			name = LKSideView;
 			sourceTree = "<group>";
 		};
+		83807F181A15A83600071612 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				83807F191A15A9B800071612 /* UIImage+Async.h */,
+				83807F1A1A15A9B800071612 /* UIImage+Async.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		83BAED9E1A09D16F00776368 = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +360,7 @@
 		83BAEDD41A09D28B00776368 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				83807F181A15A83600071612 /* Category */,
 				830BFBB91A0FA96B00F9C036 /* LKSideView */,
 				830BFBB11A0FA8B700F9C036 /* JASidePanel */,
 				830BFB6E1A0F903300F9C036 /* FlatKit */,
@@ -360,6 +376,8 @@
 			children = (
 				83BAEDD61A09D9A400776368 /* LKHttpRequest.h */,
 				83BAEDD71A09D9A400776368 /* LKHttpRequest.m */,
+				83C6FB5F1A14F4BE003CD71B /* LKProgressView.h */,
+				83C6FB601A14F4BE003CD71B /* LKProgressView.m */,
 			);
 			name = LKHTTPRequest;
 			sourceTree = "<group>";
@@ -489,6 +507,7 @@
 				83C2C92E1A0B432E00FD292B /* LKViewController.m in Sources */,
 				830BFB9A1A0F903300F9C036 /* FUISegmentedControl.m in Sources */,
 				83BAEDD81A09D9A400776368 /* LKHttpRequest.m in Sources */,
+				83C6FB611A14F4BE003CD71B /* LKProgressView.m in Sources */,
 				830BFBA41A0F903400F9C036 /* UISlider+FlatUI.m in Sources */,
 				83BAEDAD1A09D16F00776368 /* main.m in Sources */,
 				83C6FB551A13A154003CD71B /* AgreementViewController.m in Sources */,
@@ -504,6 +523,7 @@
 				830BFB9B1A0F903300F9C036 /* FUISwitch.m in Sources */,
 				830BFBA21A0F903400F9C036 /* UIPopoverController+FlatUI.m in Sources */,
 				830BFB991A0F903300F9C036 /* FUIPopoverBackgroundView.m in Sources */,
+				83807F1B1A15A9B800071612 /* UIImage+Async.m in Sources */,
 				830BFBA11A0F903400F9C036 /* UINavigationBar+FlatUI.m in Sources */,
 				830BFBB61A0FA8B700F9C036 /* JASidePanelController.m in Sources */,
 				830BFB971A0F903300F9C036 /* FUIButton.m in Sources */,

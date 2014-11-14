@@ -7,7 +7,7 @@
 //
 
 #import "LKViewController.h"
-
+#import "LKSideViewController.h"
 @interface LKViewController () <UITextFieldDelegate>
 {
     BOOL isKeyboardAnimating;
@@ -158,6 +158,7 @@
 }
 - (IBAction)pushedSideMenu:(id)sender {
     [self.sidePanelController showLeftPanelAnimated:true];
+    [(LKSideViewController *)self.sidePanelController.leftPanel refreshInfo];
 }
 
 #pragma mark - Custom Methods
