@@ -27,7 +27,10 @@
         self.request = [[LKHttpRequest alloc]init];
         self.request.delegate =self;
     }
-
+    [UIImage loadFromURL:[NSURL URLWithString:sharedUserInfo(@"profile_img")] callback:^(UIImage *image) {
+        
+        self.img_profile.image = image;
+    }];
     self.img_profile.layer.cornerRadius = 25.0f;
     self.img_profile.layer.masksToBounds = true;
     [self.label_name setText:sharedUserInfo(@"name")];
@@ -38,10 +41,7 @@
     
 }
 - (void)refreshInfo{
-    [UIImage loadFromURL:[NSURL URLWithString:sharedUserInfo(@"profile_img")] callback:^(UIImage *image) {
-
-            self.img_profile.image = image;
-    }];
+   
 }
 #pragma mark - Button Actions
 

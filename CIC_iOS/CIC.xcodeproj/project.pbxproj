@@ -32,6 +32,9 @@
 		830BFBB71A0FA8B700F9C036 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBB51A0FA8B700F9C036 /* UIViewController+JASidePanel.m */; };
 		830BFBBC1A0FA99B00F9C036 /* LKSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBBB1A0FA99B00F9C036 /* LKSideViewController.m */; };
 		830BFBBF1A0FB32D00F9C036 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBBE1A0FB32D00F9C036 /* RegistViewController.m */; };
+		833286561A1911CD0095A0DE /* LKSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 833286551A1911CD0095A0DE /* LKSegmentControl.m */; };
+		8332865A1A1914EB0095A0DE /* LKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 833286591A1914EB0095A0DE /* LKButton.m */; };
+		836962B61A1910A1009BC7AC /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836962B51A1910A1009BC7AC /* IntroViewController.m */; };
 		83807F1B1A15A9B800071612 /* UIImage+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 83807F1A1A15A9B800071612 /* UIImage+Async.m */; };
 		8390AE1A1A0B2FDA00C69020 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE191A0B2FDA00C69020 /* res */; };
 		8390AE1C1A0B3D9800C69020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE1B1A0B3D9800C69020 /* Images.xcassets */; };
@@ -113,6 +116,12 @@
 		830BFBBB1A0FA99B00F9C036 /* LKSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKSideViewController.m; sourceTree = "<group>"; };
 		830BFBBD1A0FB32D00F9C036 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		830BFBBE1A0FB32D00F9C036 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		833286541A1911CD0095A0DE /* LKSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKSegmentControl.h; sourceTree = "<group>"; };
+		833286551A1911CD0095A0DE /* LKSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKSegmentControl.m; sourceTree = "<group>"; };
+		833286581A1914EB0095A0DE /* LKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKButton.h; sourceTree = "<group>"; };
+		833286591A1914EB0095A0DE /* LKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKButton.m; sourceTree = "<group>"; };
+		836962B41A1910A1009BC7AC /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		836962B51A1910A1009BC7AC /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		83807F191A15A9B800071612 /* UIImage+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Async.h"; sourceTree = "<group>"; };
 		83807F1A1A15A9B800071612 /* UIImage+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Async.m"; sourceTree = "<group>"; };
 		8390AE191A0B2FDA00C69020 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
@@ -269,6 +278,33 @@
 			name = LKSideView;
 			sourceTree = "<group>";
 		};
+		833286531A1911A20095A0DE /* LKSegementControl */ = {
+			isa = PBXGroup;
+			children = (
+				833286541A1911CD0095A0DE /* LKSegmentControl.h */,
+				833286551A1911CD0095A0DE /* LKSegmentControl.m */,
+			);
+			name = LKSegementControl;
+			sourceTree = "<group>";
+		};
+		833286571A1914C90095A0DE /* LKButton */ = {
+			isa = PBXGroup;
+			children = (
+				833286581A1914EB0095A0DE /* LKButton.h */,
+				833286591A1914EB0095A0DE /* LKButton.m */,
+			);
+			name = LKButton;
+			sourceTree = "<group>";
+		};
+		836962B31A19108E009BC7AC /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				836962B41A1910A1009BC7AC /* IntroViewController.h */,
+				836962B51A1910A1009BC7AC /* IntroViewController.m */,
+			);
+			name = Intro;
+			sourceTree = "<group>";
+		};
 		83807F181A15A83600071612 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +387,7 @@
 				830BFBA91A0F98F500F9C036 /* LoginViewController */,
 				830BFBAA1A0F990500F9C036 /* MainViewController */,
 				830BFBB81A0FA94200F9C036 /* RegistViewController */,
+				836962B31A19108E009BC7AC /* Intro */,
 				83807F1C1A15B43700071612 /* BoardViewController */,
 			);
 			name = src;
@@ -368,6 +405,8 @@
 		83BAEDD41A09D28B00776368 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				833286571A1914C90095A0DE /* LKButton */,
+				833286531A1911A20095A0DE /* LKSegementControl */,
 				83807F181A15A83600071612 /* Category */,
 				830BFBB91A0FA96B00F9C036 /* LKSideView */,
 				830BFBB11A0FA8B700F9C036 /* JASidePanel */,
@@ -507,6 +546,7 @@
 				830BFB961A0F903300F9C036 /* FUIAlertView.m in Sources */,
 				83BAEDB31A09D16F00776368 /* LoginViewController.m in Sources */,
 				83C6FB581A13A6F9003CD71B /* AgreementContentsViewController.m in Sources */,
+				833286561A1911CD0095A0DE /* LKSegmentControl.m in Sources */,
 				830BFB9D1A0F903300F9C036 /* UIBarButtonItem+FlatUI.m in Sources */,
 				830BFB9C1A0F903300F9C036 /* FUITextField.m in Sources */,
 				830BFB9E1A0F903300F9C036 /* UIColor+FlatUI.m in Sources */,
@@ -537,6 +577,8 @@
 				830BFB971A0F903300F9C036 /* FUIButton.m in Sources */,
 				830BFB6C1A0F7CAD00F9C036 /* LKView.m in Sources */,
 				830BFB9F1A0F903300F9C036 /* UIFont+FlatUI.m in Sources */,
+				8332865A1A1914EB0095A0DE /* LKButton.m in Sources */,
+				836962B61A1910A1009BC7AC /* IntroViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,7 +707,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "69931e38-45a1-4b20-a8a6-bdaf4deb18c9";
 			};
 			name = Debug;
 		};
@@ -680,7 +722,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "69931e38-45a1-4b20-a8a6-bdaf4deb18c9";
 			};
 			name = Release;
 		};

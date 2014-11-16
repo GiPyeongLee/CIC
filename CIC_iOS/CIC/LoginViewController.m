@@ -49,7 +49,8 @@
         
         return;
     }
-    [self.request postWithURL:kURL_MEMBER_LOGIN withParams:@{@"user_id":self.field_id.text,@"user_pw":self.field_pw.text} compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
+
+    [self.request postWithURL:kURL_MEMBER_LOGIN withParams:@{@"user_id":self.field_id.text,@"user_pw":self.field_pw.text,@"device_token":sharedPref(@"device_token")} compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
 
         NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         NSLog(@"jsonArray : %@",jsonDic);

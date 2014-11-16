@@ -10,6 +10,7 @@
 #define CIC_Define_h
 
 #pragma mark - LOAD VIEW CONTROLLER FROM STORYBOARD
+#define sharedPref(key) [[NSUserDefaults standardUserDefaults] valueForKey:key]
 #define sharedUserInfo(key) [[[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"]valueForKey:key]
 #define RGB(r, g, b) [UIColor colorWithRed:(float)r / 255.0 green:(float)g / 255.0 blue:(float)b / 255.0 alpha:1.0]
 #define RGBA(r, g, b, a) [UIColor colorWithRed:(float)r / 255.0 green:(float)g / 255.0 blue:(float)b / 255.0 alpha:a]
@@ -24,5 +25,24 @@
 #define kURL_MEMBER_LOGIN @"https://cic.hongik.ac.kr/api/login.php"
 #define kURL_MEMBER_JOIN @"https://cic.hongik.ac.kr/api/join.php"
 #define kURL_MEMBER_UPLOAD_PROFILE @"https://cic.hongik.ac.kr/api/upload_profile.php"
+
+#pragma mark - LKButtonType
+typedef enum {
+    LKButtonTypeWhite =0,
+    LKButtonTypeOrange,
+    LKButtonTypeOrangeRound,
+    LKButtonTypeNavi,
+    LKButtonTypeGray
+} LKButtonType;
+
+#pragma mark - LKSegmentControlType
+typedef enum {
+    LKSegmentTypeIntro =0,
+    LKSegmentTypeBoard,
+    LKSegmentTypeRental
+} LKSegmentControlType;
+
+#define kLKSegIntroTitle @[@"인사말",@"소개",@"구성원"]
+
 
 #endif
