@@ -278,6 +278,13 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
+		83807F1C1A15B43700071612 /* BoardViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BoardViewController;
+			sourceTree = "<group>";
+		};
 		83BAED9E1A09D16F00776368 = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +351,7 @@
 				830BFBA91A0F98F500F9C036 /* LoginViewController */,
 				830BFBAA1A0F990500F9C036 /* MainViewController */,
 				830BFBB81A0FA94200F9C036 /* RegistViewController */,
+				83807F1C1A15B43700071612 /* BoardViewController */,
 			);
 			name = src;
 			sourceTree = "<group>";
