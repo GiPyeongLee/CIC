@@ -9,5 +9,5 @@
 #import "LKViewController.h"
 
 @interface IntroViewController : LKViewController
-
+- (void)setupSelectedSegement:(NSInteger)index withData:(NSDictionary *)data;
 @end

@@ -12,6 +12,7 @@
 #import "LKHttpRequest.h"
 #import "Define.h"
 #import "UIImage+Async.h"
+#import "IntroViewController.h"
 @interface LKSideViewController() <UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,LKHttpRequestDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *img_profile;
 @property (weak, nonatomic) IBOutlet UILabel *label_name;
@@ -50,6 +51,18 @@
 }
 // CIC 인사말 및 안내
 - (IBAction)pushedIntroBtn:(id)sender {
+    [self.request postWithURL:kURL_GREETING withParams:nil compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        IntroViewController *VC = (IntroViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"IntroViewController"];
+        
+        [VC setupSelectedSegement:[sender tag]withData:jsonDic];
+        [self.sidePanelController toggleLeftPanel:nil];
+        [(UINavigationController *)self.sidePanelController.centerPanel pushViewController:VC animated:false];
+
+        
+    }];
+
 }
 // Board 게시판
 - (IBAction)pushedBoardBtn:(id)sender {

@@ -8,14 +8,85 @@
 
 #import "LKSegmentControl.h"
 #import "Define.h"
-#define kIMAGE_TAP @"btn_tap"
-#define kIMAGE_UNTAP @"btn_untap"
+#define kINTRO_IMAGE_UNTAP @[@"btn_greeting_untap",@"btn_intro_untap",@"btn_member_untap"]
+#define kINTRO_IMAGE_TAP @[@"btn_greeting_tap",@"btn_intro_tap",@"btn_member_tap"]
 @implementation LKSegmentControl
--(id)initWithFrame:(CGRect)frame withType:(LKSegmentControlType)type{
-    self = [super initWithFrame:frame];
-    if(self){
+@synthesize delegate;
 
+//-(id)initWithFrame:(CGRect)frame withType:(LKSegmentControlType)type{
+//    self = [super initWithFrame:frame];
+//    if(self){
+//        switch (type) {
+//            case LKSegmentTypeIntro:
+//            {
+//                float width = frame.size.width/[kLKSegIntroTitle count];
+//                float offsetX = 0.f;
+//                for (int i=0; [kLKSegIntroTitle count]; i++) {
+//                    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+//                    [btn setBackgroundImage:IMAGE(@"btn_untap") forState:UIControlStateNormal];
+//                    [btn setBackgroundImage:IMAGE(@"btn_tap") forState:UIControlStateSelected];
+//                    [btn setTitle:[kLKSegIntroTitle objectAtIndex:i] forState:UIControlStateNormal];
+//                    [btn setTitle:[kLKSegIntroTitle objectAtIndex:i] forState:UIControlStateSelected];
+//                    [btn setTitleColor:LKButtonColorNavi forState:UIControlStateNormal];
+//                    [btn setTitleColor:LKButtonColorWhite forState:UIControlStateSelected];
+//                    [btn addTarget:delegate action:@selector(selectedSegment:) forControlEvents:UIControlEventTouchUpInside];
+//                    [btn setTag:i];
+//                    [btn setFrame:CGRectMake(offsetX, 0, width, 40)];
+//                    offsetX+=width;
+//                    [self addSubview:btn];
+//                }
+//                break;
+//            }
+//            default:
+//                break;
+//        }
+//    }
+//    return self;
+//}
+
+- (id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
+    if(self){
+        CGRect frame = self.frame;
+        switch (self.tag) {
+            case LKSegmentTypeIntro:
+            {
+                float width = frame.size.width/[kLKSegIntroTitle count];
+                float offsetX = 0.f;
+                for (int i=0;i<[kLKSegIntroTitle count]; i++) {
+                    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+                    NSString *tapName = kINTRO_IMAGE_TAP[i];
+                    NSString *untapName = kINTRO_IMAGE_UNTAP[i];
+                    [btn setImage:IMAGE(untapName) forState:UIControlStateNormal];
+                    [btn setImage:IMAGE(tapName) forState:UIControlStateSelected];
+                    [btn addTarget:delegate action:@selector(selectedSegment:) forControlEvents:UIControlEventTouchUpInside];
+                    [btn setTag:i];
+                    [btn setFrame:CGRectMake(offsetX, 0, width, frame.size.height)];
+                    offsetX+=width;
+                    [self addSubview:btn];
+                }
+            }
+            default:
+                break;
+        }
     }
     return self;
 }
+- (void)clearSubViews{
+    for (UIButton *btn in self.subviews) {
+        if([btn isKindOfClass:[UIButton class]]){
+            [btn setSelected:false];
+        }
+    }
+}
+- (void)setSelectedIndex:(NSInteger)index{
+    for (UIButton *btn in self.subviews) {
+        if([btn isKindOfClass:[UIButton class]]&&btn.tag==index){
+            [btn setSelected:true];
+        }else{
+            [btn setSelected:false];
+        }
+    }
+}
+
 @end

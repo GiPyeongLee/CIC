@@ -453,7 +453,7 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKx-RT-3g1">
                                                 <rect key="frame" x="0.0" y="508" width="320" height="60"/>
-                                                <state key="normal" image="btn_signup.png">
+                                                <state key="normal" image="btn_signup">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -484,7 +484,7 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf6-SX-y5T">
                                                 <rect key="frame" x="84" y="415" width="152" height="40"/>
-                                                <state key="normal" image="btn_login.png">
+                                                <state key="normal" image="btn_login">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -567,18 +567,27 @@
                                 <state key="normal" image="btn_main_greeting">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushedIntroBtn:" destination="m87-uI-kb9" eventType="touchUpInside" id="aYL-s9-Xtm"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApW-4N-GxD">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApW-4N-GxD">
                                 <rect key="frame" x="111" y="77" width="101" height="117"/>
                                 <state key="normal" image="btn_main_intro">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushedIntroBtn:" destination="m87-uI-kb9" eventType="touchUpInside" id="KKx-55-fUT"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtG-Y3-7LX">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtG-Y3-7LX">
                                 <rect key="frame" x="217" y="77" width="98" height="117"/>
                                 <state key="normal" image="btn_main_member">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushedIntroBtn:" destination="m87-uI-kb9" eventType="touchUpInside" id="WEp-2g-VdJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3G-dk-LLJ">
                                 <rect key="frame" x="5" y="202" width="155" height="95"/>
@@ -646,14 +655,17 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gmw-LL-gSf">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_main_navibar" translatesAutoresizingMaskIntoConstraints="NO" id="9AQ-oR-ZsX">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_navibar" translatesAutoresizingMaskIntoConstraints="NO" id="9AQ-oR-ZsX">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHx-4v-Udx">
                                         <rect key="frame" x="7" y="14" width="42" height="47"/>
                                         <state key="normal" image="icon_back">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="pushedCustomBack:" destination="K7C-E7-ees" eventType="touchUpInside" id="58K-dR-MXl"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCx-c1-hl1">
                                         <rect key="frame" x="139" y="29" width="42" height="21"/>
@@ -664,13 +676,132 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w5U-9X-xEX" customClass="LKSegmentControl">
+                                <rect key="frame" x="0.0" y="64" width="320" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="K7C-E7-ees" id="c8W-tr-u6x"/>
+                                </connections>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="384" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="T6d-Fz-3RW">
+                                <rect key="frame" x="0.0" y="99" width="320" height="469"/>
+                                <color key="backgroundColor" red="0.88235300780000003" green="0.88235300780000003" blue="0.89019614459999996" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="MemberCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberCell" rowHeight="384" id="yfh-dP-Oyj" customClass="MemberCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yfh-dP-Oyj" id="VYg-kS-opS">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5c0-G5-59i">
+                                                    <rect key="frame" x="11" y="12" width="299" height="360"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0g-cW-SeS">
+                                                            <rect key="frame" x="105" y="16" width="57" height="21"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Au-fIF">
+                                                            <rect key="frame" x="105" y="37" width="148" height="21"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hre-JC-LDJ">
+                                                            <rect key="frame" x="10" y="127" width="278" height="57"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="교수" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20L-P6-ZLm">
+                                                            <rect key="frame" x="170" y="19" width="47" height="18"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="연구실" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItY-FV-nkW">
+                                                            <rect key="frame" x="105" y="61" width="47" height="18"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="최종학위" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhZ-yT-ZPZ">
+                                                            <rect key="frame" x="10" y="102" width="49" height="18"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                            <color key="textColor" red="0.96862745100000003" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="deviceRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="전공분야" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzT-QV-Wpe">
+                                                            <rect key="frame" x="10" y="192" width="49" height="18"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                            <color key="textColor" red="0.96862745100000003" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="deviceRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pb-sR-ubn">
+                                                            <rect key="frame" x="156" y="61" width="47" height="18"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_write_input_line" translatesAutoresizingMaskIntoConstraints="NO" id="mIJ-cx-KVA">
+                                                            <rect key="frame" x="10" y="93" width="278" height="1"/>
+                                                        </imageView>
+                                                        <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GnH-cj-Ve4" customClass="LKButton">
+                                                            <rect key="frame" x="100" y="304" width="98" height="30"/>
+                                                            <state key="normal" title="Email 보내기">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="pushedMailBtn:" destination="K7C-E7-ees" eventType="touchUpInside" id="1SA-1R-pH6"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGt-cE-dFg">
+                                                            <rect key="frame" x="10" y="213" width="278" height="57"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwn-zu-JCO">
+                                                            <rect key="frame" x="10" y="8" width="80" height="80"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="containerView" destination="5c0-G5-59i" id="Riz-tu-4Ff"/>
+                                            <outlet property="label_email" destination="EI7-Au-fIF" id="hgo-tJ-9cH"/>
+                                            <outlet property="label_major" destination="rGt-cE-dFg" id="4CS-Im-kbD"/>
+                                            <outlet property="label_name" destination="T0g-cW-SeS" id="huN-5e-Kvi"/>
+                                            <outlet property="label_school" destination="hre-JC-LDJ" id="AwX-M1-LEo"/>
+                                            <outlet property="lable_room" destination="3pb-sR-ubn" id="MqT-OQ-yas"/>
+                                            <outlet property="profile_img" destination="fwn-zu-JCO" id="Z2Q-Ou-NUB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="K7C-E7-ees" id="7BR-3R-4JW"/>
+                                    <outlet property="delegate" destination="K7C-E7-ees" id="fMi-xe-7nN"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_white_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="4DC-FH-uOE">
+                                <rect key="frame" x="0.0" y="488" width="320" height="80"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9zk-O1-tHH"/>
+                    <connections>
+                        <outlet property="m_tableView" destination="T6d-Fz-3RW" id="fbD-rn-0ox"/>
+                        <outlet property="segmentCtrl" destination="w5U-9X-xEX" id="YfH-Xa-gKR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uJ-WS-7Md" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12" y="-15"/>
+            <point key="canvasLocation" x="8" y="-13"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k6X-kb-2Yz">
@@ -694,6 +825,7 @@
     <resources>
         <image name="bg_check" width="28" height="28"/>
         <image name="bg_main_navibar" width="320" height="69"/>
+        <image name="bg_navibar" width="320" height="64"/>
         <image name="bg_none_check" width="28" height="28"/>
         <image name="btn_Sign up" width="155" height="40"/>
         <image name="btn_all_agree" width="155" height="40"/>
@@ -703,7 +835,7 @@
         <image name="btn_drawor_graduation" width="276" height="56"/>
         <image name="btn_drawor_pic" width="276" height="56"/>
         <image name="btn_filter_classname" width="77" height="25"/>
-        <image name="btn_login.png" width="152" height="40"/>
+        <image name="btn_login" width="152" height="40"/>
         <image name="btn_main_councel" width="113" height="77"/>
         <image name="btn_main_free" width="155" height="95"/>
         <image name="btn_main_gellery" width="150" height="95"/>
@@ -715,7 +847,7 @@
         <image name="btn_main_rental" width="113" height="77"/>
         <image name="btn_main_union" width="150" height="95"/>
         <image name="btn_next" width="155" height="40"/>
-        <image name="btn_signup.png" width="320" height="60"/>
+        <image name="btn_signup" width="320" height="60"/>
         <image name="btn_view_contents" width="68" height="28"/>
         <image name="icon_back" width="17" height="17"/>
         <image name="icon_drawor_setting" width="47" height="46"/>
@@ -723,6 +855,7 @@
         <image name="icon_setting.png" width="30" height="30"/>
         <image name="img_drawor_line" width="231" height="1"/>
         <image name="img_drawor_profile.png" width="50" height="50"/>
+        <image name="img_white_gradient" width="320" height="80"/>
         <image name="login_logo.png" width="202" height="73"/>
         <image name="login_write_input_line" width="260" height="1"/>
         <image name="login_write_input_line.png" width="260" height="1"/>

@@ -13,11 +13,95 @@
 -(id)initWithFrame:(CGRect)frame withType:(LKButtonType)type{
     self = [super initWithFrame:frame];
     if(self){
+        NSLog(@"%s",__FUNCTION__);
+        [self.titleLabel setFont:[UIFont fontWithName:@"AppleSDGothicNeo-Medium" size:frame.size.height/3.5]];
+
         switch (type) {
             case LKButtonTypeWhite:{
-                
-                
-                
+                self.backgroundColor = LKButtonColorWhite;
+                break;
+            }
+            case LKButtonTypeGray:{
+                self.backgroundColor = LKButtonColorGray;
+                break;
+            }
+            case LKButtonTypeOrange:{
+                self.backgroundColor = LKButtonColorOrange;
+                break;
+            }
+            case LKButtonTypeOrangeRound :{
+                self.backgroundColor = LKButtonColorOrange;
+                self.layer.cornerRadius = frame.size.height/3.5;
+                self.layer.masksToBounds = true;
+                break;
+            }
+            case LKButtonTypeNavi:{
+                self.backgroundColor = LKButtonColorNavi;
+                break;
+            }
+            case LKButtonTypeNaviRound:{
+                self.backgroundColor = LKButtonColorNavi;
+                self.layer.cornerRadius = frame.size.height/3.5;
+                self.layer.masksToBounds = true;
+                break;
+            }
+            default:
+                break;
+        }
+        
+        
+    }
+    return self;
+}
+- (id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
+    NSLog(@"%s",__FUNCTION__);
+    CGRect frame = self.frame;
+    [self.titleLabel setFont:[UIFont fontWithName:@"AppleSDGothicNeo-Medium" size:frame.size.height/3]];
+    /*
+     LKButtonTypeWhite =0,
+     LKButtonTypeWhiteRound,
+     LKButtonTypeOrange,
+     LKButtonTypeOrangeRound,
+     LKButtonTypeNavi,
+     LKButtonTypeNaviRound,
+     LKButtonTypeGray,
+     LKButtonTypeGrayRound
+     */
+    if(self){
+        switch (self.tag) {
+            case LKButtonTypeWhite:{
+                self.backgroundColor = LKButtonColorWhite;
+                break;
+            }
+            case LKButtonTypeOrange:{
+                self.backgroundColor = LKButtonColorOrange;
+                break;
+            }
+            case LKButtonTypeOrangeRound :{
+                self.backgroundColor = LKButtonColorOrange;
+                self.layer.cornerRadius = frame.size.height/3;
+                self.layer.masksToBounds = true;
+                break;
+            }
+            case LKButtonTypeNavi:{
+                self.backgroundColor = LKButtonColorNavi;
+                break;
+            }
+            case LKButtonTypeNaviRound:{
+                self.backgroundColor = LKButtonColorNavi;
+                self.layer.cornerRadius = frame.size.height/3;
+                self.layer.masksToBounds = true;
+                break;
+            }
+            case LKButtonTypeGray:{
+                self.backgroundColor = LKButtonColorGray;
+                break;
+            }
+            case LKButtonTypeGrayRound:{
+                self.backgroundColor = LKButtonColorGray;
+                self.layer.cornerRadius = frame.size.height/3;
+                self.layer.masksToBounds = true;
                 break;
             }
             default:
@@ -26,4 +110,6 @@
     }
     return self;
 }
+
+
 @end

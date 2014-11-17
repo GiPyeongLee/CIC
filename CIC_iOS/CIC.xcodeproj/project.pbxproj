@@ -32,8 +32,13 @@
 		830BFBB71A0FA8B700F9C036 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBB51A0FA8B700F9C036 /* UIViewController+JASidePanel.m */; };
 		830BFBBC1A0FA99B00F9C036 /* LKSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBBB1A0FA99B00F9C036 /* LKSideViewController.m */; };
 		830BFBBF1A0FB32D00F9C036 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBBE1A0FB32D00F9C036 /* RegistViewController.m */; };
+		831FBE411A1A45AB002F3C36 /* intro.txt in Resources */ = {isa = PBXBuildFile; fileRef = 831FBE401A1A45AB002F3C36 /* intro.txt */; };
+		831FBE431A1A4D77002F3C36 /* professors.json in Resources */ = {isa = PBXBuildFile; fileRef = 831FBE421A1A4D77002F3C36 /* professors.json */; };
 		833286561A1911CD0095A0DE /* LKSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 833286551A1911CD0095A0DE /* LKSegmentControl.m */; };
 		8332865A1A1914EB0095A0DE /* LKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 833286591A1914EB0095A0DE /* LKButton.m */; };
+		8332865E1A1A36DC0095A0DE /* GreetingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8332865D1A1A36DC0095A0DE /* GreetingCell.m */; };
+		833286611A1A43680095A0DE /* IntroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833286601A1A43680095A0DE /* IntroCell.m */; };
+		833286641A1A43700095A0DE /* MemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833286631A1A43700095A0DE /* MemberCell.m */; };
 		836962B61A1910A1009BC7AC /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836962B51A1910A1009BC7AC /* IntroViewController.m */; };
 		83807F1B1A15A9B800071612 /* UIImage+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 83807F1A1A15A9B800071612 /* UIImage+Async.m */; };
 		8390AE1A1A0B2FDA00C69020 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE191A0B2FDA00C69020 /* res */; };
@@ -116,10 +121,18 @@
 		830BFBBB1A0FA99B00F9C036 /* LKSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKSideViewController.m; sourceTree = "<group>"; };
 		830BFBBD1A0FB32D00F9C036 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		830BFBBE1A0FB32D00F9C036 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		831FBE401A1A45AB002F3C36 /* intro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = intro.txt; sourceTree = "<group>"; };
+		831FBE421A1A4D77002F3C36 /* professors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = professors.json; sourceTree = "<group>"; };
 		833286541A1911CD0095A0DE /* LKSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKSegmentControl.h; sourceTree = "<group>"; };
 		833286551A1911CD0095A0DE /* LKSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKSegmentControl.m; sourceTree = "<group>"; };
 		833286581A1914EB0095A0DE /* LKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKButton.h; sourceTree = "<group>"; };
 		833286591A1914EB0095A0DE /* LKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKButton.m; sourceTree = "<group>"; };
+		8332865C1A1A36DC0095A0DE /* GreetingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreetingCell.h; sourceTree = "<group>"; };
+		8332865D1A1A36DC0095A0DE /* GreetingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreetingCell.m; sourceTree = "<group>"; };
+		8332865F1A1A43680095A0DE /* IntroCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroCell.h; sourceTree = "<group>"; };
+		833286601A1A43680095A0DE /* IntroCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroCell.m; sourceTree = "<group>"; };
+		833286621A1A43700095A0DE /* MemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberCell.h; sourceTree = "<group>"; };
+		833286631A1A43700095A0DE /* MemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberCell.m; sourceTree = "<group>"; };
 		836962B41A1910A1009BC7AC /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		836962B51A1910A1009BC7AC /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		83807F191A15A9B800071612 /* UIImage+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Async.h"; sourceTree = "<group>"; };
@@ -296,9 +309,25 @@
 			name = LKButton;
 			sourceTree = "<group>";
 		};
+		8332865B1A1A36B60095A0DE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8332865C1A1A36DC0095A0DE /* GreetingCell.h */,
+				8332865D1A1A36DC0095A0DE /* GreetingCell.m */,
+				8332865F1A1A43680095A0DE /* IntroCell.h */,
+				833286601A1A43680095A0DE /* IntroCell.m */,
+				833286621A1A43700095A0DE /* MemberCell.h */,
+				833286631A1A43700095A0DE /* MemberCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		836962B31A19108E009BC7AC /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				831FBE421A1A4D77002F3C36 /* professors.json */,
+				831FBE401A1A45AB002F3C36 /* intro.txt */,
+				8332865B1A1A36B60095A0DE /* Cell */,
 				836962B41A1910A1009BC7AC /* IntroViewController.h */,
 				836962B51A1910A1009BC7AC /* IntroViewController.m */,
 			);
@@ -523,6 +552,8 @@
 				83C6FB5E1A13AC7D003CD71B /* agreement_1.txt in Resources */,
 				8390AE1A1A0B2FDA00C69020 /* res in Resources */,
 				8390AE1C1A0B3D9800C69020 /* Images.xcassets in Resources */,
+				831FBE411A1A45AB002F3C36 /* intro.txt in Resources */,
+				831FBE431A1A4D77002F3C36 /* professors.json in Resources */,
 				83C6FB5C1A13ABF7003CD71B /* agreement_2.txt in Resources */,
 				83BAEDBB1A09D16F00776368 /* LaunchScreen.xib in Resources */,
 			);
@@ -570,15 +601,18 @@
 				830BFBA51A0F903400F9C036 /* UIStepper+FlatUI.m in Sources */,
 				830BFB9B1A0F903300F9C036 /* FUISwitch.m in Sources */,
 				830BFBA21A0F903400F9C036 /* UIPopoverController+FlatUI.m in Sources */,
+				8332865E1A1A36DC0095A0DE /* GreetingCell.m in Sources */,
 				830BFB991A0F903300F9C036 /* FUIPopoverBackgroundView.m in Sources */,
 				83807F1B1A15A9B800071612 /* UIImage+Async.m in Sources */,
 				830BFBA11A0F903400F9C036 /* UINavigationBar+FlatUI.m in Sources */,
 				830BFBB61A0FA8B700F9C036 /* JASidePanelController.m in Sources */,
 				830BFB971A0F903300F9C036 /* FUIButton.m in Sources */,
 				830BFB6C1A0F7CAD00F9C036 /* LKView.m in Sources */,
+				833286611A1A43680095A0DE /* IntroCell.m in Sources */,
 				830BFB9F1A0F903300F9C036 /* UIFont+FlatUI.m in Sources */,
 				8332865A1A1914EB0095A0DE /* LKButton.m in Sources */,
 				836962B61A1910A1009BC7AC /* IntroViewController.m in Sources */,
+				833286641A1A43700095A0DE /* MemberCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
