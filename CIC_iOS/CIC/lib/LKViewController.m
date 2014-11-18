@@ -154,6 +154,11 @@
 #pragma mark - IBOutlet
 
 - (IBAction)pushedBackBtn:(id)sender {
+    [UIView beginAnimations:nil context:nil];
+    [sender setAlpha:0.0f];
+    [sender setFrame:CGRectZero];
+    [UIView setAnimationDuration:0.1f];
+    [UIView commitAnimations];
     [self.navigationController popViewControllerAnimated:true];
 }
 - (IBAction)pushedSideMenu:(id)sender {

@@ -51,16 +51,6 @@
     
     [self.segmentCtrl setSelectedIndex:selectedIndex];
     
-    if(selectedIndex==0){
-        
-    }
-    else if(selectedIndex==1){
-        
-    }
-    else if(selectedIndex==2){
-        
-    }
-    
 }
 
 - (void)selectedSegment:(id)sender
@@ -222,16 +212,14 @@
         MemberCell *cell = (MemberCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.containerView.layer.cornerRadius = 14.f;
-//        if (cell == nil) {
-//            cell = [[MemberCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-            NSString *path = [[[dataDic objectForKey:@"members"] objectAtIndex:indexPaths.row] valueForKey:@"img"];
-            [cell.profile_img setImage:IMAGE(path)];
-            cell.label_name.text = [[[dataDic objectForKey:@"members"] objectAtIndex:indexPaths.row] valueForKey:@"name"];
-            cell.label_email.text = [[[dataDic objectForKey:@"members"] objectAtIndex:indexPaths.row] valueForKey:@"email"];
-            cell.label_school.text = [[[dataDic objectForKey:@"members"] objectAtIndex:indexPaths.row] valueForKey:@"school"];
-            cell.label_major.text = [[[dataDic objectForKey:@"members"] objectAtIndex:indexPaths.row] valueForKey:@"major"];
-//        }
-        // Just want to test, so I hardcode the data
+
+        NSString *path = [[[dataDic objectForKey:@"members"] objectAtIndex:indexPaths.row] valueForKey:@"img"];
+        [cell.profile_img setImage:IMAGE(path)];
+        cell.label_name.text = [[[dataDic objectForKey:@"members"] objectAtIndex:indexPaths.row] valueForKey:@"name"];
+        cell.label_email.text = [[[dataDic objectForKey:@"members"] objectAtIndex:indexPaths.row] valueForKey:@"email"];
+        cell.label_school.text = [[[dataDic objectForKey:@"members"] objectAtIndex:indexPaths.row] valueForKey:@"school"];
+        cell.label_major.text = [[[dataDic objectForKey:@"members"] objectAtIndex:indexPaths.row] valueForKey:@"major"];
+
         return cell;
     }
     

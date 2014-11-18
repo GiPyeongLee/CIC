@@ -16,6 +16,7 @@
 #define RGBA(r, g, b, a) [UIColor colorWithRed:(float)r / 255.0 green:(float)g / 255.0 blue:(float)b / 255.0 alpha:a]
 #define VIEWCONTROLLER(name) [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:name]
 #define IMAGE(name) [UIImage imageNamed:name]
+#define Int2Str(val) [NSString stringWithFormat:@"%i",val]
 
 #pragma mark - HTTP REQUEST STATUS CODE
 #define kREQUEST_SUCCESS @"200"
@@ -26,6 +27,7 @@
 #define kURL_MEMBER_JOIN @"https://cic.hongik.ac.kr/api/join.php"
 #define kURL_MEMBER_UPLOAD_PROFILE @"https://cic.hongik.ac.kr/api/upload_profile.php"
 #define kURL_GREETING @"https://cic.hongik.ac.kr/api/greeting.php"
+#define kURL_BOARD @"https://cic.hongik.ac.kr/api/board.php"
 
 #pragma mark - LKButtonType
 typedef enum {
@@ -52,7 +54,8 @@ typedef enum {
 } LKSegmentControlType;
 
 #define kLKSegIntroTitle @[@"인사말",@"소개",@"구성원"]
-
+#define kLKSegBoardTitle @[@"공지사항",@"취업게시판",@"자유게시판",@"사진게시판"]
+#define kLKSegBoardType @[@(1),@(2),@(4),@(9)]
 
 
 #endif

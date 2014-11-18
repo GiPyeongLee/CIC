@@ -34,6 +34,8 @@
 		830BFBBF1A0FB32D00F9C036 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830BFBBE1A0FB32D00F9C036 /* RegistViewController.m */; };
 		831FBE411A1A45AB002F3C36 /* intro.txt in Resources */ = {isa = PBXBuildFile; fileRef = 831FBE401A1A45AB002F3C36 /* intro.txt */; };
 		831FBE431A1A4D77002F3C36 /* professors.json in Resources */ = {isa = PBXBuildFile; fileRef = 831FBE421A1A4D77002F3C36 /* professors.json */; };
+		831FBE471A1AFF06002F3C36 /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831FBE461A1AFF06002F3C36 /* BoardViewController.m */; };
+		831FBE4A1A1AFF5B002F3C36 /* BoardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 831FBE491A1AFF5B002F3C36 /* BoardCell.m */; };
 		833286561A1911CD0095A0DE /* LKSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 833286551A1911CD0095A0DE /* LKSegmentControl.m */; };
 		8332865A1A1914EB0095A0DE /* LKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 833286591A1914EB0095A0DE /* LKButton.m */; };
 		8332865E1A1A36DC0095A0DE /* GreetingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8332865D1A1A36DC0095A0DE /* GreetingCell.m */; };
@@ -43,6 +45,7 @@
 		83807F1B1A15A9B800071612 /* UIImage+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 83807F1A1A15A9B800071612 /* UIImage+Async.m */; };
 		8390AE1A1A0B2FDA00C69020 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE191A0B2FDA00C69020 /* res */; };
 		8390AE1C1A0B3D9800C69020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE1B1A0B3D9800C69020 /* Images.xcassets */; };
+		83AC00D91A1BB4630040B5BD /* LKLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC00D81A1BB4630040B5BD /* LKLoadingView.m */; };
 		83BAEDAD1A09D16F00776368 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDAC1A09D16F00776368 /* main.m */; };
 		83BAEDB01A09D16F00776368 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDAF1A09D16F00776368 /* AppDelegate.m */; };
 		83BAEDB31A09D16F00776368 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDB21A09D16F00776368 /* LoginViewController.m */; };
@@ -123,6 +126,10 @@
 		830BFBBE1A0FB32D00F9C036 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		831FBE401A1A45AB002F3C36 /* intro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = intro.txt; sourceTree = "<group>"; };
 		831FBE421A1A4D77002F3C36 /* professors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = professors.json; sourceTree = "<group>"; };
+		831FBE451A1AFF06002F3C36 /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardViewController.h; sourceTree = "<group>"; };
+		831FBE461A1AFF06002F3C36 /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardViewController.m; sourceTree = "<group>"; };
+		831FBE481A1AFF5B002F3C36 /* BoardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardCell.h; sourceTree = "<group>"; };
+		831FBE491A1AFF5B002F3C36 /* BoardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardCell.m; sourceTree = "<group>"; };
 		833286541A1911CD0095A0DE /* LKSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKSegmentControl.h; sourceTree = "<group>"; };
 		833286551A1911CD0095A0DE /* LKSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKSegmentControl.m; sourceTree = "<group>"; };
 		833286581A1914EB0095A0DE /* LKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKButton.h; sourceTree = "<group>"; };
@@ -139,6 +146,8 @@
 		83807F1A1A15A9B800071612 /* UIImage+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Async.m"; sourceTree = "<group>"; };
 		8390AE191A0B2FDA00C69020 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		8390AE1B1A0B3D9800C69020 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		83AC00D71A1BB4630040B5BD /* LKLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLoadingView.h; sourceTree = "<group>"; };
+		83AC00D81A1BB4630040B5BD /* LKLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLoadingView.m; sourceTree = "<group>"; };
 		83BAEDA71A09D16F00776368 /* CIC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BAEDAB1A09D16F00776368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BAEDAC1A09D16F00776368 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -291,6 +300,22 @@
 			name = LKSideView;
 			sourceTree = "<group>";
 		};
+		831FBE441A1AFEE7002F3C36 /* RentalViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RentalViewController;
+			sourceTree = "<group>";
+		};
+		831FBE4B1A1AFF5E002F3C36 /* BoardCell */ = {
+			isa = PBXGroup;
+			children = (
+				831FBE481A1AFF5B002F3C36 /* BoardCell.h */,
+				831FBE491A1AFF5B002F3C36 /* BoardCell.m */,
+			);
+			name = BoardCell;
+			sourceTree = "<group>";
+		};
 		833286531A1911A20095A0DE /* LKSegementControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +371,9 @@
 		83807F1C1A15B43700071612 /* BoardViewController */ = {
 			isa = PBXGroup;
 			children = (
+				831FBE4B1A1AFF5E002F3C36 /* BoardCell */,
+				831FBE451A1AFF06002F3C36 /* BoardViewController.h */,
+				831FBE461A1AFF06002F3C36 /* BoardViewController.m */,
 			);
 			name = BoardViewController;
 			sourceTree = "<group>";
@@ -418,6 +446,7 @@
 				830BFBB81A0FA94200F9C036 /* RegistViewController */,
 				836962B31A19108E009BC7AC /* Intro */,
 				83807F1C1A15B43700071612 /* BoardViewController */,
+				831FBE441A1AFEE7002F3C36 /* RentalViewController */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -454,6 +483,8 @@
 				83BAEDD71A09D9A400776368 /* LKHttpRequest.m */,
 				83C6FB5F1A14F4BE003CD71B /* LKProgressView.h */,
 				83C6FB601A14F4BE003CD71B /* LKProgressView.m */,
+				83AC00D71A1BB4630040B5BD /* LKLoadingView.h */,
+				83AC00D81A1BB4630040B5BD /* LKLoadingView.m */,
 			);
 			name = LKHTTPRequest;
 			sourceTree = "<group>";
@@ -581,16 +612,19 @@
 				830BFB9D1A0F903300F9C036 /* UIBarButtonItem+FlatUI.m in Sources */,
 				830BFB9C1A0F903300F9C036 /* FUITextField.m in Sources */,
 				830BFB9E1A0F903300F9C036 /* UIColor+FlatUI.m in Sources */,
+				83AC00D91A1BB4630040B5BD /* LKLoadingView.m in Sources */,
 				830BFBA81A0F903400F9C036 /* UIToolbar+FlatUI.m in Sources */,
 				83BAEDB01A09D16F00776368 /* AppDelegate.m in Sources */,
 				83C2C92E1A0B432E00FD292B /* LKViewController.m in Sources */,
 				830BFB9A1A0F903300F9C036 /* FUISegmentedControl.m in Sources */,
 				83BAEDD81A09D9A400776368 /* LKHttpRequest.m in Sources */,
 				83C6FB611A14F4BE003CD71B /* LKProgressView.m in Sources */,
+				831FBE4A1A1AFF5B002F3C36 /* BoardCell.m in Sources */,
 				830BFBA41A0F903400F9C036 /* UISlider+FlatUI.m in Sources */,
 				83BAEDAD1A09D16F00776368 /* main.m in Sources */,
 				83C6FB551A13A154003CD71B /* AgreementViewController.m in Sources */,
 				830BFBB71A0FA8B700F9C036 /* UIViewController+JASidePanel.m in Sources */,
+				831FBE471A1AFF06002F3C36 /* BoardViewController.m in Sources */,
 				830BFBBF1A0FB32D00F9C036 /* RegistViewController.m in Sources */,
 				830BFBA71A0F903400F9C036 /* UITableViewCell+FlatUI.m in Sources */,
 				830BFBA61A0F903400F9C036 /* UITabBar+FlatUI.m in Sources */,

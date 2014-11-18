@@ -188,7 +188,7 @@
 - (void)finishUploadData{
     NSLog(@"%s",__FUNCTION__);
     [UIImage loadFromURL:[NSURL URLWithString:sharedUserInfo(@"profile_img")] callback:^(UIImage *image) {
-        self.img_profile.image = image;
+        [self.img_profile setImage:image];
     }];
 }
 @end

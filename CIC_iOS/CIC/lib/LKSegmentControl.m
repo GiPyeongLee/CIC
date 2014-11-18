@@ -10,6 +10,9 @@
 #import "Define.h"
 #define kINTRO_IMAGE_UNTAP @[@"btn_greeting_untap",@"btn_intro_untap",@"btn_member_untap"]
 #define kINTRO_IMAGE_TAP @[@"btn_greeting_tap",@"btn_intro_tap",@"btn_member_tap"]
+#define kBOARD_IMAGE_UNTAP @[@"btn_noticeboard",@"btn_freeboard",@"btn_jobboard",@"btn_photoboard"]
+#define kBOARD_IMAGE_TAP @[@"btn_noticeboard_red",@"btn_freeboard_red",@"btn_jobboard_red",@"btn_photoboard_red"]
+
 @implementation LKSegmentControl
 @synthesize delegate;
 
@@ -65,6 +68,24 @@
                     offsetX+=width;
                     [self addSubview:btn];
                 }
+                break;
+            }
+            case LKSegmentTypeBoard:{
+                float width = frame.size.width/[kLKSegBoardTitle count];
+                float offsetX = 0.f;
+                for (int i=0;i<[kLKSegBoardTitle count]; i++) {
+                    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+                    NSString *tapName = kBOARD_IMAGE_TAP[i];
+                    NSString *untapName = kBOARD_IMAGE_UNTAP[i];
+                    [btn setImage:IMAGE(untapName) forState:UIControlStateNormal];
+                    [btn setImage:IMAGE(tapName) forState:UIControlStateSelected];
+                    [btn addTarget:delegate action:@selector(selectedSegment:) forControlEvents:UIControlEventTouchUpInside];
+                    [btn setTag:i];
+                    [btn setFrame:CGRectMake(offsetX, 0, width, frame.size.height)];
+                    offsetX+=width;
+                    [self addSubview:btn];
+                }
+                break;
             }
             default:
                 break;

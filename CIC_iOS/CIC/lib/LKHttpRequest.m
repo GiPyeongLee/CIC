@@ -30,7 +30,7 @@
         NSURLSessionConfiguration *sessionConfig =
         [NSURLSessionConfiguration defaultSessionConfiguration];
         sessionConfig.URLCache = [NSURLCache sharedURLCache]; // NEW LINE ON TOP OF OTHERWISE WORKING CODE
-        sessionConfig.requestCachePolicy = NSURLRequestReloadRevalidatingCacheData;
+        sessionConfig.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
         self.progressView = [[LKProgressView alloc]init];
         [self.progressView setDelegate:self];
         self.session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:[NSOperationQueue mainQueue]];

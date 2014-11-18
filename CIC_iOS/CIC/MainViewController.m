@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "IntroViewController.h"
+#import "BoardViewController.h"
 #import "LKHttpRequest.h"
 @interface MainViewController()
 @property (nonatomic,strong) LKHttpRequest *request;
@@ -30,9 +31,37 @@
         [self.navigationController pushViewController:VC animated:false];
         
     }];
+}
 
-    
-    
+- (IBAction)pushedBoardBtn:(id)sender   
+{
+    // 1 공지사항
+    // 2 자유게시판
+    // 4 취업게시판
+    // 9.사진게시판
+    [self.request postWithURL:kURL_BOARD withParams:@{@"main_type":@([sender tag])} compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        BoardViewController *VC = (BoardViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"BoardViewController"];
+        switch ([sender tag]) {
+            case 1:
+            case 2:
+                [VC preloadData:jsonDic withSelectIndex:[sender tag]-1];
+                break;
+            case 4:
+                [VC preloadData:jsonDic withSelectIndex:2];
+                break;
+            case 9:
+                [VC preloadData:jsonDic withSelectIndex:3];
+                break;
+            default:
+                break;
+        }
+
+        
+        [self.navigationController pushViewController:VC animated:false];
+        
+    }];
 }
 
 
