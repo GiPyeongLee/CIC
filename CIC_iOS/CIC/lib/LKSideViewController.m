@@ -13,6 +13,7 @@
 #import "Define.h"
 #import "UIImage+Async.h"
 #import "IntroViewController.h"
+#import "BoardViewController.h"
 @interface LKSideViewController() <UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,LKHttpRequestDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *img_profile;
 @property (weak, nonatomic) IBOutlet UILabel *label_name;
@@ -66,6 +67,17 @@
 }
 // Board 게시판
 - (IBAction)pushedBoardBtn:(id)sender {
+    [self.request postWithURL:kURL_BOARD withParams:@{@"main_type":@(1)} compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        BoardViewController *VC = (BoardViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"BoardViewController"];
+        [VC preloadData:jsonDic withSelectIndex:0];
+        
+        
+        [self.sidePanelController toggleLeftPanel:nil];
+        [(UINavigationController *)self.sidePanelController.centerPanel pushViewController:VC animated:false];
+        
+    }];
 }
 // 졸업프로젝트
 - (IBAction)pushedGraduateBtn:(id)sender {
