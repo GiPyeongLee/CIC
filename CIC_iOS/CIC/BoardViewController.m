@@ -7,6 +7,7 @@
 //
 
 #import "BoardViewController.h"
+#import "BoardDetailViewController.h"
 #import "BoardCell.h"
 #import "LKSegmentControl.h"
 #import "Define.h"
@@ -161,6 +162,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"%@",[[self.dataArray objectAtIndex:indexPath.row] valueForKey:@"pkid"]);
+  [self.request postWithURL:kURL_BOARD_COMMENT withParams:@{@"board_id":[[self.dataArray objectAtIndex:indexPath.row] valueForKey:@"pkid"]} compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
+      NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+      BoardDetailViewController *VC = (BoardDetailViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"BoardDetailViewController"];
+      
+      [VC preloadData:jsonDic withArticle:[self.dataArray objectAtIndex:indexPath.row]];
+      VC.title = [self.segmentCtrl getSegemntTitleWithIndex:selectedIndex];
+      [self.navigationController pushViewController:VC animated:false];
+
+  }];
 }
 
 #pragma mark - add Data

@@ -13,4 +13,5 @@
 @interface LKSegmentControl : UIView
 @property (nonatomic,assign) IBOutlet id <LKSegmentDelegate>delegate;
 -(void)setSelectedIndex:(NSInteger)index;
+- (NSString *)getSegemntTitleWithIndex:(NSInteger)index;
 @end

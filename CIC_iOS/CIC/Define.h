@@ -28,6 +28,7 @@
 #define kURL_MEMBER_UPLOAD_PROFILE @"https://cic.hongik.ac.kr/api/upload_profile.php"
 #define kURL_GREETING @"https://cic.hongik.ac.kr/api/greeting.php"
 #define kURL_BOARD @"https://cic.hongik.ac.kr/api/board.php"
+#define kURL_BOARD_COMMENT @"https://cic.hongik.ac.kr/api/board_comment.php"
 
 #pragma mark - LKButtonType
 typedef enum {

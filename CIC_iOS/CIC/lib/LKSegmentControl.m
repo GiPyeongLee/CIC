@@ -109,5 +109,19 @@
         }
     }
 }
-
+- (NSString *)getSegemntTitleWithIndex:(NSInteger)index{
+    switch (self.tag) {
+        case LKSegmentTypeIntro:{
+            return [kLKSegIntroTitle objectAtIndex:index];
+            break;
+        }
+        case LKSegmentTypeBoard:{
+            return [kLKSegBoardTitle objectAtIndex:index];
+            break;
+        }
+         default:
+            break;
+    }
+    return @"";
+}
 @end

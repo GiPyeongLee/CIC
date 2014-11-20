@@ -8,8 +8,11 @@
 
 #import "LKViewController.h"
 
-@interface BoardDetailViewController : LKViewController
+@interface BoardDetailViewController : LKViewController{
+    
+}
 @property (weak, nonatomic) IBOutlet UILabel *nav_title;
+@property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSMutableDictionary *dataDic;
 - (void)preloadData:(NSDictionary *)data withArticle:(NSDictionary *)article;
 @end
