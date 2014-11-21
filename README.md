@@ -1,4 +1,4 @@
-Computer Information Commuincation 2014 Graduation Project , Hongik UNIV, Republic of
+Computer Information Commuincation 2014 Graduation Project , Hongik UNIV, Republic of Korea
 =======
 Project Period 
 2014. 09. ~ 2014. 11.
