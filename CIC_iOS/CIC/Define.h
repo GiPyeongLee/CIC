@@ -23,12 +23,13 @@
 #define kREQUEST_FAIL @"400"
 
 #pragma mark - URL FLAGS
-#define kURL_MEMBER_LOGIN @"https://cic.hongik.ac.kr/api/login.php"
-#define kURL_MEMBER_JOIN @"https://cic.hongik.ac.kr/api/join.php"
-#define kURL_MEMBER_UPLOAD_PROFILE @"https://cic.hongik.ac.kr/api/upload_profile.php"
-#define kURL_GREETING @"https://cic.hongik.ac.kr/api/greeting.php"
-#define kURL_BOARD @"https://cic.hongik.ac.kr/api/board.php"
-#define kURL_BOARD_COMMENT @"https://cic.hongik.ac.kr/api/board_comment.php"
+#define kURL_MEMBER_LOGIN @"https://cic.hongik.ac.kr/api/login"
+#define kURL_MEMBER_JOIN @"https://cic.hongik.ac.kr/api/join"
+#define kURL_MEMBER_UPLOAD_PROFILE @"https://cic.hongik.ac.kr/api/upload_profile"
+#define kURL_GREETING @"https://cic.hongik.ac.kr/api/greeting"
+#define kURL_BOARD @"https://cic.hongik.ac.kr/api/board"
+#define kURL_BOARD_COMMENT @"https://cic.hongik.ac.kr/api/board_comment"
+#define kURL_BOARD_LIKE @"https://cic.hongik.ac.kr/api/board_like"
 
 #pragma mark - LKButtonType
 typedef enum {

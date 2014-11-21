@@ -162,10 +162,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"%@",[[self.dataArray objectAtIndex:indexPath.row] valueForKey:@"pkid"]);
-  [self.request postWithURL:kURL_BOARD_COMMENT withParams:@{@"board_id":[[self.dataArray objectAtIndex:indexPath.row] valueForKey:@"pkid"]} compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
+  [self.request postWithURL:kURL_BOARD_COMMENT withParams:@{@"board_id":[[self.dataArray objectAtIndex:indexPath.row] valueForKey:@"pkid"],@"member_id":sharedUserInfo(@"pkid")} compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
       NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
       BoardDetailViewController *VC = (BoardDetailViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"BoardDetailViewController"];
-      
+      NSLog(@"jsonDic %@",jsonDic);
       [VC preloadData:jsonDic withArticle:[self.dataArray objectAtIndex:indexPath.row]];
       VC.title = [self.segmentCtrl getSegemntTitleWithIndex:selectedIndex];
       [self.navigationController pushViewController:VC animated:false];

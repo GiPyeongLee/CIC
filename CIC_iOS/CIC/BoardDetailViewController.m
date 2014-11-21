@@ -28,12 +28,13 @@
     NSMutableString *text = [[self.dataDic valueForKey:@"text"] mutableCopy];
     [self.dataDic setObject:[text stringByReplacingOccurrencesOfString:@"<br>" withString:@"\n"] forKey:@"text"];
     if([data objectForKey:@"data"]!=nil){
-        [self.dataDic setObject:@"comments" forKey:[data objectForKey:@"data"]];
+        [self.dataDic setObject:@"comments" forKey:[[data objectForKey:@"data"] objectForKey:@"comments"]];
+        [self.dataDic setValue:[[data objectForKey:@"data"] valueForKey:@"isLike"] forKey:@"isLike"];
     }else{
         [self.dataDic setObject:@"comments" forKey:@[].mutableCopy];
+        [self.dataDic setValue:@"0" forKey:@"isLike"];
     }
-
-    NSLog(@"%@\n%@",self.dataDic,data);
+    NSLog(@"%@",self.dataDic);
 
 }
 
@@ -86,6 +87,8 @@
         
     }else if(indexPath.section==1){
         BoardDetailCell *cell = (BoardDetailCell *)[tableView dequeueReusableCellWithIdentifier:@"BoardMiddleCell" forIndexPath:indexPath];
+        
+      
         cell.middle_label_title.text = [self.dataDic valueForKey:@"title"];
         cell.middle_label_description.text = [self.dataDic valueForKey:@"text"];
         
@@ -94,6 +97,13 @@
         
     }else if(indexPath.section==2){
         BoardDetailCell *cell = (BoardDetailCell *)[tableView dequeueReusableCellWithIdentifier:@"BoardBottomCell" forIndexPath:indexPath];
+        if([[self.dataDic valueForKey:@"isLike"]intValue]==0){
+            [cell.btn_like setSelected:false];
+        }else{
+            [cell.btn_like setSelected:true];
+        }
+        [cell.btn_like addTarget:self action:@selector(pushedLikeBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.btn_share addTarget:self action:@selector(pushedShareBtn:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
     else{
@@ -102,6 +112,21 @@
         return cell;
     }
 
+}
+
+- (void)pushedLikeBtn:(id)sender{
+    NSLog(@"%@",sharedUserInfo(@"pkid"));
+    [self.request postWithURL:kURL_BOARD_LIKE withParams:@{@"board_id":[self.dataDic valueForKey:@"pkid"],@"member_id":sharedUserInfo(@"pkid")}compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
+         NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        NSLog(@"%@",jsonDic);
+        if ([[jsonDic valueForKey:@"status"]isEqualToString:kREQUEST_SUCCESS]) {
+            [(UIButton *)sender setSelected:![(UIButton *)sender isSelected]];
+        }
+    }];
+
+}
+- (void)pushedShareBtn:(id)sender{
+    
 }
 
 
