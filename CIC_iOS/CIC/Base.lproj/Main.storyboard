@@ -768,6 +768,9 @@
                                 <state key="normal" image="btn_main_graduation">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushedGraduateBtn:" destination="m87-uI-kb9" eventType="touchUpInside" id="gct-Ka-6WO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5st-K7-kys">
                                 <rect key="frame" x="165" y="202" width="150" height="95"/>
@@ -1249,10 +1252,92 @@
             </objects>
             <point key="canvasLocation" x="-367" y="632"/>
         </scene>
+        <!--Graduation View Controller-->
+        <scene sceneID="xqb-N2-6Ze">
+            <objects>
+                <viewController storyboardIdentifier="GraduationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wwb-xC-gut" customClass="GraduationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EXA-ha-Kzp"/>
+                        <viewControllerLayoutGuide type="bottom" id="r3K-Sf-H3R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5qW-ZP-QhX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="md5-v0-2cI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_navibar" translatesAutoresizingMaskIntoConstraints="NO" id="p0c-Wg-M9g">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUh-0D-uNU">
+                                        <rect key="frame" x="7" y="14" width="42" height="47"/>
+                                        <state key="normal" image="icon_back">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pushedBackBtn:" destination="Wwb-xC-gut" eventType="touchUpInside" id="1rc-Y4-XCE"/>
+                                            <action selector="pushedBackBtn:" destination="Fgl-3W-bB6" eventType="touchUpInside" id="tAB-MF-5v1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="졸업게시판" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nc-PI-n5J">
+                                        <rect key="frame" x="110" y="29" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="k9c-0l-R4j">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.88235300780000003" green="0.88235300780000003" blue="0.89019614459999996" alpha="1" colorSpace="deviceRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GraduationCell" rowHeight="134" id="of6-zr-OMN" customClass="GraduationCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="of6-zr-OMN" id="kWe-td-1qT">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uov-CR-FM4">
+                                                    <rect key="frame" x="15" y="10" width="290" height="124"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_gradation_post_graduation" translatesAutoresizingMaskIntoConstraints="NO" id="Bln-gt-vTp">
+                                                    <rect key="frame" x="15" y="10" width="290" height="124"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7F-QN-7e5">
+                                                    <rect key="frame" x="28" y="18" width="260" height="21"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="img_cover" destination="Uov-CR-FM4" id="btd-1M-tgz"/>
+                                            <outlet property="label_title" destination="a7F-QN-7e5" id="jp5-oY-p86"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wwb-xC-gut" id="iOR-Bb-yjW"/>
+                                    <outlet property="delegate" destination="Wwb-xC-gut" id="SXf-um-PPo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHp-da-3hY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8" y="632"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg_check" width="28" height="28"/>
         <image name="bg_comment_write" width="320" height="45"/>
+        <image name="bg_gradation_post_graduation" width="290" height="124"/>
         <image name="bg_main_navibar" width="320" height="69"/>
         <image name="bg_navibar" width="320" height="64"/>
         <image name="bg_none_check" width="28" height="28"/>

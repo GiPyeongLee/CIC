@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "IntroViewController.h"
 #import "BoardViewController.h"
+#import "GraduationViewController.h"
 #import "LKHttpRequest.h"
 @interface MainViewController()
 @property (nonatomic,strong) LKHttpRequest *request;
@@ -64,6 +65,10 @@
     }];
 }
 
+- (IBAction)pushedGraduateBtn:(id)sender {
+   GraduationViewController *VC = (GraduationViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"GraduationViewController"];
+    [self.navigationController pushViewController:VC animated:false];
+}
 
 
 @end

@@ -46,6 +46,8 @@
 		8385C3A31A2038010059E95B /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8385C3A21A2038010059E95B /* KakaoOpenSDK.framework */; };
 		8385C3A61A203E430059E95B /* LKChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385C3A51A203E430059E95B /* LKChatView.m */; };
 		8385C3A91A2041390059E95B /* LKChatTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385C3A81A2041390059E95B /* LKChatTableView.m */; };
+		8385C3AD1A207BE80059E95B /* GraduationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385C3AC1A207BE80059E95B /* GraduationViewController.m */; };
+		8385C3B11A207C3D0059E95B /* GraduationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385C3B01A207C3D0059E95B /* GraduationCell.m */; };
 		8390AE1A1A0B2FDA00C69020 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE191A0B2FDA00C69020 /* res */; };
 		8390AE1C1A0B3D9800C69020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE1B1A0B3D9800C69020 /* Images.xcassets */; };
 		83AC00D91A1BB4630040B5BD /* LKLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC00D81A1BB4630040B5BD /* LKLoadingView.m */; };
@@ -155,6 +157,10 @@
 		8385C3A51A203E430059E95B /* LKChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKChatView.m; sourceTree = "<group>"; };
 		8385C3A71A2041390059E95B /* LKChatTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKChatTableView.h; sourceTree = "<group>"; };
 		8385C3A81A2041390059E95B /* LKChatTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKChatTableView.m; sourceTree = "<group>"; };
+		8385C3AB1A207BE80059E95B /* GraduationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraduationViewController.h; sourceTree = "<group>"; };
+		8385C3AC1A207BE80059E95B /* GraduationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduationViewController.m; sourceTree = "<group>"; };
+		8385C3AF1A207C3D0059E95B /* GraduationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraduationCell.h; sourceTree = "<group>"; };
+		8385C3B01A207C3D0059E95B /* GraduationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduationCell.m; sourceTree = "<group>"; };
 		8390AE191A0B2FDA00C69020 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		8390AE1B1A0B3D9800C69020 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83AC00D71A1BB4630040B5BD /* LKLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLoadingView.h; sourceTree = "<group>"; };
@@ -406,6 +412,25 @@
 			name = BoardViewController;
 			sourceTree = "<group>";
 		};
+		8385C3AA1A2078C00059E95B /* GraduateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8385C3AE1A207C300059E95B /* Cell */,
+				8385C3AB1A207BE80059E95B /* GraduationViewController.h */,
+				8385C3AC1A207BE80059E95B /* GraduationViewController.m */,
+			);
+			name = GraduateViewController;
+			sourceTree = "<group>";
+		};
+		8385C3AE1A207C300059E95B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8385C3AF1A207C3D0059E95B /* GraduationCell.h */,
+				8385C3B01A207C3D0059E95B /* GraduationCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		83BAED9E1A09D16F00776368 = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +500,7 @@
 				836962B31A19108E009BC7AC /* Intro */,
 				83807F1C1A15B43700071612 /* BoardViewController */,
 				831FBE441A1AFEE7002F3C36 /* RentalViewController */,
+				8385C3AA1A2078C00059E95B /* GraduateViewController */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -657,6 +683,7 @@
 				83C6FB551A13A154003CD71B /* AgreementViewController.m in Sources */,
 				830BFBB71A0FA8B700F9C036 /* UIViewController+JASidePanel.m in Sources */,
 				831FBE471A1AFF06002F3C36 /* BoardViewController.m in Sources */,
+				8385C3AD1A207BE80059E95B /* GraduationViewController.m in Sources */,
 				830BFBBF1A0FB32D00F9C036 /* RegistViewController.m in Sources */,
 				830BFBA71A0F903400F9C036 /* UITableViewCell+FlatUI.m in Sources */,
 				830BFBA61A0F903400F9C036 /* UITabBar+FlatUI.m in Sources */,
@@ -675,6 +702,7 @@
 				8385C3A61A203E430059E95B /* LKChatView.m in Sources */,
 				830BFBB61A0FA8B700F9C036 /* JASidePanelController.m in Sources */,
 				830BFB971A0F903300F9C036 /* FUIButton.m in Sources */,
+				8385C3B11A207C3D0059E95B /* GraduationCell.m in Sources */,
 				830BFB6C1A0F7CAD00F9C036 /* LKView.m in Sources */,
 				833286611A1A43680095A0DE /* IntroCell.m in Sources */,
 				830BFB9F1A0F903300F9C036 /* UIFont+FlatUI.m in Sources */,
