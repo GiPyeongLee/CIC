@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "JASidePanelController.h"
 #import "LKSideViewController.h"
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
 @interface AppDelegate ()
 
 @end
@@ -106,5 +107,15 @@
 }
 
 
-
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSLog(@"application openURL:(%@) sourceApplication:(%@) annotation:(%@)", url, sourceApplication, annotation);
+    
+    if ([KOSession isKakaoLinkCallback:url]) {
+        NSLog(@"KakaoLink callback! query string: %@", [url query]);
+        
+        return YES;
+    }
+    
+    return NO;
+}
 @end

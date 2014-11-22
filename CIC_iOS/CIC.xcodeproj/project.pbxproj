@@ -43,6 +43,9 @@
 		833286641A1A43700095A0DE /* MemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833286631A1A43700095A0DE /* MemberCell.m */; };
 		836962B61A1910A1009BC7AC /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836962B51A1910A1009BC7AC /* IntroViewController.m */; };
 		83807F1B1A15A9B800071612 /* UIImage+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 83807F1A1A15A9B800071612 /* UIImage+Async.m */; };
+		8385C3A31A2038010059E95B /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8385C3A21A2038010059E95B /* KakaoOpenSDK.framework */; };
+		8385C3A61A203E430059E95B /* LKChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385C3A51A203E430059E95B /* LKChatView.m */; };
+		8385C3A91A2041390059E95B /* LKChatTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385C3A81A2041390059E95B /* LKChatTableView.m */; };
 		8390AE1A1A0B2FDA00C69020 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE191A0B2FDA00C69020 /* res */; };
 		8390AE1C1A0B3D9800C69020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8390AE1B1A0B3D9800C69020 /* Images.xcassets */; };
 		83AC00D91A1BB4630040B5BD /* LKLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC00D81A1BB4630040B5BD /* LKLoadingView.m */; };
@@ -147,6 +150,11 @@
 		836962B51A1910A1009BC7AC /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		83807F191A15A9B800071612 /* UIImage+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Async.h"; sourceTree = "<group>"; };
 		83807F1A1A15A9B800071612 /* UIImage+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Async.m"; sourceTree = "<group>"; };
+		8385C3A21A2038010059E95B /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		8385C3A41A203E430059E95B /* LKChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKChatView.h; sourceTree = "<group>"; };
+		8385C3A51A203E430059E95B /* LKChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKChatView.m; sourceTree = "<group>"; };
+		8385C3A71A2041390059E95B /* LKChatTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKChatTableView.h; sourceTree = "<group>"; };
+		8385C3A81A2041390059E95B /* LKChatTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKChatTableView.m; sourceTree = "<group>"; };
 		8390AE191A0B2FDA00C69020 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		8390AE1B1A0B3D9800C69020 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83AC00D71A1BB4630040B5BD /* LKLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLoadingView.h; sourceTree = "<group>"; };
@@ -188,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8385C3A31A2038010059E95B /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +215,10 @@
 			children = (
 				830BFB6A1A0F7CAD00F9C036 /* LKView.h */,
 				830BFB6B1A0F7CAD00F9C036 /* LKView.m */,
+				8385C3A41A203E430059E95B /* LKChatView.h */,
+				8385C3A51A203E430059E95B /* LKChatView.m */,
+				8385C3A71A2041390059E95B /* LKChatTableView.h */,
+				8385C3A81A2041390059E95B /* LKChatTableView.m */,
 			);
 			name = LKView;
 			sourceTree = "<group>";
@@ -478,6 +491,7 @@
 		83BAEDD41A09D28B00776368 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				8385C3A21A2038010059E95B /* KakaoOpenSDK.framework */,
 				833286571A1914C90095A0DE /* LKButton */,
 				833286531A1911A20095A0DE /* LKSegementControl */,
 				83807F181A15A83600071612 /* Category */,
@@ -657,6 +671,8 @@
 				830BFB991A0F903300F9C036 /* FUIPopoverBackgroundView.m in Sources */,
 				83807F1B1A15A9B800071612 /* UIImage+Async.m in Sources */,
 				830BFBA11A0F903400F9C036 /* UINavigationBar+FlatUI.m in Sources */,
+				8385C3A91A2041390059E95B /* LKChatTableView.m in Sources */,
+				8385C3A61A203E430059E95B /* LKChatView.m in Sources */,
 				830BFBB61A0FA8B700F9C036 /* JASidePanelController.m in Sources */,
 				830BFB971A0F903300F9C036 /* FUIButton.m in Sources */,
 				830BFB6C1A0F7CAD00F9C036 /* LKView.m in Sources */,
@@ -789,9 +805,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CIC/lib",
+				);
 				INFOPLIST_FILE = CIC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "69931e38-45a1-4b20-a8a6-bdaf4deb18c9";
 			};
@@ -804,9 +825,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CIC/lib",
+				);
 				INFOPLIST_FILE = CIC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "69931e38-45a1-4b20-a8a6-bdaf4deb18c9";
 			};

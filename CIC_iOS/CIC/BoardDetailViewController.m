@@ -11,24 +11,43 @@
 #import "BoardDetailCell.h"
 #import "BoardCommentCell.h"
 #import "UIImage+Async.h"
-@interface BoardDetailViewController() <UITableViewDataSource,UITableViewDelegate>
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
+@interface BoardDetailViewController() <UITableViewDataSource,UITableViewDelegate,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *m_tableView;
 @property (nonatomic,strong) LKHttpRequest *request;
+@property(nonatomic, retain) NSMutableDictionary *kakaoTalkLinkObjects;
+@property (weak, nonatomic) IBOutlet UIView *textInputView;
+@property (weak, nonatomic) IBOutlet UITextView *m_textView;
 @end
 
 @implementation BoardDetailViewController
+@synthesize kakaoTalkLinkObjects;
 - (void)viewDidLoad{
     self.request = [[LKHttpRequest alloc]init];
+    kakaoTalkLinkObjects = @{}.mutableCopy;
     NSLog(@"tt : %@",self.title);
     [self.nav_title setText:self.title];
+    
+    KakaoTalkLinkAction *iphoneAppAction = [KakaoTalkLinkAction createAppAction:KakaoTalkLinkActionOSPlatformIOS
+                                                                     devicetype:KakaoTalkLinkActionDeviceTypePhone
+                                                                      execparam:@{@"board_id" : [self.dataDic valueForKey:@"pkid"]}];
+    
+//    KakaoTalkLinkAction *ipadAppAction = [KakaoTalkLinkAction createAppAction:KakaoTalkLinkActionOSPlatformIOS
+//                                                                   devicetype:KakaoTalkLinkActionDeviceTypePad
+//                                                                    execparam:@{@"a" : @"p", @"b" : @"2", @"c" : @"3"}];
+    
+    KakaoTalkLinkObject *buttonObj = [KakaoTalkLinkObject createAppButton:[self.dataDic valueForKey:@"title"]
+                                                                  actions:@[iphoneAppAction]];
+    [kakaoTalkLinkObjects setObject:buttonObj forKey:@"title"];
 }
 
 - (void)preloadData:(NSDictionary *)data withArticle:(NSDictionary *)article{
     self.dataDic = article.mutableCopy;
     NSMutableString *text = [[self.dataDic valueForKey:@"text"] mutableCopy];
     [self.dataDic setObject:[text stringByReplacingOccurrencesOfString:@"<br>" withString:@"\n"] forKey:@"text"];
+    NSLog(@"%lu",[[[data objectForKey:@"data"] objectForKey:@"comments"]count]);
     if([data objectForKey:@"data"]!=nil){
-        [self.dataDic setObject:@"comments" forKey:[[data objectForKey:@"data"] objectForKey:@"comments"]];
+        [self.dataDic setObject:[[[data objectForKey:@"data"] objectForKey:@"comments"] copy] forKey:@"comments"];
         [self.dataDic setValue:[[data objectForKey:@"data"] valueForKey:@"isLike"] forKey:@"isLike"];
     }else{
         [self.dataDic setObject:@"comments" forKey:@[].mutableCopy];
@@ -45,8 +64,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if(section>=0&&section<=2){
         return 1;
-    }else{
+    }else if(section==3){
+        NSLog(@"%@",[[self.dataDic objectForKey:@"comments"] class]);
         return [[self.dataDic objectForKey:@"comments"]count];
+    }else{
+        return 0;
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -66,8 +88,20 @@
     else if(indexPath.section==2){
         return 31.f;
     }
+    else if(indexPath.section==3){
+        NSString *content = [[[self.dataDic objectForKey:@"comments"] objectAtIndex:indexPath.row] valueForKey:@"text"];
+        
+        NSDictionary *attributes = @{NSFontAttributeName: [UIFont fontWithName:@"AppleSDGothicNeo-Medium" size:12]};
+        CGRect rect = [content boundingRectWithSize:CGSizeMake(221, CGFLOAT_MAX)
+                                            options:NSStringDrawingUsesLineFragmentOrigin
+                                         attributes:attributes
+                                            context:nil];
+
+        NSLog(@"%f",rect.size.height);
+        return rect.size.height+40<50?50:rect.size.height+40;
+    }
     else{
-        return 50.f;
+        return 0;
     }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -108,7 +142,14 @@
     }
     else{
         BoardCommentCell *cell = (BoardCommentCell *)[tableView dequeueReusableCellWithIdentifier:@"BoardCommentCell" forIndexPath:indexPath];
-        
+        cell.label_name.text = [[[self.dataDic objectForKey:@"comments"] objectAtIndex:indexPath.row]valueForKey:@"name"];
+        cell.label_date.text = [[[[self.dataDic objectForKey:@"comments"] objectAtIndex:indexPath.row]valueForKey:@"date"] substringToIndex:10];
+        cell.label_description.text = [[[self.dataDic objectForKey:@"comments"] objectAtIndex:indexPath.row]valueForKey:@"text"];
+        [UIImage loadFromURL:[NSURL URLWithString:[[[self.dataDic objectForKey:@"comments"] objectAtIndex:indexPath.row]valueForKey:@"profile_img"]] callback:^(UIImage *image) {
+            cell.img_profile.layer.cornerRadius = cell.img_profile.frame.size.height/2;
+            cell.img_profile.layer.masksToBounds = true;
+            cell.img_profile.image = image;
+        }];
         return cell;
     }
 
@@ -127,7 +168,55 @@
 }
 - (void)pushedShareBtn:(id)sender{
     
+    if ([KOAppCall canOpenKakaoTalkAppLink]) {
+        [KOAppCall openKakaoTalkAppLink:[kakaoTalkLinkObjects allValues]];
+    }
 }
+
+#pragma mark - UITextViewDelegate
+- (void)keyboardWillChange:(NSNotification *)notification{
+    NSLog(@"%s",__FUNCTION__);
+    CGRect keyboardEndFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGRect keyboardBeginFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    UIViewAnimationCurve animationCurve = [[[notification userInfo] objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
+    NSTimeInterval animationDuration = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] integerValue];
+    CGRect keyboardFrameEnd = [self.view convertRect:keyboardEndFrame toView:nil];
+    CGRect keyboardFrameBegin = [self.view convertRect:keyboardBeginFrame toView:nil];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIView beginAnimations:@"textViewAnimate" context:nil];
+        [UIView setAnimationDuration:animationDuration];
+        [UIView setAnimationCurve:animationCurve];
+        
+        CGRect newFrame = self.textInputView.frame;
+        CGRect tableFrame = self.m_tableView.frame;
+        
+        newFrame.origin.y -= (keyboardFrameBegin.origin.y - keyboardFrameEnd.origin.y);
+        tableFrame.size.height -= (keyboardFrameBegin.origin.y - keyboardFrameEnd.origin.y);
+        self.textInputView.frame = newFrame;
+        self.m_tableView.frame = tableFrame;
+        [UIView commitAnimations];
+    });
+}
+- (IBAction)pushedBoardBtn:(id)sender {
+    NSLog(@"%@",@{@"board_id":[self.dataDic valueForKey:@"pkid"],@"member_id":sharedUserInfo(@"pkid"),@"comment":self.m_textView.text});
+    [self.request postWithURL:kURL_BOARD_COMMENT_WRITE withParams:@{@"board_id":[self.dataDic valueForKey:@"pkid"],@"member_id":sharedUserInfo(@"pkid"),@"comment":self.m_textView.text}compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        NSLog(@"%@",jsonDic);
+        if ([[jsonDic valueForKey:@"status"]isEqualToString:kREQUEST_SUCCESS]) {
+            NSDictionary *dic = @{@"name":sharedUserInfo(@"name"),@"profile_img":sharedUserInfo(@"profile_img"),@"date":[[jsonDic objectForKey:@"data"] valueForKey:@"date"],@"text":self.m_textView.text};
+            
+            NSMutableArray *array = [[self.dataDic objectForKey:@"comments"]mutableCopy];
+            [array addObject:dic];
+            [self.dataDic setObject:array forKey:@"comments"];
+            [self.m_textView setText:@""];
+            [self.m_textView resignFirstResponder];
+            [self.m_tableView reloadData];
+        }
+    }];
+
+}
+
 
 
 @end
