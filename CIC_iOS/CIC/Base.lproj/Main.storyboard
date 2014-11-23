@@ -1482,6 +1482,214 @@
             </objects>
             <point key="canvasLocation" x="378" y="632"/>
         </scene>
+        <!--Graduation Poster View Controller-->
+        <scene sceneID="H8P-yT-Awh">
+            <objects>
+                <viewController storyboardIdentifier="GraduationPosterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nCt-Xh-u0h" customClass="GraduationPosterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mUF-Uo-giL"/>
+                        <viewControllerLayoutGuide type="bottom" id="i06-7T-BD0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VWQ-8I-fen">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wqw-JP-vMD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_navibar" translatesAutoresizingMaskIntoConstraints="NO" id="mrG-9S-Nv3">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KP3-El-R1x">
+                                        <rect key="frame" x="7" y="14" width="42" height="47"/>
+                                        <state key="normal" image="icon_back">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pushedBackBtn:" destination="Wwb-xC-gut" eventType="touchUpInside" id="HNz-kQ-Vog"/>
+                                            <action selector="pushedBackBtn:" destination="nCt-Xh-u0h" eventType="touchUpInside" id="RlE-U1-PYW"/>
+                                            <action selector="pushedBackBtn:" destination="96w-Kf-WBJ" eventType="touchUpInside" id="dQF-gT-Qp5"/>
+                                            <action selector="pushedBackBtn:" destination="Fgl-3W-bB6" eventType="touchUpInside" id="eyc-cq-tpM"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2014 졸업게시판" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GL-HD-Ll6">
+                                        <rect key="frame" x="60" y="29" width="220" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wNq-bi-8YA">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.88235300780000003" green="0.88235300780000003" blue="0.89019614459999996" alpha="1" colorSpace="deviceRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="GraduationDetailCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="GraduationDetailCell" rowHeight="138" id="Rak-mu-LuK" customClass="GraduationDetailCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rak-mu-LuK" id="4wM-T1-iwO">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_post_graduation" translatesAutoresizingMaskIntoConstraints="NO" id="wq1-ba-LJJ">
+                                                    <rect key="frame" x="15" y="13" width="290" height="124"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zK3-SM-gGs">
+                                                    <rect key="frame" x="265" y="22" width="40" height="15"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfR-7e-eBA">
+                                                    <rect key="frame" x="23" y="19" width="200" height="40"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpZ-cb-q5n">
+                                                    <rect key="frame" x="235" y="39" width="65" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_write_input_line" translatesAutoresizingMaskIntoConstraints="NO" id="Jcc-zq-Jox">
+                                                    <rect key="frame" x="15" y="74" width="290" height="1"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s3j-HP-s2g">
+                                                    <rect key="frame" x="23" y="85" width="40" height="40"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrI-4N-a15">
+                                                    <rect key="frame" x="71" y="85" width="30" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4L-wG-wzs">
+                                                    <rect key="frame" x="71" y="103" width="40" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="9"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Qg-Xc-IwS">
+                                                    <rect key="frame" x="118" y="85" width="40" height="40"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdg-E0-eQy">
+                                                    <rect key="frame" x="166" y="85" width="30" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2T-ln-KwV">
+                                                    <rect key="frame" x="166" y="103" width="40" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="9"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EBw-tm-pJg">
+                                                    <rect key="frame" x="212" y="85" width="40" height="40"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQC-00-uwj">
+                                                    <rect key="frame" x="260" y="85" width="30" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0e-sy-afd">
+                                                    <rect key="frame" x="260" y="103" width="40" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="9"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="img_profile_1" destination="s3j-HP-s2g" id="zj4-1n-bKJ"/>
+                                            <outlet property="img_profile_2" destination="4Qg-Xc-IwS" id="ZDF-Fh-AZR"/>
+                                            <outlet property="img_profile_3" destination="EBw-tm-pJg" id="jBE-d7-8qs"/>
+                                            <outlet property="img_type" destination="zK3-SM-gGs" id="lCe-OB-Uvp"/>
+                                            <outlet property="label_name_profile_1" destination="GrI-4N-a15" id="Hft-Yi-XF4"/>
+                                            <outlet property="label_name_profile_2" destination="jdg-E0-eQy" id="uGe-GB-rFB"/>
+                                            <outlet property="label_name_profile_3" destination="EQC-00-uwj" id="xet-nA-tUf"/>
+                                            <outlet property="label_pkid_profile_1" destination="V4L-wG-wzs" id="YNe-ZP-P1O"/>
+                                            <outlet property="label_pkid_profile_2" destination="H2T-ln-KwV" id="5VA-e6-D4p"/>
+                                            <outlet property="label_pkid_profile_3" destination="b0e-sy-afd" id="LbN-5U-VFt"/>
+                                            <outlet property="label_title" destination="JfR-7e-eBA" id="cUa-9f-OVC"/>
+                                            <outlet property="label_type" destination="rpZ-cb-q5n" id="Tda-1y-WR0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GraduationMiddleCell" rowHeight="140" id="dLl-ft-guN" customClass="GraduationMiddleCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dLl-ft-guN" id="KMN-OZ-xgD">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_post_graduation" translatesAutoresizingMaskIntoConstraints="NO" id="Xt6-Az-olC">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="141"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k6n-Cq-o9M">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="140"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="k6n-Cq-o9M" firstAttribute="leading" secondItem="KMN-OZ-xgD" secondAttribute="leadingMargin" constant="7" id="7cR-EI-FQS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Xt6-Az-olC" secondAttribute="trailing" constant="7" id="PFw-6a-qcD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Xt6-Az-olC" secondAttribute="bottom" constant="-9" id="RFT-bn-DjK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="k6n-Cq-o9M" secondAttribute="bottom" constant="-8" id="ccM-aT-5aJ"/>
+                                                <constraint firstItem="k6n-Cq-o9M" firstAttribute="top" secondItem="KMN-OZ-xgD" secondAttribute="topMargin" constant="-8" id="eOa-vv-lIS"/>
+                                                <constraint firstItem="Xt6-Az-olC" firstAttribute="top" secondItem="KMN-OZ-xgD" secondAttribute="topMargin" constant="-8" id="vdc-Rs-RtL"/>
+                                                <constraint firstItem="Xt6-Az-olC" firstAttribute="leading" secondItem="KMN-OZ-xgD" secondAttribute="leadingMargin" constant="7" id="wfO-Go-hfv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="k6n-Cq-o9M" secondAttribute="trailing" constant="7" id="yNL-GS-Kl5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="img_cover" destination="k6n-Cq-o9M" id="pHA-hj-Sb4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GraduationBottomCell" rowHeight="100" id="PwW-8c-vB5" customClass="GraduationBottomCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PwW-8c-vB5" id="D7b-in-Gah">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_post_graduation" translatesAutoresizingMaskIntoConstraints="NO" id="qVa-SB-03K">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="100"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BX-me-27S">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="100"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qVa-SB-03K" firstAttribute="leading" secondItem="D7b-in-Gah" secondAttribute="leadingMargin" constant="7" id="0Tv-GQ-n4o"/>
+                                                <constraint firstItem="5BX-me-27S" firstAttribute="leading" secondItem="D7b-in-Gah" secondAttribute="leadingMargin" constant="7" id="4uI-Lx-Eum"/>
+                                                <constraint firstItem="5BX-me-27S" firstAttribute="top" secondItem="D7b-in-Gah" secondAttribute="topMargin" constant="-8" id="FIO-yA-scf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5BX-me-27S" secondAttribute="trailing" constant="7" id="G4C-ra-LXg"/>
+                                                <constraint firstItem="qVa-SB-03K" firstAttribute="top" secondItem="D7b-in-Gah" secondAttribute="topMargin" constant="-8" id="J2y-MA-xBf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qVa-SB-03K" secondAttribute="bottom" constant="-8" id="Kge-lx-tFE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qVa-SB-03K" secondAttribute="trailing" constant="7" id="fGt-Ju-Ubq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5BX-me-27S" secondAttribute="bottom" constant="-8" id="iC0-PV-XW7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="label_description" destination="5BX-me-27S" id="WnL-lP-IgE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nCt-Xh-u0h" id="mpB-Uz-1aw"/>
+                                    <outlet property="delegate" destination="nCt-Xh-u0h" id="PeA-1g-o5X"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ki4-nd-Wsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="632"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg_check" width="28" height="28"/>

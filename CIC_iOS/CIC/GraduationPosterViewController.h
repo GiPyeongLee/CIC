@@ -9,5 +9,5 @@
 #import "LKViewController.h"
 
 @interface GraduationPosterViewController : LKViewController
-
+- (void)preloadData:(NSDictionary *)dic;
 @end

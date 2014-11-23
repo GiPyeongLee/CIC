@@ -8,6 +8,7 @@
 
 #import "GraduationDetailViewController.h"
 #import "GraduationDetailCell.h"
+#import "GraduationPosterViewController.h"
 #import "Define.h"
 
 @interface GraduationDetailViewController()<UITableViewDelegate,UITableViewDataSource>
@@ -77,7 +78,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    GraduationPosterViewController *VC = VIEWCONTROLLER(@"GraduationPosterViewController");
+    [VC preloadData:[self.dataArray objectAtIndex:indexPath.row]];
+    [self.navigationController pushViewController:VC animated:true];
 }
 
 @end

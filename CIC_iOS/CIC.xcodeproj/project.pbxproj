@@ -72,6 +72,8 @@
 		83D109B91A21DB590011E3F6 /* GraduationDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109B81A21DB590011E3F6 /* GraduationDetailCell.m */; };
 		83D109BC1A21DBDA0011E3F6 /* GraduationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109BB1A21DBDA0011E3F6 /* GraduationDetailViewController.m */; };
 		83D109BF1A21F2440011E3F6 /* GraduationPosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109BE1A21F2440011E3F6 /* GraduationPosterViewController.m */; };
+		83D109C21A22178D0011E3F6 /* GraduationMiddleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109C11A22178D0011E3F6 /* GraduationMiddleCell.m */; };
+		83D109C51A2217980011E3F6 /* GraduationBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109C41A2217980011E3F6 /* GraduationBottomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +211,10 @@
 		83D109BB1A21DBDA0011E3F6 /* GraduationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduationDetailViewController.m; sourceTree = "<group>"; };
 		83D109BD1A21F2440011E3F6 /* GraduationPosterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraduationPosterViewController.h; sourceTree = "<group>"; };
 		83D109BE1A21F2440011E3F6 /* GraduationPosterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduationPosterViewController.m; sourceTree = "<group>"; };
+		83D109C01A22178D0011E3F6 /* GraduationMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraduationMiddleCell.h; sourceTree = "<group>"; };
+		83D109C11A22178D0011E3F6 /* GraduationMiddleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduationMiddleCell.m; sourceTree = "<group>"; };
+		83D109C31A2217980011E3F6 /* GraduationBottomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraduationBottomCell.h; sourceTree = "<group>"; };
+		83D109C41A2217980011E3F6 /* GraduationBottomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduationBottomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,6 +456,10 @@
 				83D109B51A21DB470011E3F6 /* UserScrollView.m */,
 				83D109B71A21DB590011E3F6 /* GraduationDetailCell.h */,
 				83D109B81A21DB590011E3F6 /* GraduationDetailCell.m */,
+				83D109C01A22178D0011E3F6 /* GraduationMiddleCell.h */,
+				83D109C11A22178D0011E3F6 /* GraduationMiddleCell.m */,
+				83D109C31A2217980011E3F6 /* GraduationBottomCell.h */,
+				83D109C41A2217980011E3F6 /* GraduationBottomCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -695,6 +705,7 @@
 				830BFB9E1A0F903300F9C036 /* UIColor+FlatUI.m in Sources */,
 				83B83EBF1A1DBDE4002CD7D9 /* BoardCommentCell.m in Sources */,
 				83AC00D91A1BB4630040B5BD /* LKLoadingView.m in Sources */,
+				83D109C51A2217980011E3F6 /* GraduationBottomCell.m in Sources */,
 				830BFBA81A0F903400F9C036 /* UIToolbar+FlatUI.m in Sources */,
 				83BAEDB01A09D16F00776368 /* AppDelegate.m in Sources */,
 				83C2C92E1A0B432E00FD292B /* LKViewController.m in Sources */,
@@ -719,6 +730,7 @@
 				830BFBBC1A0FA99B00F9C036 /* LKSideViewController.m in Sources */,
 				830BFBA31A0F903400F9C036 /* UIProgressView+FlatUI.m in Sources */,
 				830BFBAD1A0F991A00F9C036 /* MainViewController.m in Sources */,
+				83D109C21A22178D0011E3F6 /* GraduationMiddleCell.m in Sources */,
 				830BFBA51A0F903400F9C036 /* UIStepper+FlatUI.m in Sources */,
 				830BFB9B1A0F903300F9C036 /* FUISwitch.m in Sources */,
 				830BFBA21A0F903400F9C036 /* UIPopoverController+FlatUI.m in Sources */,

@@ -211,7 +211,7 @@
         static NSString *cellIdentifier = @"MemberCell";
         MemberCell *cell = (MemberCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.containerView.layer.cornerRadius = 14.f;
+//        cell.containerView.layer.cornerRadius = 14.f;
 
         NSString *path = [[[dataDic objectForKey:@"members"] objectAtIndex:indexPaths.row] valueForKey:@"img"];
         [cell.profile_img setImage:IMAGE(path)];
