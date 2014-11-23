@@ -74,6 +74,7 @@
 		83D109BF1A21F2440011E3F6 /* GraduationPosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109BE1A21F2440011E3F6 /* GraduationPosterViewController.m */; };
 		83D109C21A22178D0011E3F6 /* GraduationMiddleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109C11A22178D0011E3F6 /* GraduationMiddleCell.m */; };
 		83D109C51A2217980011E3F6 /* GraduationBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109C41A2217980011E3F6 /* GraduationBottomCell.m */; };
+		83D109C91A2220730011E3F6 /* RentalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109C81A2220730011E3F6 /* RentalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,6 +216,8 @@
 		83D109C11A22178D0011E3F6 /* GraduationMiddleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduationMiddleCell.m; sourceTree = "<group>"; };
 		83D109C31A2217980011E3F6 /* GraduationBottomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraduationBottomCell.h; sourceTree = "<group>"; };
 		83D109C41A2217980011E3F6 /* GraduationBottomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduationBottomCell.m; sourceTree = "<group>"; };
+		83D109C71A2220730011E3F6 /* RentalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RentalViewController.h; sourceTree = "<group>"; };
+		83D109C81A2220730011E3F6 /* RentalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +354,8 @@
 		831FBE441A1AFEE7002F3C36 /* RentalViewController */ = {
 			isa = PBXGroup;
 			children = (
+				83D109C71A2220730011E3F6 /* RentalViewController.h */,
+				83D109C81A2220730011E3F6 /* RentalViewController.m */,
 			);
 			name = RentalViewController;
 			sourceTree = "<group>";
@@ -534,6 +539,7 @@
 				83807F1C1A15B43700071612 /* BoardViewController */,
 				831FBE441A1AFEE7002F3C36 /* RentalViewController */,
 				8385C3AA1A2078C00059E95B /* GraduateViewController */,
+				83D109C61A2220380011E3F6 /* Counsel */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -584,6 +590,13 @@
 				83C2C92D1A0B432E00FD292B /* LKViewController.m */,
 			);
 			name = LKViewController;
+			sourceTree = "<group>";
+		};
+		83D109C61A2220380011E3F6 /* Counsel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Counsel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -726,6 +739,7 @@
 				830BFBA61A0F903400F9C036 /* UITabBar+FlatUI.m in Sources */,
 				83D109BC1A21DBDA0011E3F6 /* GraduationDetailViewController.m in Sources */,
 				830BFBA01A0F903300F9C036 /* UIImage+FlatUI.m in Sources */,
+				83D109C91A2220730011E3F6 /* RentalViewController.m in Sources */,
 				83D109BF1A21F2440011E3F6 /* GraduationPosterViewController.m in Sources */,
 				830BFBBC1A0FA99B00F9C036 /* LKSideViewController.m in Sources */,
 				830BFBA31A0F903400F9C036 /* UIProgressView+FlatUI.m in Sources */,

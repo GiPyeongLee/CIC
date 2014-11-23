@@ -13,6 +13,9 @@
 #define kBOARD_IMAGE_UNTAP @[@"btn_noticeboard",@"btn_freeboard",@"btn_jobboard",@"btn_photoboard"]
 #define kBOARD_IMAGE_TAP @[@"btn_noticeboard_red",@"btn_freeboard_red",@"btn_jobboard_red",@"btn_photoboard_red"]
 
+#define kRENTAL_IMAGE_UNTAP @[@"btn_list_untap",@"btn_standby_untap",@"btn_rental_untap",@"btn_finish_untap"]
+#define kRENTAL_IMAGE_TAP @[@"btn_list_tap",@"btn_standby_tap",@"btn_rental_tap",@"btn_finish_untap"]
+
 @implementation LKSegmentControl
 @synthesize delegate;
 
@@ -77,6 +80,23 @@
                     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
                     NSString *tapName = kBOARD_IMAGE_TAP[i];
                     NSString *untapName = kBOARD_IMAGE_UNTAP[i];
+                    [btn setImage:IMAGE(untapName) forState:UIControlStateNormal];
+                    [btn setImage:IMAGE(tapName) forState:UIControlStateSelected];
+                    [btn addTarget:delegate action:@selector(selectedSegment:) forControlEvents:UIControlEventTouchUpInside];
+                    [btn setTag:i];
+                    [btn setFrame:CGRectMake(offsetX, 0, width, frame.size.height)];
+                    offsetX+=width;
+                    [self addSubview:btn];
+                }
+                break;
+            }
+            case LKSegmentTypeRental:{
+                float width = frame.size.width/[kRENTAL_IMAGE_UNTAP count];
+                float offsetX = 0.f;
+                for (int i=0;i<[kRENTAL_IMAGE_UNTAP count]; i++) {
+                    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+                    NSString *tapName = kRENTAL_IMAGE_TAP[i];
+                    NSString *untapName = kRENTAL_IMAGE_UNTAP[i];
                     [btn setImage:IMAGE(untapName) forState:UIControlStateNormal];
                     [btn setImage:IMAGE(tapName) forState:UIControlStateSelected];
                     [btn addTarget:delegate action:@selector(selectedSegment:) forControlEvents:UIControlEventTouchUpInside];

@@ -10,6 +10,7 @@
 #import "IntroViewController.h"
 #import "BoardViewController.h"
 #import "GraduationViewController.h"
+#import "RentalViewController.h"
 #import "LKHttpRequest.h"
 @interface MainViewController()
 @property (nonatomic,strong) LKHttpRequest *request;
@@ -66,7 +67,12 @@
 }
 
 - (IBAction)pushedGraduateBtn:(id)sender {
-   GraduationViewController *VC = (GraduationViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"GraduationViewController"];
+   GraduationViewController *VC = VIEWCONTROLLER(@"GraduationViewController");
+    [self.navigationController pushViewController:VC animated:false];
+}
+- (IBAction)pushedRentalBtn:(id)sender {
+    RentalViewController *VC = VIEWCONTROLLER(@"RentalViewController");
+    [VC setupSelectedSegement:0 withData:nil];
     [self.navigationController pushViewController:VC animated:false];
 }
 

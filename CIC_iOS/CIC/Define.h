@@ -58,6 +58,7 @@ typedef enum {
 
 #define kLKSegIntroTitle @[@"인사말",@"소개",@"구성원"]
 #define kLKSegBoardTitle @[@"공지사항",@"취업게시판",@"자유게시판",@"사진게시판"]
+
 #define kLKSegBoardType @[@(1),@(2),@(4),@(9)]
 
 #pragma mark - Graduation
