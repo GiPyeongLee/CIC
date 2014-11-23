@@ -7,6 +7,7 @@
 //
 
 #import "GraduationViewController.h"
+#import "GraduationDetailViewController.h"
 #import "GraduationCell.h"
 #import "Define.h"
 @interface GraduationViewController()<UITableViewDataSource,UITableViewDelegate>
@@ -25,6 +26,18 @@
     cell.label_title.text = [LKGraduationTitles objectAtIndex:indexPath.row];
     cell.img_cover.image = IMAGE([LKGraduationImageCovers objectAtIndex:indexPath.row]);
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    GraduationDetailViewController *VC = VIEWCONTROLLER(@"GraduationDetailViewController");
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"graduation" ofType:@"json"];
+    NSData *jsonData = [NSData dataWithContentsOfFile:filePath];
+    NSArray *json = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
+
+    
+    [VC preloadData:json withTitle:[LKGraduationTitles objectAtIndex:indexPath.row]];
+    [self.navigationController pushViewController:VC animated:true];
 }
 
 @end

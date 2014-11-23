@@ -1333,6 +1333,155 @@
             </objects>
             <point key="canvasLocation" x="8" y="632"/>
         </scene>
+        <!--Graduation Detail View Controller-->
+        <scene sceneID="480-Lc-zFn">
+            <objects>
+                <viewController storyboardIdentifier="GraduationDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="96w-Kf-WBJ" customClass="GraduationDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NCS-rZ-6Tm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xtm-Fl-yGf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ddt-LR-7gp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pDi-NA-pcW">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.88235300780000003" green="0.88235300780000003" blue="0.89019614459999996" alpha="1" colorSpace="deviceRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="GraduationDetailCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="GraduationDetailCell" rowHeight="138" id="3Zn-WZ-e3u" customClass="GraduationDetailCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Zn-WZ-e3u" id="gDY-Y9-U0G">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_post_graduation" translatesAutoresizingMaskIntoConstraints="NO" id="Phn-2w-vBN">
+                                                    <rect key="frame" x="15" y="13" width="290" height="124"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yih-Ev-G7u">
+                                                    <rect key="frame" x="265" y="22" width="40" height="15"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z58-kv-8i8">
+                                                    <rect key="frame" x="23" y="19" width="200" height="40"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0S-cC-kom">
+                                                    <rect key="frame" x="235" y="39" width="65" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_write_input_line" translatesAutoresizingMaskIntoConstraints="NO" id="Was-2z-e6G">
+                                                    <rect key="frame" x="15" y="74" width="290" height="1"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66v-Wd-nTw">
+                                                    <rect key="frame" x="23" y="85" width="40" height="40"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEm-bA-KqK">
+                                                    <rect key="frame" x="71" y="85" width="30" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2g-Bs-pmD">
+                                                    <rect key="frame" x="71" y="103" width="40" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="9"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lNS-eW-kOz">
+                                                    <rect key="frame" x="118" y="85" width="40" height="40"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7c2-l9-Jpb">
+                                                    <rect key="frame" x="166" y="85" width="30" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOm-rx-Yb9">
+                                                    <rect key="frame" x="166" y="103" width="40" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="9"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E4u-de-qLt">
+                                                    <rect key="frame" x="212" y="85" width="40" height="40"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOi-jy-bJo">
+                                                    <rect key="frame" x="260" y="85" width="30" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJY-Ss-cNN">
+                                                    <rect key="frame" x="260" y="103" width="40" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="9"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="img_profile_1" destination="66v-Wd-nTw" id="nFn-sz-aIV"/>
+                                            <outlet property="img_profile_2" destination="lNS-eW-kOz" id="qzx-Xo-Wz3"/>
+                                            <outlet property="img_profile_3" destination="E4u-de-qLt" id="Sz5-cM-FZZ"/>
+                                            <outlet property="img_type" destination="Yih-Ev-G7u" id="j1Y-RE-VVO"/>
+                                            <outlet property="label_name_profile_1" destination="MEm-bA-KqK" id="u2l-70-1M7"/>
+                                            <outlet property="label_name_profile_2" destination="7c2-l9-Jpb" id="L9q-nv-fdH"/>
+                                            <outlet property="label_name_profile_3" destination="GOi-jy-bJo" id="1UU-vO-BaP"/>
+                                            <outlet property="label_pkid_profile_1" destination="V2g-Bs-pmD" id="sPo-2Q-8ZP"/>
+                                            <outlet property="label_pkid_profile_2" destination="fOm-rx-Yb9" id="MnS-s2-bRX"/>
+                                            <outlet property="label_pkid_profile_3" destination="QJY-Ss-cNN" id="3Cf-ct-jxZ"/>
+                                            <outlet property="label_title" destination="Z58-kv-8i8" id="gEt-me-xSj"/>
+                                            <outlet property="label_type" destination="J0S-cC-kom" id="bQu-b7-Dmf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="96w-Kf-WBJ" id="0E4-33-41i"/>
+                                    <outlet property="delegate" destination="96w-Kf-WBJ" id="TTq-dF-Aah"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ym9-hB-OAb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_navibar" translatesAutoresizingMaskIntoConstraints="NO" id="3GI-wh-Qdz">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUh-Ne-mUA">
+                                        <rect key="frame" x="7" y="14" width="42" height="47"/>
+                                        <state key="normal" image="icon_back">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pushedBackBtn:" destination="Fgl-3W-bB6" eventType="touchUpInside" id="9iT-ZM-FQY"/>
+                                            <action selector="pushedBackBtn:" destination="Wwb-xC-gut" eventType="touchUpInside" id="CX6-uT-Lr0"/>
+                                            <action selector="pushedBackBtn:" destination="96w-Kf-WBJ" eventType="touchUpInside" id="stg-t5-pjO"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="졸업게시판" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="as8-Cu-abi">
+                                        <rect key="frame" x="60" y="29" width="220" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="navTitle" destination="as8-Cu-abi" id="oxf-DY-9hW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q5v-Dj-OVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="632"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg_check" width="28" height="28"/>
@@ -1342,6 +1491,7 @@
         <image name="bg_navibar" width="320" height="64"/>
         <image name="bg_none_check" width="28" height="28"/>
         <image name="bg_notice" width="290" height="130"/>
+        <image name="bg_post_graduation" width="290" height="124"/>
         <image name="btn_Sign up" width="155" height="40"/>
         <image name="btn_all_agree" width="155" height="40"/>
         <image name="btn_comment_write" width="25" height="15"/>

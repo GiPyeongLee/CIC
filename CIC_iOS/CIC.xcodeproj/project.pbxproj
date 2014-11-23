@@ -67,6 +67,11 @@
 		83C6FB5C1A13ABF7003CD71B /* agreement_2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C6FB5B1A13ABF7003CD71B /* agreement_2.txt */; };
 		83C6FB5E1A13AC7D003CD71B /* agreement_1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C6FB5D1A13AC7D003CD71B /* agreement_1.txt */; };
 		83C6FB611A14F4BE003CD71B /* LKProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C6FB601A14F4BE003CD71B /* LKProgressView.m */; };
+		83D109B31A21DA400011E3F6 /* graduation.json in Resources */ = {isa = PBXBuildFile; fileRef = 83D109B21A21DA400011E3F6 /* graduation.json */; };
+		83D109B61A21DB470011E3F6 /* UserScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109B51A21DB470011E3F6 /* UserScrollView.m */; };
+		83D109B91A21DB590011E3F6 /* GraduationDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109B81A21DB590011E3F6 /* GraduationDetailCell.m */; };
+		83D109BC1A21DBDA0011E3F6 /* GraduationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109BB1A21DBDA0011E3F6 /* GraduationDetailViewController.m */; };
+		83D109BF1A21F2440011E3F6 /* GraduationPosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D109BE1A21F2440011E3F6 /* GraduationPosterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +200,15 @@
 		83C6FB5D1A13AC7D003CD71B /* agreement_1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = agreement_1.txt; sourceTree = "<group>"; };
 		83C6FB5F1A14F4BE003CD71B /* LKProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKProgressView.h; sourceTree = "<group>"; };
 		83C6FB601A14F4BE003CD71B /* LKProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKProgressView.m; sourceTree = "<group>"; };
+		83D109B21A21DA400011E3F6 /* graduation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = graduation.json; sourceTree = "<group>"; };
+		83D109B41A21DB470011E3F6 /* UserScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserScrollView.h; sourceTree = "<group>"; };
+		83D109B51A21DB470011E3F6 /* UserScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserScrollView.m; sourceTree = "<group>"; };
+		83D109B71A21DB590011E3F6 /* GraduationDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraduationDetailCell.h; sourceTree = "<group>"; };
+		83D109B81A21DB590011E3F6 /* GraduationDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduationDetailCell.m; sourceTree = "<group>"; };
+		83D109BA1A21DBDA0011E3F6 /* GraduationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraduationDetailViewController.h; sourceTree = "<group>"; };
+		83D109BB1A21DBDA0011E3F6 /* GraduationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduationDetailViewController.m; sourceTree = "<group>"; };
+		83D109BD1A21F2440011E3F6 /* GraduationPosterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraduationPosterViewController.h; sourceTree = "<group>"; };
+		83D109BE1A21F2440011E3F6 /* GraduationPosterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduationPosterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,9 +429,14 @@
 		8385C3AA1A2078C00059E95B /* GraduateViewController */ = {
 			isa = PBXGroup;
 			children = (
+				83D109B21A21DA400011E3F6 /* graduation.json */,
 				8385C3AE1A207C300059E95B /* Cell */,
 				8385C3AB1A207BE80059E95B /* GraduationViewController.h */,
 				8385C3AC1A207BE80059E95B /* GraduationViewController.m */,
+				83D109BA1A21DBDA0011E3F6 /* GraduationDetailViewController.h */,
+				83D109BB1A21DBDA0011E3F6 /* GraduationDetailViewController.m */,
+				83D109BD1A21F2440011E3F6 /* GraduationPosterViewController.h */,
+				83D109BE1A21F2440011E3F6 /* GraduationPosterViewController.m */,
 			);
 			name = GraduateViewController;
 			sourceTree = "<group>";
@@ -427,6 +446,10 @@
 			children = (
 				8385C3AF1A207C3D0059E95B /* GraduationCell.h */,
 				8385C3B01A207C3D0059E95B /* GraduationCell.m */,
+				83D109B41A21DB470011E3F6 /* UserScrollView.h */,
+				83D109B51A21DB470011E3F6 /* UserScrollView.m */,
+				83D109B71A21DB590011E3F6 /* GraduationDetailCell.h */,
+				83D109B81A21DB590011E3F6 /* GraduationDetailCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -641,6 +664,7 @@
 				831FBE411A1A45AB002F3C36 /* intro.txt in Resources */,
 				831FBE431A1A4D77002F3C36 /* professors.json in Resources */,
 				83C6FB5C1A13ABF7003CD71B /* agreement_2.txt in Resources */,
+				83D109B31A21DA400011E3F6 /* graduation.json in Resources */,
 				83BAEDBB1A09D16F00776368 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -681,13 +705,17 @@
 				830BFBA41A0F903400F9C036 /* UISlider+FlatUI.m in Sources */,
 				83BAEDAD1A09D16F00776368 /* main.m in Sources */,
 				83C6FB551A13A154003CD71B /* AgreementViewController.m in Sources */,
+				83D109B91A21DB590011E3F6 /* GraduationDetailCell.m in Sources */,
 				830BFBB71A0FA8B700F9C036 /* UIViewController+JASidePanel.m in Sources */,
 				831FBE471A1AFF06002F3C36 /* BoardViewController.m in Sources */,
+				83D109B61A21DB470011E3F6 /* UserScrollView.m in Sources */,
 				8385C3AD1A207BE80059E95B /* GraduationViewController.m in Sources */,
 				830BFBBF1A0FB32D00F9C036 /* RegistViewController.m in Sources */,
 				830BFBA71A0F903400F9C036 /* UITableViewCell+FlatUI.m in Sources */,
 				830BFBA61A0F903400F9C036 /* UITabBar+FlatUI.m in Sources */,
+				83D109BC1A21DBDA0011E3F6 /* GraduationDetailViewController.m in Sources */,
 				830BFBA01A0F903300F9C036 /* UIImage+FlatUI.m in Sources */,
+				83D109BF1A21F2440011E3F6 /* GraduationPosterViewController.m in Sources */,
 				830BFBBC1A0FA99B00F9C036 /* LKSideViewController.m in Sources */,
 				830BFBA31A0F903400F9C036 /* UIProgressView+FlatUI.m in Sources */,
 				830BFBAD1A0F991A00F9C036 /* MainViewController.m in Sources */,
