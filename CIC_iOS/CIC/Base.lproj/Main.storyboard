@@ -688,6 +688,15 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFl-lQ-0CN">
+                                        <rect key="frame" x="272" y="23" width="40" height="30"/>
+                                        <state key="normal" image="icon_edit">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pushedEditBtn:" destination="kbc-iR-nTv" eventType="touchUpInside" id="zE9-ug-am2"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -702,7 +711,7 @@
                                 <rect key="frame" x="0.0" y="99" width="320" height="469"/>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalCell" rowHeight="100" id="Cwk-0D-fCJ" customClass="RentalCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RentalCell" rowHeight="100" id="Cwk-0D-fCJ" customClass="RentalCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cwk-0D-fCJ" id="w5O-Sd-LsJ">
@@ -738,9 +747,6 @@
                                                     <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asset_pagebtn" translatesAutoresizingMaskIntoConstraints="NO" id="18J-Fc-cdg">
-                                                    <rect key="frame" x="285" y="5" width="20" height="89"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장비이름" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGa-gk-BSA">
                                                     <rect key="frame" x="167" y="14" width="110" height="18"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
@@ -761,15 +767,165 @@
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asset_pagebtn" translatesAutoresizingMaskIntoConstraints="NO" id="18J-Fc-cdg">
+                                                    <rect key="frame" x="285" y="5" width="20" height="89"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asset_rental_disable_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="ItB-32-pd4">
+                                                    <rect key="frame" x="15" y="5" width="290" height="89"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
+                                            <outlet property="img_disable" destination="ItB-32-pd4" id="uS9-ja-Qud"/>
                                             <outlet property="img_equipment" destination="g4L-nu-f9T" id="6Qp-7v-Rfq"/>
                                             <outlet property="label_enable" destination="gqp-QH-0UZ" id="sO3-Lr-DgE"/>
                                             <outlet property="label_name" destination="AGa-gk-BSA" id="6ou-IB-tlc"/>
                                             <outlet property="label_pkid" destination="VOQ-D3-2yG" id="kxA-Uy-8Lq"/>
                                             <outlet property="label_rentaled" destination="GV6-aq-kgs" id="a0g-Ci-qTA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RentalStatusCell" rowHeight="100" id="DlX-x0-Th4" customClass="RentalStatusCell">
+                                        <rect key="frame" x="0.0" y="234" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DlX-x0-Th4" id="hg0-Cd-eAE">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asset_rental_bg" translatesAutoresizingMaskIntoConstraints="NO" id="w0R-eD-ogr">
+                                                    <rect key="frame" x="15" y="5" width="290" height="89"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P11-Xt-z10">
+                                                    <rect key="frame" x="23" y="14" width="70" height="70"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장비이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAG-lc-Evt">
+                                                    <rect key="frame" x="101" y="14" width="60" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비품번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48Z-AQ-CV6">
+                                                    <rect key="frame" x="101" y="32" width="60" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대여장소" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8o-7U-VEp">
+                                                    <rect key="frame" x="101" y="50" width="60" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대여상태" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhr-Cy-bmn">
+                                                    <rect key="frame" x="101" y="67" width="60" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장비이름" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWF-Bz-Oyo">
+                                                    <rect key="frame" x="167" y="14" width="110" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비품번호" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="499-Cb-NsV">
+                                                    <rect key="frame" x="167" y="32" width="110" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="D407" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKZ-8e-J4Y">
+                                                    <rect key="frame" x="217" y="50" width="60" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asset_pagebtn" translatesAutoresizingMaskIntoConstraints="NO" id="JCD-JA-PNd">
+                                                    <rect key="frame" x="285" y="5" width="20" height="89"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0Z-dk-87r">
+                                                    <rect key="frame" x="229" y="67" width="52" height="22"/>
+                                                    <state key="normal" image="asset_btn_request_ing">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="btn_status" destination="s0Z-dk-87r" id="HEH-Qy-b1P"/>
+                                            <outlet property="img_equipment" destination="P11-Xt-z10" id="wKc-gb-xOW"/>
+                                            <outlet property="label_name" destination="UWF-Bz-Oyo" id="xTN-Wo-BXx"/>
+                                            <outlet property="label_pkid" destination="499-Cb-NsV" id="H2u-i1-5O5"/>
+                                            <outlet property="label_room" destination="TKZ-8e-J4Y" id="EtI-Kr-Jp9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RentalAdminCell" rowHeight="100" id="Qfz-xb-iAw" customClass="RentalAdminCell">
+                                        <rect key="frame" x="0.0" y="234" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qfz-xb-iAw" id="9ta-7j-GYE">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asset_rental_bg" translatesAutoresizingMaskIntoConstraints="NO" id="mnb-Ki-X10">
+                                                    <rect key="frame" x="15" y="5" width="290" height="89"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-U8-M6w">
+                                                    <rect key="frame" x="23" y="14" width="70" height="70"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장비이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piR-N0-IPI">
+                                                    <rect key="frame" x="101" y="14" width="60" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비품번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1K-6b-t6f">
+                                                    <rect key="frame" x="101" y="31" width="60" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대여상태" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsd-nH-IyJ">
+                                                    <rect key="frame" x="101" y="48" width="60" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장비이름" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee9-RL-G6A">
+                                                    <rect key="frame" x="167" y="14" width="110" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비품번호" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKZ-Xl-FJ2">
+                                                    <rect key="frame" x="167" y="31" width="110" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대여가능" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMW-7H-Q7p">
+                                                    <rect key="frame" x="217" y="48" width="60" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asset_pagebtn" translatesAutoresizingMaskIntoConstraints="NO" id="x3y-nQ-RYa">
+                                                    <rect key="frame" x="285" y="5" width="20" height="89"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7j-bS-Zjs">
+                                                    <rect key="frame" x="227" y="68" width="52" height="21"/>
+                                                    <state key="normal" image="btn_cancel">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jq-Pu-KuC">
+                                                    <rect key="frame" x="167" y="68" width="52" height="22"/>
+                                                    <state key="normal" image="btn_accept">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="btn_accept" destination="9Jq-Pu-KuC" id="r1W-b9-9Fs"/>
+                                            <outlet property="btn_cancel" destination="M7j-bS-Zjs" id="bCo-5Z-yIv"/>
+                                            <outlet property="img_equipment" destination="8Yx-U8-M6w" id="N0U-1g-krS"/>
+                                            <outlet property="label_enable" destination="cMW-7H-Q7p" id="zDI-1R-W5j"/>
+                                            <outlet property="label_name" destination="ee9-RL-G6A" id="r2R-AN-cPO"/>
+                                            <outlet property="label_pkid" destination="kKZ-Xl-FJ2" id="Dd8-PB-d6Z"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -782,6 +938,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="btn_edit" destination="mFl-lQ-0CN" id="IJ7-Pi-ujv"/>
+                        <outlet property="m_tableView" destination="yzO-uc-1d5" id="l59-A3-aTK"/>
                         <outlet property="segmentCtrl" destination="xiA-Gq-t64" id="bpH-e5-5AQ"/>
                     </connections>
                 </viewController>
@@ -813,7 +971,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pushedBackBtn:" destination="kbc-iR-nTv" eventType="touchUpInside" id="oo8-X8-jka"/>
+                                            <action selector="pushedBackBtn:" destination="pCi-Vi-eJZ" eventType="touchUpInside" id="eI4-do-9Jz"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장비대여" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0X-y8-vJf">
@@ -828,18 +986,100 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rental_bg_big" translatesAutoresizingMaskIntoConstraints="NO" id="ppv-8g-7iz">
                                 <rect key="frame" x="16" y="85" width="290" height="398"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장비이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfe-la-FSN">
+                                <rect key="frame" x="31" y="334" width="60" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비품번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJk-9t-r4G">
+                                <rect key="frame" x="31" y="352" width="60" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대여가능" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP3-4t-yjE">
+                                <rect key="frame" x="31" y="370" width="60" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대여중" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVc-N5-9ox">
+                                <rect key="frame" x="31" y="387" width="60" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장비이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1I-Bd-dIp">
+                                <rect key="frame" x="97" y="334" width="194" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비품번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3v-Ul-Vt2">
+                                <rect key="frame" x="97" y="352" width="194" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대여가능" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfh-Z2-pvE">
+                                <rect key="frame" x="97" y="370" width="194" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대여중" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekh-bO-oSJ">
+                                <rect key="frame" x="97" y="387" width="194" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkP-cu-uN9">
                                 <rect key="frame" x="0.0" y="527" width="320" height="41"/>
                                 <state key="normal" image="btn_rental_request">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushedRequestRental:" destination="pCi-Vi-eJZ" eventType="touchUpInside" id="v3w-Tt-qXS"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rental_noneimg_big" translatesAutoresizingMaskIntoConstraints="NO" id="IBF-Jv-R2N">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rental_noneimg_big" translatesAutoresizingMaskIntoConstraints="NO" id="IBF-Jv-R2N">
                                 <rect key="frame" x="31" y="99" width="260" height="212"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjI-W1-6fT">
+                                <rect key="frame" x="31" y="441" width="100" height="30"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <state key="normal" title="대여일" backgroundImage="btn_return_due_b">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushedDateBtn:" destination="pCi-Vi-eJZ" eventType="touchUpInside" id="5Dw-4Q-zmJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEI-AG-iQG">
+                                <rect key="frame" x="191" y="441" width="100" height="30"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <state key="normal" title="반납일" backgroundImage="btn_return_due_b">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushedDateBtn:" destination="pCi-Vi-eJZ" eventType="touchUpInside" id="Yve-RT-qvW"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_between" translatesAutoresizingMaskIntoConstraints="NO" id="K0J-j5-LFL">
+                                <rect key="frame" x="155" y="441" width="11" height="30"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_write_input_line" translatesAutoresizingMaskIntoConstraints="NO" id="Lne-sM-x9z">
+                                <rect key="frame" x="31" y="420" width="260" height="1"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="btn_end" destination="XEI-AG-iQG" id="zl9-eW-BZd"/>
+                        <outlet property="btn_start" destination="TjI-W1-6fT" id="N1I-Kh-IEC"/>
+                        <outlet property="img_equip" destination="IBF-Jv-R2N" id="VtF-9G-eLr"/>
+                        <outlet property="label_enable" destination="Mfh-Z2-pvE" id="4DM-p2-fya"/>
+                        <outlet property="label_equip_id" destination="n3v-Ul-Vt2" id="KQ1-vR-079"/>
+                        <outlet property="label_name" destination="W1I-Bd-dIp" id="2X9-KV-fmK"/>
+                        <outlet property="label_rentaled" destination="ekh-bO-oSJ" id="TFM-ep-e6y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YY5-U8-7IC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1885,8 +2125,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="asset_btn_request_ing" width="52" height="18"/>
         <image name="asset_pagebtn" width="11" height="89"/>
         <image name="asset_rental_bg" width="290" height="89"/>
+        <image name="asset_rental_disable_bg.png" width="290" height="89"/>
         <image name="bg_check" width="28" height="28"/>
         <image name="bg_comment_write" width="320" height="45"/>
         <image name="bg_gradation_post_graduation" width="290" height="124"/>
@@ -1896,7 +2138,9 @@
         <image name="bg_notice" width="290" height="130"/>
         <image name="bg_post_graduation" width="290" height="124"/>
         <image name="btn_Sign up" width="155" height="40"/>
+        <image name="btn_accept" width="52" height="21"/>
         <image name="btn_all_agree" width="155" height="40"/>
+        <image name="btn_cancel" width="52" height="21"/>
         <image name="btn_comment_write" width="25" height="15"/>
         <image name="btn_drawor_board" width="276" height="56"/>
         <image name="btn_drawor_cic" width="276" height="56"/>
@@ -1919,15 +2163,18 @@
         <image name="btn_main_rental" width="113" height="77"/>
         <image name="btn_next" width="155" height="40"/>
         <image name="btn_rental_request" width="320" height="41"/>
+        <image name="btn_return_due_b" width="100" height="30"/>
         <image name="btn_share_red" width="145" height="31"/>
         <image name="btn_signup" width="320" height="60"/>
         <image name="btn_view_contents" width="68" height="28"/>
         <image name="icon_back" width="17" height="17"/>
         <image name="icon_comment" width="11" height="11"/>
         <image name="icon_drawor_setting" width="47" height="46"/>
+        <image name="icon_edit" width="40" height="30"/>
         <image name="icon_heart" width="11" height="11"/>
         <image name="icon_menu.png" width="30" height="30"/>
         <image name="icon_setting.png" width="30" height="30"/>
+        <image name="img_between" width="11" height="30"/>
         <image name="img_drawor_line" width="231" height="1"/>
         <image name="img_drawor_profile.png" width="50" height="50"/>
         <image name="img_white_gradient" width="320" height="80"/>

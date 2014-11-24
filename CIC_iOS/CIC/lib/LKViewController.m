@@ -8,7 +8,7 @@
 
 #import "LKViewController.h"
 #import "LKSideViewController.h"
-@interface LKViewController () <UITextFieldDelegate>
+@interface LKViewController () <UITextFieldDelegate,UIAlertViewDelegate>
 {
     BOOL isKeyboardAnimating;
     UIDatePicker *activeDatePicker;
@@ -137,7 +137,7 @@
 #pragma mark - FUIAlertView
 - (void)showAlertViewWithTitle:(NSString *)title description:(NSString *)description
 {
-    FUIAlertView *alertView = [[FUIAlertView alloc]initWithTitle:title message:description delegate:nil cancelButtonTitle:@"확인" otherButtonTitles:nil, nil];
+    FUIAlertView *alertView = [[FUIAlertView alloc]initWithTitle:title message:description delegate:self cancelButtonTitle:@"확인" otherButtonTitles:nil, nil];
     alertView.backgroundOverlay.backgroundColor = [UIColor clearColor];
     alertView.titleLabel.textColor = [UIColor cloudsColor];
     alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];

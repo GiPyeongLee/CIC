@@ -71,7 +71,7 @@
     [self.navigationController pushViewController:VC animated:false];
 }
 - (IBAction)pushedRentalBtn:(id)sender {
-    [self.request postWithURL:kURL_RENTAL_LIST withParams:@{@"main_type":@([sender tag])} compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
+    [self.request postWithURL:kURL_RENTAL_LIST withParams:@{@"status":@(0),@"user_id":sharedUserInfo(@"pkid")} compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         RentalViewController *VC = VIEWCONTROLLER(@"RentalViewController");
         [VC setupSelectedSegement:0 withData:jsonDic];

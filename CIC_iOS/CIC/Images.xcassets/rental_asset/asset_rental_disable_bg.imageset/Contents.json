@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "asset_navi_point.png"
+      "filename" : "asset_rental_disable_bg.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "asset_navi_point@2x.png"
+      "filename" : "asset_rental_disable_bg@2x.png"
     }
   ],
   "info" : {

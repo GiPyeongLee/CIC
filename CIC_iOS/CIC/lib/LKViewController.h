@@ -15,7 +15,8 @@
     CGRect touchFieldRect;
     CGRect goalFrame;
 }
-- (void)showAlertViewWithTitle:(NSString *)title description:(NSString *)description;
+
+- (void)showAlertViewWithTitle:(NSString *)title description:(NSString *)description ;
 - (void)showDatePickerView;
 - (NSDate *)getSelectedDate;
 - (void)hideDatePickerView;

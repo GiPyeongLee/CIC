@@ -32,6 +32,7 @@
 #define kURL_BOARD_LIKE @"https://cic.hongik.ac.kr/api/board_like"
 #define kURL_BOARD_COMMENT_WRITE @"https://cic.hongik.ac.kr/api/board_comment_write"
 #define kURL_RENTAL_LIST @"https://cic.hongik.ac.kr/api/rental_list"
+#define kURL_RENTAL_BOOK @"https://cic.hongik.ac.kr/api/rental_book"
 
 #pragma mark - LKButtonType
 typedef enum {

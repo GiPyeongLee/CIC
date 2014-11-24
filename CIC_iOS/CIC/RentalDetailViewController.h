@@ -9,5 +9,5 @@
 #import "LKViewController.h"
 
 @interface RentalDetailViewController : LKViewController
-
+- (void)setupUserData:(NSDictionary *)equip;
 @end
