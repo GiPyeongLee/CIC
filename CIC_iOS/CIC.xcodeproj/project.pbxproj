@@ -53,6 +53,8 @@
 		83AC00D91A1BB4630040B5BD /* LKLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC00D81A1BB4630040B5BD /* LKLoadingView.m */; };
 		83AC00FD1A1C5B030040B5BD /* BoardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC00FC1A1C5B030040B5BD /* BoardDetailViewController.m */; };
 		83AC01001A1D725D0040B5BD /* BoardDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC00FF1A1D725D0040B5BD /* BoardDetailCell.m */; };
+		83B0BBC21A22EEE600438379 /* RentalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BBC11A22EEE600438379 /* RentalCell.m */; };
+		83B0BBC51A231A0700438379 /* RentalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BBC41A231A0700438379 /* RentalDetailViewController.m */; };
 		83B83EBF1A1DBDE4002CD7D9 /* BoardCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B83EBE1A1DBDE4002CD7D9 /* BoardCommentCell.m */; };
 		83BAEDAD1A09D16F00776368 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDAC1A09D16F00776368 /* main.m */; };
 		83BAEDB01A09D16F00776368 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDAF1A09D16F00776368 /* AppDelegate.m */; };
@@ -177,6 +179,10 @@
 		83AC00FC1A1C5B030040B5BD /* BoardDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardDetailViewController.m; sourceTree = "<group>"; };
 		83AC00FE1A1D725D0040B5BD /* BoardDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardDetailCell.h; sourceTree = "<group>"; };
 		83AC00FF1A1D725D0040B5BD /* BoardDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardDetailCell.m; sourceTree = "<group>"; };
+		83B0BBC01A22EEE600438379 /* RentalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RentalCell.h; sourceTree = "<group>"; };
+		83B0BBC11A22EEE600438379 /* RentalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentalCell.m; sourceTree = "<group>"; };
+		83B0BBC31A231A0700438379 /* RentalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RentalDetailViewController.h; sourceTree = "<group>"; };
+		83B0BBC41A231A0700438379 /* RentalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentalDetailViewController.m; sourceTree = "<group>"; };
 		83B83EBD1A1DBDE4002CD7D9 /* BoardCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardCommentCell.h; sourceTree = "<group>"; };
 		83B83EBE1A1DBDE4002CD7D9 /* BoardCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardCommentCell.m; sourceTree = "<group>"; };
 		83BAEDA71A09D16F00776368 /* CIC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,8 +360,11 @@
 		831FBE441A1AFEE7002F3C36 /* RentalViewController */ = {
 			isa = PBXGroup;
 			children = (
+				83B0BBBF1A22EEAF00438379 /* Cell */,
 				83D109C71A2220730011E3F6 /* RentalViewController.h */,
 				83D109C81A2220730011E3F6 /* RentalViewController.m */,
+				83B0BBC31A231A0700438379 /* RentalDetailViewController.h */,
+				83B0BBC41A231A0700438379 /* RentalDetailViewController.m */,
 			);
 			name = RentalViewController;
 			sourceTree = "<group>";
@@ -465,6 +474,15 @@
 				83D109C11A22178D0011E3F6 /* GraduationMiddleCell.m */,
 				83D109C31A2217980011E3F6 /* GraduationBottomCell.h */,
 				83D109C41A2217980011E3F6 /* GraduationBottomCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		83B0BBBF1A22EEAF00438379 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				83B0BBC01A22EEE600438379 /* RentalCell.h */,
+				83B0BBC11A22EEE600438379 /* RentalCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -713,6 +731,7 @@
 				83C6FB581A13A6F9003CD71B /* AgreementContentsViewController.m in Sources */,
 				83AC00FD1A1C5B030040B5BD /* BoardDetailViewController.m in Sources */,
 				833286561A1911CD0095A0DE /* LKSegmentControl.m in Sources */,
+				83B0BBC51A231A0700438379 /* RentalDetailViewController.m in Sources */,
 				830BFB9D1A0F903300F9C036 /* UIBarButtonItem+FlatUI.m in Sources */,
 				830BFB9C1A0F903300F9C036 /* FUITextField.m in Sources */,
 				830BFB9E1A0F903300F9C036 /* UIColor+FlatUI.m in Sources */,
@@ -725,6 +744,7 @@
 				830BFB9A1A0F903300F9C036 /* FUISegmentedControl.m in Sources */,
 				83BAEDD81A09D9A400776368 /* LKHttpRequest.m in Sources */,
 				83C6FB611A14F4BE003CD71B /* LKProgressView.m in Sources */,
+				83B0BBC21A22EEE600438379 /* RentalCell.m in Sources */,
 				831FBE4A1A1AFF5B002F3C36 /* BoardCell.m in Sources */,
 				830BFBA41A0F903400F9C036 /* UISlider+FlatUI.m in Sources */,
 				83BAEDAD1A09D16F00776368 /* main.m in Sources */,
