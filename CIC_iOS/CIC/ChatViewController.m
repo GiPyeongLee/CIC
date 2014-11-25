@@ -75,7 +75,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CounselSenderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CounselSenderCell"];
+    CounselMyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CounselMyCell"];
     cell.label_message.text = [self.chatArray objectAtIndex:indexPath.row];
     return cell;
 }

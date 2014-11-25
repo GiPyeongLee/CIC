@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CounselMyCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *label_message;
 
 @end
