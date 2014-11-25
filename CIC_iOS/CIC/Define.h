@@ -34,7 +34,8 @@
 #define kURL_RENTAL_LIST @"https://cic.hongik.ac.kr/api/rental_list"
 #define kURL_RENTAL_BOOK @"https://cic.hongik.ac.kr/api/rental_book"
 #define kURL_COUNSEL_DATA @"https://cic.hongik.ac.kr/api/counsel"
-
+#define kURL_SENDING_MESSAGE @"https://cic.hongik.ac.kr/api/sending_messages"
+#define kURL_POLLING_MESSAGE @"https://cic.hongik.ac.kr/api/polling_messages"
 #pragma mark - LKButtonType
 typedef enum {
     LKButtonTypeWhite =0,

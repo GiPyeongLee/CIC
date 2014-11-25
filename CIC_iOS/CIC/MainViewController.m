@@ -82,22 +82,37 @@
 - (IBAction)pushedCounselBtn:(id)sender {
     CounselViewController *VC = VIEWCONTROLLER(@"CounselViewController");
     
-    if (sharedPref(@"people")&&sharedPref(@"room")) {
-        [VC preloadDataWithPeople:sharedPref(@"people") withRoom:sharedPref(@"room")];
-        [self.navigationController pushViewController:VC animated:true];
-    }else{
+//    if (sharedPref(@"people")&&[sharedPref(@"room") count]>0) {
+//        NSLog(@"rooms %@",sharedPref(@"room"));
+//        [VC preloadDataWithPeople:sharedPref(@"people") withRoom:sharedPref(@"room")];
+//        [self.navigationController pushViewController:VC animated:true];
+//    }else{
+    
         [self.request postWithURL:kURL_COUNSEL_DATA withParams:@{@"user_id":sharedUserInfo(@"pkid")} compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
             NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            NSLog(@"%@",jsonDic);
+            @try {
+                [[NSUserDefaults standardUserDefaults]setObject:[[jsonDic objectForKey:@"data"]objectForKey:@"people"] forKey:@"people"];
+                
+                [[NSUserDefaults standardUserDefaults]setObject:[[jsonDic objectForKey:@"data"]objectForKey:@"room"] forKey:@"room"];
+                
+                [VC preloadDataWithPeople:[[jsonDic objectForKey:@"data"]objectForKey:@"people"] withRoom:[[jsonDic objectForKey:@"data"]objectForKey:@"room"]];
 
-            [[NSUserDefaults standardUserDefaults]setObject:[[jsonDic objectForKey:@"data"]objectForKey:@"people"] forKey:@"people"];
-            
-            [[NSUserDefaults standardUserDefaults]setObject:[[jsonDic objectForKey:@"data"]objectForKey:@"room"] forKey:@"room"];
-            
-            [VC preloadDataWithPeople:[[jsonDic objectForKey:@"data"]objectForKey:@"people"] withRoom:[[jsonDic objectForKey:@"data"]objectForKey:@"room"]];
+            }
+            @catch (NSException *exception) {
+                [[NSUserDefaults standardUserDefaults]setObject:[[jsonDic objectForKey:@"data"]objectForKey:@"people"] forKey:@"people"];
+                
+                [[NSUserDefaults standardUserDefaults]setObject:[[jsonDic objectForKey:@"data"]objectForKey:@"room"] forKey:@"room"];
+                
+                [VC preloadDataWithPeople:@[] withRoom:@[]];
+            }
+            @finally {
+                
+            }
             
             [self.navigationController pushViewController:VC animated:true];
         }];
-    }
+//    }
 
 }
 

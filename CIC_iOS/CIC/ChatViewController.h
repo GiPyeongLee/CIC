@@ -10,5 +10,5 @@
 
 @interface ChatViewController : LKViewController
 @property (weak, nonatomic) IBOutlet UILabel *nav_title;
-- (void)preloadData:(NSArray *)data withTitle:(NSString *)title;
+- (void)preloadData:(NSArray *)data withPerson:(NSDictionary *)person;
 @end

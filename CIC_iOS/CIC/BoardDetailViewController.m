@@ -176,7 +176,7 @@
 
 #pragma mark - UITextViewDelegate
 - (void)keyboardWillChange:(NSNotification *)notification{
-    NSLog(@"%s",__FUNCTION__);
+
     CGRect keyboardEndFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     CGRect keyboardBeginFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
     UIViewAnimationCurve animationCurve = [[[notification userInfo] objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];

@@ -14,6 +14,7 @@
 #import "UIImage+Async.h"
 #import "IntroViewController.h"
 #import "BoardViewController.h"
+#import "CounselViewController.h"
 @interface LKSideViewController() <UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,LKHttpRequestDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *img_profile;
 @property (weak, nonatomic) IBOutlet UILabel *label_name;
@@ -88,6 +89,40 @@
 
 // 상담
 - (IBAction)pushedCounselBtn:(id)sender {
+    CounselViewController *VC = VIEWCONTROLLER(@"CounselViewController");
+    
+    if (sharedPref(@"people")&&[sharedPref(@"room") count]>0) {
+        NSLog(@"rooms %@",sharedPref(@"room"));
+        [VC preloadDataWithPeople:sharedPref(@"people") withRoom:sharedPref(@"room")];
+        [self.navigationController pushViewController:VC animated:true];
+    }else{
+        
+        [self.request postWithURL:kURL_COUNSEL_DATA withParams:@{@"user_id":sharedUserInfo(@"pkid")} compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            NSLog(@"%@",jsonDic);
+            @try {
+                [[NSUserDefaults standardUserDefaults]setObject:[[jsonDic objectForKey:@"data"]objectForKey:@"people"] forKey:@"people"];
+                
+                [[NSUserDefaults standardUserDefaults]setObject:[[jsonDic objectForKey:@"data"]objectForKey:@"room"] forKey:@"room"];
+                
+                [VC preloadDataWithPeople:[[jsonDic objectForKey:@"data"]objectForKey:@"people"] withRoom:[[jsonDic objectForKey:@"data"]objectForKey:@"room"]];
+                
+            }
+            @catch (NSException *exception) {
+                [[NSUserDefaults standardUserDefaults]setObject:[[jsonDic objectForKey:@"data"]objectForKey:@"people"] forKey:@"people"];
+                
+                [[NSUserDefaults standardUserDefaults]setObject:[[jsonDic objectForKey:@"data"]objectForKey:@"room"] forKey:@"room"];
+                
+                [VC preloadDataWithPeople:@[] withRoom:@[]];
+            }
+            @finally {
+                
+            }
+            [self.sidePanelController toggleLeftPanel:nil];
+            [(UINavigationController *)self.sidePanelController.centerPanel pushViewController:VC animated:false];
+        }];
+    }
+
 }
 - (IBAction)pushedSettingBtn:(id)sender {
 }
