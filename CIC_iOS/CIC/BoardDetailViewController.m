@@ -14,10 +14,11 @@
 #import <KakaoOpenSDK/KakaoOpenSDK.h>
 @interface BoardDetailViewController() <UITableViewDataSource,UITableViewDelegate,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *m_tableView;
-@property (nonatomic,strong) LKHttpRequest *request;
-@property(nonatomic, retain) NSMutableDictionary *kakaoTalkLinkObjects;
 @property (weak, nonatomic) IBOutlet UIView *textInputView;
 @property (weak, nonatomic) IBOutlet UITextView *m_textView;
+@property (nonatomic,strong) LKHttpRequest *request;
+@property(nonatomic, retain) NSMutableDictionary *kakaoTalkLinkObjects;
+
 @end
 
 @implementation BoardDetailViewController

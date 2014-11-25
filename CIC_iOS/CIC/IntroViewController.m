@@ -33,6 +33,7 @@
     
     if(dataDic==nil)
         dataDic = @{}.mutableCopy;
+    
     // Greeting
     [dataDic setObject:data forKey:@"greet"];
     
@@ -42,7 +43,7 @@
     NSData *jsonData = [NSData dataWithContentsOfFile:filePath];
     NSArray *json = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
     [dataDic setObject:json forKey:@"members"];
-    NSLog(@"json %@",json);
+
 }
 - (void)viewDidLoad{
     [super viewDidLoad];

@@ -57,6 +57,12 @@
 		83B0BBC51A231A0700438379 /* RentalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BBC41A231A0700438379 /* RentalDetailViewController.m */; };
 		83B0BBC81A23A5B300438379 /* RentalStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BBC71A23A5B300438379 /* RentalStatusCell.m */; };
 		83B0BBCB1A23A79E00438379 /* RentalAdminCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BBCA1A23A79E00438379 /* RentalAdminCell.m */; };
+		83B0BBCE1A23B77D00438379 /* CounselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BBCD1A23B77D00438379 /* CounselViewController.m */; };
+		83B0BBD21A24187B00438379 /* CounselPeopleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BBD11A24187B00438379 /* CounselPeopleCell.m */; };
+		83B0BBD51A24188D00438379 /* CounselRoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BBD41A24188D00438379 /* CounselRoomCell.m */; };
+		83B0BBD81A241F2600438379 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BBD71A241F2600438379 /* ChatViewController.m */; };
+		83B0BBDB1A24216E00438379 /* CounselSenderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BBDA1A24216E00438379 /* CounselSenderCell.m */; };
+		83B0BBDE1A24217D00438379 /* CounselMyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BBDD1A24217D00438379 /* CounselMyCell.m */; };
 		83B83EBF1A1DBDE4002CD7D9 /* BoardCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B83EBE1A1DBDE4002CD7D9 /* BoardCommentCell.m */; };
 		83BAEDAD1A09D16F00776368 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDAC1A09D16F00776368 /* main.m */; };
 		83BAEDB01A09D16F00776368 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BAEDAF1A09D16F00776368 /* AppDelegate.m */; };
@@ -189,6 +195,18 @@
 		83B0BBC71A23A5B300438379 /* RentalStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentalStatusCell.m; sourceTree = "<group>"; };
 		83B0BBC91A23A79E00438379 /* RentalAdminCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RentalAdminCell.h; sourceTree = "<group>"; };
 		83B0BBCA1A23A79E00438379 /* RentalAdminCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentalAdminCell.m; sourceTree = "<group>"; };
+		83B0BBCC1A23B77D00438379 /* CounselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounselViewController.h; sourceTree = "<group>"; };
+		83B0BBCD1A23B77D00438379 /* CounselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounselViewController.m; sourceTree = "<group>"; };
+		83B0BBD01A24187B00438379 /* CounselPeopleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounselPeopleCell.h; sourceTree = "<group>"; };
+		83B0BBD11A24187B00438379 /* CounselPeopleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounselPeopleCell.m; sourceTree = "<group>"; };
+		83B0BBD31A24188D00438379 /* CounselRoomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounselRoomCell.h; sourceTree = "<group>"; };
+		83B0BBD41A24188D00438379 /* CounselRoomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounselRoomCell.m; sourceTree = "<group>"; };
+		83B0BBD61A241F2600438379 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		83B0BBD71A241F2600438379 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		83B0BBD91A24216E00438379 /* CounselSenderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounselSenderCell.h; sourceTree = "<group>"; };
+		83B0BBDA1A24216E00438379 /* CounselSenderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounselSenderCell.m; sourceTree = "<group>"; };
+		83B0BBDC1A24217D00438379 /* CounselMyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounselMyCell.h; sourceTree = "<group>"; };
+		83B0BBDD1A24217D00438379 /* CounselMyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounselMyCell.m; sourceTree = "<group>"; };
 		83B83EBD1A1DBDE4002CD7D9 /* BoardCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardCommentCell.h; sourceTree = "<group>"; };
 		83B83EBE1A1DBDE4002CD7D9 /* BoardCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardCommentCell.m; sourceTree = "<group>"; };
 		83BAEDA71A09D16F00776368 /* CIC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -497,6 +515,21 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		83B0BBCF1A24186F00438379 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				83B0BBD01A24187B00438379 /* CounselPeopleCell.h */,
+				83B0BBD11A24187B00438379 /* CounselPeopleCell.m */,
+				83B0BBD31A24188D00438379 /* CounselRoomCell.h */,
+				83B0BBD41A24188D00438379 /* CounselRoomCell.m */,
+				83B0BBD91A24216E00438379 /* CounselSenderCell.h */,
+				83B0BBDA1A24216E00438379 /* CounselSenderCell.m */,
+				83B0BBDC1A24217D00438379 /* CounselMyCell.h */,
+				83B0BBDD1A24217D00438379 /* CounselMyCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		83BAED9E1A09D16F00776368 = {
 			isa = PBXGroup;
 			children = (
@@ -623,6 +656,11 @@
 		83D109C61A2220380011E3F6 /* Counsel */ = {
 			isa = PBXGroup;
 			children = (
+				83B0BBCF1A24186F00438379 /* Cell */,
+				83B0BBCC1A23B77D00438379 /* CounselViewController.h */,
+				83B0BBCD1A23B77D00438379 /* CounselViewController.m */,
+				83B0BBD61A241F2600438379 /* ChatViewController.h */,
+				83B0BBD71A241F2600438379 /* ChatViewController.m */,
 			);
 			name = Counsel;
 			sourceTree = "<group>";
@@ -744,12 +782,14 @@
 				83B0BBC81A23A5B300438379 /* RentalStatusCell.m in Sources */,
 				83B0BBC51A231A0700438379 /* RentalDetailViewController.m in Sources */,
 				830BFB9D1A0F903300F9C036 /* UIBarButtonItem+FlatUI.m in Sources */,
+				83B0BBDE1A24217D00438379 /* CounselMyCell.m in Sources */,
 				830BFB9C1A0F903300F9C036 /* FUITextField.m in Sources */,
 				830BFB9E1A0F903300F9C036 /* UIColor+FlatUI.m in Sources */,
 				83B83EBF1A1DBDE4002CD7D9 /* BoardCommentCell.m in Sources */,
 				83AC00D91A1BB4630040B5BD /* LKLoadingView.m in Sources */,
 				83D109C51A2217980011E3F6 /* GraduationBottomCell.m in Sources */,
 				830BFBA81A0F903400F9C036 /* UIToolbar+FlatUI.m in Sources */,
+				83B0BBDB1A24216E00438379 /* CounselSenderCell.m in Sources */,
 				83BAEDB01A09D16F00776368 /* AppDelegate.m in Sources */,
 				83C2C92E1A0B432E00FD292B /* LKViewController.m in Sources */,
 				830BFB9A1A0F903300F9C036 /* FUISegmentedControl.m in Sources */,
@@ -768,6 +808,8 @@
 				830BFBBF1A0FB32D00F9C036 /* RegistViewController.m in Sources */,
 				830BFBA71A0F903400F9C036 /* UITableViewCell+FlatUI.m in Sources */,
 				830BFBA61A0F903400F9C036 /* UITabBar+FlatUI.m in Sources */,
+				83B0BBD51A24188D00438379 /* CounselRoomCell.m in Sources */,
+				83B0BBCE1A23B77D00438379 /* CounselViewController.m in Sources */,
 				83D109BC1A21DBDA0011E3F6 /* GraduationDetailViewController.m in Sources */,
 				830BFBA01A0F903300F9C036 /* UIImage+FlatUI.m in Sources */,
 				83D109C91A2220730011E3F6 /* RentalViewController.m in Sources */,
@@ -784,10 +826,12 @@
 				83807F1B1A15A9B800071612 /* UIImage+Async.m in Sources */,
 				830BFBA11A0F903400F9C036 /* UINavigationBar+FlatUI.m in Sources */,
 				8385C3A91A2041390059E95B /* LKChatTableView.m in Sources */,
+				83B0BBD81A241F2600438379 /* ChatViewController.m in Sources */,
 				8385C3A61A203E430059E95B /* LKChatView.m in Sources */,
 				830BFBB61A0FA8B700F9C036 /* JASidePanelController.m in Sources */,
 				830BFB971A0F903300F9C036 /* FUIButton.m in Sources */,
 				83B0BBCB1A23A79E00438379 /* RentalAdminCell.m in Sources */,
+				83B0BBD21A24187B00438379 /* CounselPeopleCell.m in Sources */,
 				8385C3B11A207C3D0059E95B /* GraduationCell.m in Sources */,
 				830BFB6C1A0F7CAD00F9C036 /* LKView.m in Sources */,
 				833286611A1A43680095A0DE /* IntroCell.m in Sources */,

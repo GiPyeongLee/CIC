@@ -16,6 +16,9 @@
 #define kRENTAL_IMAGE_UNTAP @[@"btn_list_untap",@"btn_standby_untap",@"btn_rental_untap",@"btn_finish_untap"]
 #define kRENTAL_IMAGE_TAP @[@"btn_list_tap",@"btn_standby_tap",@"btn_rental_tap",@"btn_finish_untap"]
 
+#define kCOUNSEL_IMAGE_UPTAP @[@"btn_chat_person_untap",@"btn_chat_room_untap"]
+#define kCOUNSEL_IMAGE_TAP @[@"btn_chat_person_tap",@"btn_chat_room_tap"]
+
 @implementation LKSegmentControl
 @synthesize delegate;
 
@@ -107,6 +110,24 @@
                 }
                 break;
             }
+            case LKSegmentTypeChat:{
+                float width = frame.size.width/[kCOUNSEL_IMAGE_TAP count];
+                float offsetX = 0.f;
+                for (int i=0;i<[kCOUNSEL_IMAGE_TAP count]; i++) {
+                    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+                    NSString *tapName = kCOUNSEL_IMAGE_TAP[i];
+                    NSString *untapName = kCOUNSEL_IMAGE_UPTAP[i];
+                    [btn setImage:IMAGE(untapName) forState:UIControlStateNormal];
+                    [btn setImage:IMAGE(tapName) forState:UIControlStateSelected];
+                    [btn addTarget:delegate action:@selector(selectedSegment:) forControlEvents:UIControlEventTouchUpInside];
+                    [btn setTag:i];
+                    [btn setFrame:CGRectMake(offsetX, 0, width, frame.size.height)];
+                    offsetX+=width;
+                    [self addSubview:btn];
+                }
+                break;
+            }
+
             default:
                 break;
         }

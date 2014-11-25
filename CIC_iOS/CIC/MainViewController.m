@@ -11,6 +11,7 @@
 #import "BoardViewController.h"
 #import "GraduationViewController.h"
 #import "RentalViewController.h"
+#import "CounselViewController.h"
 #import "LKHttpRequest.h"
 @interface MainViewController()
 @property (nonatomic,strong) LKHttpRequest *request;
@@ -78,7 +79,28 @@
         [self.navigationController pushViewController:VC animated:false];
     }];
 }
-     
+- (IBAction)pushedCounselBtn:(id)sender {
+    CounselViewController *VC = VIEWCONTROLLER(@"CounselViewController");
+    
+    if (sharedPref(@"people")&&sharedPref(@"room")) {
+        [VC preloadDataWithPeople:sharedPref(@"people") withRoom:sharedPref(@"room")];
+        [self.navigationController pushViewController:VC animated:true];
+    }else{
+        [self.request postWithURL:kURL_COUNSEL_DATA withParams:@{@"user_id":sharedUserInfo(@"pkid")} compelete:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+
+            [[NSUserDefaults standardUserDefaults]setObject:[[jsonDic objectForKey:@"data"]objectForKey:@"people"] forKey:@"people"];
+            
+            [[NSUserDefaults standardUserDefaults]setObject:[[jsonDic objectForKey:@"data"]objectForKey:@"room"] forKey:@"room"];
+            
+            [VC preloadDataWithPeople:[[jsonDic objectForKey:@"data"]objectForKey:@"people"] withRoom:[[jsonDic objectForKey:@"data"]objectForKey:@"room"]];
+            
+            [self.navigationController pushViewController:VC animated:true];
+        }];
+    }
+
+}
+
 
 
 @end

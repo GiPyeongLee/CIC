@@ -33,6 +33,7 @@
 #define kURL_BOARD_COMMENT_WRITE @"https://cic.hongik.ac.kr/api/board_comment_write"
 #define kURL_RENTAL_LIST @"https://cic.hongik.ac.kr/api/rental_list"
 #define kURL_RENTAL_BOOK @"https://cic.hongik.ac.kr/api/rental_book"
+#define kURL_COUNSEL_DATA @"https://cic.hongik.ac.kr/api/counsel"
 
 #pragma mark - LKButtonType
 typedef enum {
@@ -55,7 +56,8 @@ typedef enum {
 typedef enum {
     LKSegmentTypeIntro =0,
     LKSegmentTypeBoard,
-    LKSegmentTypeRental
+    LKSegmentTypeRental,
+    LKSegmentTypeChat
 } LKSegmentControlType;
 
 #define kLKSegIntroTitle @[@"인사말",@"소개",@"구성원"]
