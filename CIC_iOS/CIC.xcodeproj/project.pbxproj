@@ -42,7 +42,6 @@
 		833286611A1A43680095A0DE /* IntroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833286601A1A43680095A0DE /* IntroCell.m */; };
 		833286641A1A43700095A0DE /* MemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833286631A1A43700095A0DE /* MemberCell.m */; };
 		836962B61A1910A1009BC7AC /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836962B51A1910A1009BC7AC /* IntroViewController.m */; };
-		836E28851A25B35800BF59D3 /* TestViewDummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 836E28841A25B35800BF59D3 /* TestViewDummy.m */; };
 		83807F1B1A15A9B800071612 /* UIImage+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 83807F1A1A15A9B800071612 /* UIImage+Async.m */; };
 		8385C3A31A2038010059E95B /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8385C3A21A2038010059E95B /* KakaoOpenSDK.framework */; };
 		8385C3A61A203E430059E95B /* LKChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385C3A51A203E430059E95B /* LKChatView.m */; };
@@ -169,8 +168,6 @@
 		833286631A1A43700095A0DE /* MemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberCell.m; sourceTree = "<group>"; };
 		836962B41A1910A1009BC7AC /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		836962B51A1910A1009BC7AC /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
-		836E28831A25B35800BF59D3 /* TestViewDummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewDummy.h; sourceTree = "<group>"; };
-		836E28841A25B35800BF59D3 /* TestViewDummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewDummy.m; sourceTree = "<group>"; };
 		83807F191A15A9B800071612 /* UIImage+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Async.h"; sourceTree = "<group>"; };
 		83807F1A1A15A9B800071612 /* UIImage+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Async.m"; sourceTree = "<group>"; };
 		8385C3A21A2038010059E95B /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
@@ -604,8 +601,6 @@
 				831FBE441A1AFEE7002F3C36 /* RentalViewController */,
 				8385C3AA1A2078C00059E95B /* GraduateViewController */,
 				83D109C61A2220380011E3F6 /* Counsel */,
-				836E28831A25B35800BF59D3 /* TestViewDummy.h */,
-				836E28841A25B35800BF59D3 /* TestViewDummy.m */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -814,7 +809,6 @@
 				830BFBA71A0F903400F9C036 /* UITableViewCell+FlatUI.m in Sources */,
 				830BFBA61A0F903400F9C036 /* UITabBar+FlatUI.m in Sources */,
 				83B0BBD51A24188D00438379 /* CounselRoomCell.m in Sources */,
-				836E28851A25B35800BF59D3 /* TestViewDummy.m in Sources */,
 				83B0BBCE1A23B77D00438379 /* CounselViewController.m in Sources */,
 				83D109BC1A21DBDA0011E3F6 /* GraduationDetailViewController.m in Sources */,
 				830BFBA01A0F903300F9C036 /* UIImage+FlatUI.m in Sources */,
